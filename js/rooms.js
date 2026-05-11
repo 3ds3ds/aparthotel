@@ -46,7 +46,7 @@ function renderRooms(filter, minGuests) {
         </div>
         <div class="suite-pricing">
           <div><span class="price-label">Desde</span><div class="price">$${r.price.toLocaleString()} <span>MXN / noche</span></div></div>
-          <a href="https://app.littlehotelier.com/properties/aparthotelsiete32direct" target="_blank" rel="noopener" class="btn btn-primary">Reservar</a>
+          <a href="suite-${r.type.toLowerCase()}.html#${r.id}" class="btn btn-primary">Ver Detalles</a>
         </div>
       </div>
     </article>
