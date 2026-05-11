@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aparthotel Siete32 — Estancias Prácticas en Mérida</title>
+  <meta name="description" content="Studios con cocina equipada, alta capacidad y ubicación ideal en Mérida, Yucatán. Ideales para familias, visitantes de hospitales y estadías largas al mejor precio.">
+  <meta name="keywords" content="Hotel con cocineta en Mérida, Apart hotel Mérida Altabrisa, Hotel para familias grandes Mérida">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ======== HEADER ======== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo" aria-label="Aparthotel Siete32 - Inicio">
+        <img src="assets/images/logo-original.png" alt="Aparthotel Siete32 Logo">
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="suites.html">Studios</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="suites.html" class="btn btn-primary nav-cta">Reservar Ahora</a>
+      </nav>
+
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="index.html">Inicio</a>
+    <a href="suites.html">Studios</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="suites.html" class="btn btn-primary">Reservar Ahora</a>
+  </div>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero" id="hero" style="background-image: url('assets/images/hero-room.jpg');">
+    <div class="hero-content fade-up">
+      <h1>Estancias prácticas y cómodas en Mérida</h1>
+      <p>Studios de gran capacidad con cocina equipada. Ideales para familias, equipos de trabajo y visitantes de hospitales cercanos.</p>
+    </div>
+  </section>
+
+  <!-- ======== BOOKING WIDGET (floats between hero & next section) ======== -->
+  <div class="booking-wrapper">
+    <form class="booking-widget fade-up" id="booking-form" aria-label="Buscador de disponibilidad">
+      <div class="booking-field">
+        <label for="checkin">Entrada</label>
+        <input type="date" id="checkin" name="checkin" required>
+      </div>
+      <div class="booking-field">
+        <label for="checkout">Salida</label>
+        <input type="date" id="checkout" name="checkout" required>
+      </div>
+      <div class="booking-field">
+        <label for="guests">Huéspedes</label>
+        <input type="number" id="guests" name="guests" value="2" min="1" max="10">
+      </div>
+      <button type="submit" class="btn btn-primary">Buscar Studios</button>
+    </form>
+  </div>
+
+  <!-- ======== DIFFERENTIATORS ======== -->
+  <section class="differentiators" id="diferenciadores">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2>Todo lo que necesitas, al mejor costo</h2>
+        <p class="subtitle">Diseñado para ser práctico y accesible, Aparthotel Siete32 te ofrece comodidades que reducen tus gastos de viaje.</p>
+      </div>
+
+      <div class="diff-grid stagger">
+        <!-- Card 1 -->
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+          </div>
+          <h3>Alta Capacidad</h3>
+          <p>Hasta 5 camas individuales en un solo studio. Perfecto para familias y equipos de trabajo, ahorrando cuartos extra.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3>Cocina Equipada</h3>
+          <p>Estufa, refrigerador y utensilios en cada cuarto. Reduce drásticamente tus gastos diarios en restaurantes.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Cerca de Hospitales</h3>
+          <p>Ubicación excelente para visitantes de hospitales. Contamos con studios accesibles en planta baja para pacientes y acompañantes.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3>Tarifas Semanales</h3>
+          <p>Precios especiales muy convenientes para estadías largas. Cuida tu presupuesto mientras estás lejos de casa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SUITES PREVIEW ======== -->
+  <section class="suites-section" id="suites">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2>Nuestros Studios</h2>
+        <p class="subtitle">Espacios amplios y equipados para cualquier tipo de estadía.</p>
+      </div>
+
+      <!-- Master Studio -->
+      <article class="suite-card fade-up">
+        <div class="suite-image">
+          <img src="assets/images/suite-master.jpg" alt="Master Studio - Aparthotel Siete32" loading="lazy">
+          <span class="suite-badge">Hasta 5 Personas</span>
+        </div>
+        <div class="suite-info">
+          <h3>Master Studio</h3>
+          <p class="suite-desc">Nuestra studio más grande. Cuenta con espacios separados, cocina completa, comedor y área de estar. Ideal para familias grandes o equipos de trabajo.</p>
+          <div class="suite-amenities">
+            <div class="suite-amenity">
+              <svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+              <span>2 Camas Matrimoniales + 1 Individual</span>
+            </div>
+            <div class="suite-amenity">
+              <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+              <span>Cocina Completa Integrada</span>
+            </div>
+          </div>
+          <div class="suite-pricing">
+            <div>
+              <span class="price-label">Desde</span>
+              <div class="price">$1,200 <span>MXN / noche</span></div>
+            </div>
+            <a href="suite-master.html" class="btn btn-primary">Reservar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Junior Studio -->
+      <article class="suite-card fade-up">
+        <div class="suite-image">
+          <img src="assets/images/suite-junior.jpg" alt="Junior Studio - Aparthotel Siete32" loading="lazy">
+          <span class="suite-badge">Hasta 3 Personas</span>
+        </div>
+        <div class="suite-info">
+          <h3>Junior Studio</h3>
+          <p class="suite-desc">Perfecta para estadías rápidas o parejas. Cuenta con lo esencial para una visita cómoda con cocina básica y área de descanso.</p>
+          <div class="suite-amenities">
+            <div class="suite-amenity">
+              <svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+              <span>1 Cama Matrimonial + 1 Sofá Cama</span>
+            </div>
+            <div class="suite-amenity">
+              <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+              <span>Cocina Completa Integrada</span>
+            </div>
+          </div>
+          <div class="suite-pricing">
+            <div>
+              <span class="price-label">Desde</span>
+              <div class="price">$850 <span>MXN / noche</span></div>
+            </div>
+            <a href="suite-junior.html" class="btn btn-primary">Reservar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Executive Studio -->
+      <article class="suite-card fade-up">
+        <div class="suite-image">
+          <img src="assets/images/suite-executive.jpg" alt="Executive Studio - Aparthotel Siete32" loading="lazy">
+          <span class="suite-badge">Hasta 4 Personas</span>
+        </div>
+        <div class="suite-info">
+          <h3>Executive Studio</h3>
+          <p class="suite-desc">Diseñada pensando en el confort de quienes visitan por trabajo o salud. Incluye cocina equipada y áreas de descanso amplias.</p>
+          <div class="suite-amenities">
+            <div class="suite-amenity">
+              <svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+              <span>2 Camas Matrimoniales</span>
+            </div>
+            <div class="suite-amenity">
+              <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+              <span>Cocina Completa Integrada</span>
+            </div>
+          </div>
+          <div class="suite-pricing">
+            <div>
+              <span class="price-label">Desde</span>
+              <div class="price">$1,050 <span>MXN / noche</span></div>
+            </div>
+            <a href="suite-executive.html" class="btn btn-primary">Reservar</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ======== LOCATION ======== -->
+  <section class="location-section" id="ubicacion">
+    <div class="container">
+      <div class="location-icon fade-up">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <h2 class="fade-up">Ubicación privilegiada en Altabrisa</h2>
+      <p class="subtitle fade-up">Diseñado para ofrecer máxima conveniencia a pacientes en recuperación, familiares y personal médico.</p>
+
+      <div class="proximity-badges fade-up">
+        <div class="proximity-badge">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>A 2 min de importantes hospitales</span>
+        </div>
+        <div class="proximity-badge">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          <span>A 2 min de Plaza Altabrisa</span>
+        </div>
+        <div class="proximity-badge">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>A 12 min del centro de Mérida</span>
+        </div>
+        <div class="proximity-badge">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M17.657 18.657A8 8 0 0 1 6.343 7.343"/><path d="M20 4v5h-5"/><path d="M3 21a9 9 0 0 0 15-6.7A9 9 0 0 0 5.6 7"/></svg>
+          <span>A 20 min de la playa</span>
+        </div>
+      </div>
+
+      <div class="location-map fade-up">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.448!2d-89.58281!3d21.0147531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567726a5c2f9d5%3A0x828a9a643f043a4d!2sAparthotel%20Siete32!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx" 
+          allowfullscreen="" loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de Aparthotel Siete32 en Google Maps">
+        </iframe>
+      </div>
+
+      <a href="https://maps.google.com/?q=Aparthotel+Siete32+Merida" target="_blank" rel="noopener" class="btn btn-outline mt-24 fade-up">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+        Ver en Google Maps
+      </a>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/logo-original.png" alt="Aparthotel Siete32">
+          <p>El confort que mereces, al precio que necesitas. Ubicación ideal para visitantes de hospitales cercanos.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Enlaces</h4>
+          <a href="index.html">Inicio</a>
+          <a href="suites.html">Studios</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Calle 7 No. 32 × 10 y 12, Fracc. Altabrisa, Mérida, Yuc.</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+52 999 255 1748</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Aparthotel Siete32. Todos los derechos reservados.</span>
+        <span>Desarrollado en Mérida, Yucatán.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/529992551748" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contáctanos por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Mobile Sticky Booking Bar -->
+  <div class="mobile-booking-bar">
+    <div class="price-col">
+      <small>Precio desde</small>
+      <strong>$850 <span>MXN</span></strong>
+    </div>
+    <a href="suites.html" class="btn btn-primary">Reservar</a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
