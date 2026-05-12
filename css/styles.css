@@ -181,14 +181,21 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
   display: block; font-size: .75rem; font-weight: 600;
   text-transform: uppercase; letter-spacing: .5px; color: var(--gray-500); margin-bottom: 6px;
 }
-.booking-field input {
+.booking-field input,
+.booking-field select {
   display: block; width: 100%; border: 1px solid var(--gray-200); border-radius: 8px;
   padding: 14px 16px; font-family: var(--font-body); font-size: 16px;
   color: var(--navy); transition: border-color var(--transition);
   cursor: pointer; -webkit-appearance: none; appearance: none;
   background: var(--white);
 }
-.booking-field input:focus { outline: none; border-color: var(--teal); }
+.booking-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center;
+  padding-right: 36px;
+}
+.booking-field input:focus,
+.booking-field select:focus { outline: none; border-color: var(--teal); }
 .booking-widget .btn { width: 100%; padding: 12px 24px; justify-content: center; }
 @media (min-width: 768px) { .booking-widget .btn { width: auto; min-width: 160px; } }
 
