@@ -183,13 +183,13 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 }
 .booking-field input {
   display: block; width: 100%; border: 1px solid var(--gray-200); border-radius: 8px;
-  padding: 12px 14px; font-family: var(--font-body); font-size: 16px;
+  padding: 14px 16px; font-family: var(--font-body); font-size: 16px;
   color: var(--navy); transition: border-color var(--transition);
-  cursor: pointer; -webkit-appearance: none; appearance: none;
+  cursor: pointer; min-height: 48px;
 }
+.booking-field input[type="number"] { -webkit-appearance: none; appearance: none; }
 .booking-field input[type="date"]::-webkit-calendar-picker-indicator {
-  cursor: pointer; padding: 4px; margin: 0;
-  opacity: .6; transition: opacity .2s;
+  cursor: pointer; opacity: .6; transition: opacity .2s;
 }
 .booking-field input[type="date"]:hover::-webkit-calendar-picker-indicator { opacity: 1; }
 .booking-field input:focus { outline: none; border-color: var(--teal); }
@@ -275,12 +275,13 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 .search-field input,
 .search-field select {
   display: block; width: 100%; border: 1px solid var(--gray-200); border-radius: 8px;
-  padding: 12px 14px; font-family: var(--font-body); font-size: 16px;
+  padding: 14px 16px; font-family: var(--font-body); font-size: 16px;
   color: var(--navy); background: var(--white);
   transition: border-color var(--transition); cursor: pointer;
-  -webkit-appearance: none; appearance: none;
+  min-height: 48px;
 }
 .search-field select {
+  -webkit-appearance: none; appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: right 12px center;
   padding-right: 32px;
