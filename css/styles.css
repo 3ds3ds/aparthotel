@@ -164,29 +164,33 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 }
 @media (min-width: 768px) { .booking-wrapper { margin-top: -44px; padding: 0 64px; } }
 .booking-widget {
-  background: var(--white); border-radius: var(--radius); padding: 24px 32px;
+  background: var(--white); border-radius: var(--radius); padding: 20px;
   box-shadow: 0 8px 30px rgba(0,0,0,.12);
-  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px;
-  max-width: 900px; width: 100%;
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px;
+  max-width: 900px; width: 100%; box-sizing: border-box;
 }
-.booking-field { flex: 1; min-width: 140px; }
+@media (min-width: 768px) { .booking-widget { padding: 24px 32px; gap: 16px; } }
+.booking-field { flex: 1 1 100%; min-width: 0; }
+@media (min-width: 768px) { .booking-field { flex: 1 1 0; min-width: 140px; } }
 .booking-field label {
   display: block; font-size: .75rem; font-weight: 600;
   text-transform: uppercase; letter-spacing: .5px; color: var(--gray-500); margin-bottom: 6px;
 }
 .booking-field input {
   width: 100%; border: 1px solid var(--gray-200); border-radius: 8px;
-  padding: 10px 12px; font-family: var(--font-body); font-size: .9375rem;
-  color: var(--navy); transition: border-color var(--transition); cursor: pointer;
+  padding: 12px 14px; font-family: var(--font-body); font-size: 1rem;
+  color: var(--navy); transition: border-color var(--transition);
+  cursor: pointer; box-sizing: border-box;
 }
-.booking-field input[type="date"] { cursor: pointer; }
+.booking-field input[type="date"] { cursor: pointer; padding-right: 12px; }
 .booking-field input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer; padding: 4px; margin: 0;
   opacity: .6; transition: opacity .2s;
 }
 .booking-field input[type="date"]:hover::-webkit-calendar-picker-indicator { opacity: 1; }
 .booking-field input:focus { outline: none; border-color: var(--teal); }
-.booking-widget .btn { min-width: 160px; padding: 12px 24px; }
+.booking-widget .btn { width: 100%; padding: 12px 24px; justify-content: center; }
+@media (min-width: 768px) { .booking-widget .btn { width: auto; min-width: 160px; } }
 
 
 /* =============================================
@@ -247,12 +251,14 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 
 /* Search / availability bar */
 .suites-search {
-  background: var(--white); border-radius: var(--radius); padding: 24px 28px;
+  background: var(--white); border-radius: var(--radius); padding: 20px;
   box-shadow: 0 4px 20px rgba(0,0,0,.08); border: 1px solid var(--gray-200);
-  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px;
-  margin-bottom: 32px;
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px;
+  margin-bottom: 32px; box-sizing: border-box;
 }
-.search-field { flex: 1; min-width: 140px; }
+@media (min-width: 768px) { .suites-search { padding: 24px 28px; gap: 16px; } }
+.search-field { flex: 1 1 100%; min-width: 0; }
+@media (min-width: 768px) { .search-field { flex: 1 1 0; min-width: 140px; } }
 .search-field label {
   display: block; font-size: .75rem; font-weight: 600;
   text-transform: uppercase; letter-spacing: .5px; color: var(--gray-500); margin-bottom: 6px;
@@ -260,10 +266,10 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 .search-field input,
 .search-field select {
   width: 100%; border: 1px solid var(--gray-200); border-radius: 8px;
-  padding: 10px 12px; font-family: var(--font-body); font-size: .9375rem;
+  padding: 12px 14px; font-family: var(--font-body); font-size: 1rem;
   color: var(--navy); background: var(--white);
   transition: border-color var(--transition); cursor: pointer;
-  -webkit-appearance: none; appearance: none;
+  -webkit-appearance: none; appearance: none; box-sizing: border-box;
 }
 .search-field select {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
@@ -272,7 +278,8 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 }
 .search-field input:focus,
 .search-field select:focus { outline: none; border-color: var(--teal); }
-.suites-search .btn { min-width: 120px; padding: 11px 24px; }
+.suites-search .btn { width: 100%; padding: 12px 24px; justify-content: center; }
+@media (min-width: 768px) { .suites-search .btn { width: auto; min-width: 120px; } }
 .no-results {
   text-align: center; padding: 48px 24px; color: var(--gray-500);
   font-size: 1.0625rem;
