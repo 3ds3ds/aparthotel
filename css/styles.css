@@ -185,13 +185,9 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
   display: block; width: 100%; border: 1px solid var(--gray-200); border-radius: 8px;
   padding: 14px 16px; font-family: var(--font-body); font-size: 16px;
   color: var(--navy); transition: border-color var(--transition);
-  cursor: pointer; min-height: 48px;
+  cursor: pointer; -webkit-appearance: none; appearance: none;
+  background: var(--white);
 }
-.booking-field input[type="number"] { -webkit-appearance: none; appearance: none; }
-.booking-field input[type="date"]::-webkit-calendar-picker-indicator {
-  cursor: pointer; opacity: .6; transition: opacity .2s;
-}
-.booking-field input[type="date"]:hover::-webkit-calendar-picker-indicator { opacity: 1; }
 .booking-field input:focus { outline: none; border-color: var(--teal); }
 .booking-widget .btn { width: 100%; padding: 12px 24px; justify-content: center; }
 @media (min-width: 768px) { .booking-widget .btn { width: auto; min-width: 160px; } }
@@ -278,7 +274,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
   padding: 14px 16px; font-family: var(--font-body); font-size: 16px;
   color: var(--navy); background: var(--white);
   transition: border-color var(--transition); cursor: pointer;
-  min-height: 48px;
+  -webkit-appearance: none; appearance: none;
 }
 .search-field select {
   -webkit-appearance: none; appearance: none;

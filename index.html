@@ -60,11 +60,11 @@
     <form class="booking-widget fade-up" id="booking-form" aria-label="Buscador de disponibilidad">
       <div class="booking-field">
         <label for="checkin">Entrada</label>
-        <input type="date" id="checkin" name="checkin" required placeholder="Seleccionar fecha">
+        <input type="text" id="checkin" name="checkin" required placeholder="Seleccionar fecha" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
       </div>
       <div class="booking-field">
         <label for="checkout">Salida</label>
-        <input type="date" id="checkout" name="checkout" required placeholder="Seleccionar fecha">
+        <input type="text" id="checkout" name="checkout" required placeholder="Seleccionar fecha" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
       </div>
       <div class="booking-field">
         <label for="guests">Huéspedes</label>

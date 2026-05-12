@@ -73,17 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); window._roomObserver.unobserve(e.target); } });
   }, { threshold: 0.1 });
 
-  // Set default dates (today + tomorrow)
-  const checkin = document.getElementById('search-checkin');
-  const checkout = document.getElementById('search-checkout');
-  if (checkin) {
-    const today = new Date();
-    const tomorrow = new Date(today);
-    tomorrow.setDate(today.getDate() + 1);
-    checkin.value = today.toISOString().split('T')[0];
-    checkout.value = tomorrow.toISOString().split('T')[0];
-    checkin.min = today.toISOString().split('T')[0];
-  }
+  // Date inputs start as text, no auto-fill so placeholders show
 
   renderRooms('all', 0);
 

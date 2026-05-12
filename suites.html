@@ -48,11 +48,11 @@
       <div class="suites-search fade-up" id="suites-search">
         <div class="search-field">
           <label for="search-checkin">Llegada</label>
-          <input type="date" id="search-checkin" placeholder="Seleccionar fecha">
+          <input type="text" id="search-checkin" placeholder="Seleccionar fecha" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
         </div>
         <div class="search-field">
           <label for="search-checkout">Salida</label>
-          <input type="date" id="search-checkout" placeholder="Seleccionar fecha">
+          <input type="text" id="search-checkout" placeholder="Seleccionar fecha" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
         </div>
         <div class="search-field">
           <label for="search-guests">Huéspedes</label>
