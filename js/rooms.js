@@ -68,7 +68,7 @@ function renderRooms(filter, minGuests) {
           <div class="suite-amenity">${icons.kitchen}<span>Cocina Equipada</span></div>
           <div class="suite-amenity">${icons.ac}<span>A/C y Ventilador</span></div>
           <div class="suite-amenity">${icons.wifi}<span>WiFi Gratis</span></div>
-          <div class="suite-amenity">${icons.tv}<span>TV con Cable</span></div>
+          <div class="suite-amenity">${icons.tv}<span>Smart TV</span></div>
           <div class="suite-amenity">${icons.bath}<span>Baño Privado</span></div>
         </div>
         <div class="suite-pricing">
