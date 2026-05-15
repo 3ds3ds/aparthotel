@@ -341,6 +341,10 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 .suite-pricing .price-extra { display: block; font-size: .8125rem; color: var(--gray-500); margin-top: 2px; }
 .suite-pricing .price-tax { display: block; font-size: .75rem; color: var(--gray-500); margin-top: 2px; }
 .suite-pricing .price-tax strong { color: var(--teal); }
+.suite-promo {
+  font-size: .8125rem; font-weight: 600; color: var(--teal);
+  padding-top: 8px; border-top: 1px solid var(--gray-200); margin-top: 4px;
+}
 
 /* =============================================
    LOCATION SECTION

@@ -77,10 +77,11 @@ function renderRooms(filter, minGuests) {
             <span class="price-label">Desde (${r.baseGuests} ${r.baseGuests === 1 ? 'persona' : 'personas'})</span>
             <div class="price">$${r.price.toLocaleString()} <span>MXN / noche</span></div>
             ${r.extraCharge ? '<span class="price-extra">+$'+r.extraCharge+' por persona adicional</span>' : ''}
-            <span class="price-tax">Impuestos incluidos · <strong>7ª noche gratis</strong></span>
+            <span class="price-tax">Impuestos incluidos</span>
           </div>
           <a href="suite-${r.type.toLowerCase()}.html#${r.id}" class="btn btn-primary">Ver Detalles</a>
         </div>
+        <div class="suite-promo">🎉 7ª noche GRATIS con pago anticipado semanal</div>
       </div>
     </article>
   `).join('');
