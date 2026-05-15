@@ -318,6 +318,9 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
   font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
   color: var(--navy);
 }
+.suite-badge-floor {
+  top: 48px; background: var(--teal); color: var(--white);
+}
 
 .suite-info { flex: 1; padding: 28px 32px; display: flex; flex-direction: column; gap: 12px; }
 .suite-info h3 { font-family: var(--font-heading); font-size: 1.5rem; }

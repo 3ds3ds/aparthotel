@@ -15,22 +15,22 @@ const ROOMS = [
     desc:"Amplia suite equipada con una cama king size y una individual. Cocina integral con estufa, refrigerador, horno de microondas y cafetera con kit, vajilla y cubertería, equipo de planchado, mesa de comedor, A/C, ventilador, TV con cable, WiFi y baño privado con toallas y amenidades." },
   { id:"exec-17", name:"Executive Suite No.17", type:"Executive", price:900, beds:"1 cama queen size", guests:2, img:"suite-executive.jpg",
     desc:"Suite equipada con una cama queen size. Con refrigerador, horno de microondas y cafetera con kit, vajilla y cubertería, equipo de planchado, mesa de comedor/trabajo, A/C, ventilador, TV con cable, WiFi y baño privado con toallas y amenidades." },
-  { id:"master-18", name:"Master Suite No.18", type:"Master", price:1200, beds:"1 queen size + 3 individuales", guests:5, img:"suite-master.jpg",
-    desc:"Suite amplia de 45 m² con 1 cama queen size y 3 individuales. A/C, ventilador, sofá, WiFi de alta velocidad, TV pantalla plana con cable, radio/reloj/despertador. Baño completo con amenidades y secador de pelo. Cocina equipada con estufa eléctrica, refrigerador, microondas, cafetera con kit, mesa comedor/trabajo, vajilla y cubertería.", area:"45 m²" },
+  { id:"master-18", name:"Master Suite No.18", type:"Master", price:1200, beds:"1 king size + 3 individuales", guests:5, img:"suite-master.jpg",
+    desc:"Suite amplia de 45 m² con 1 cama king size y 3 individuales. A/C, ventilador, sofá, WiFi de alta velocidad, TV pantalla plana con cable, radio/reloj/despertador. Baño completo con amenidades y secador de pelo. Cocina equipada con estufa eléctrica, refrigerador, microondas, cafetera con kit, mesa comedor/trabajo, vajilla y cubertería.", area:"45 m²" },
   { id:"master-19", name:"Master Suite No.19", type:"Master", price:1200, beds:"1 queen size + 3 individuales", guests:5, img:"portada-master.png",
     desc:"Suite amplia de 45 m² con 1 cama queen size y 3 individuales. A/C, ventilador, sofá, WiFi de alta velocidad, TV pantalla plana con cable, radio/reloj/despertador. Baño completo con amenidades y secador de pelo. Cocina equipada con estufa eléctrica, refrigerador, microondas, cafetera con kit, mesa comedor/trabajo, vajilla y cubertería.", area:"45 m²" },
-  { id:"exec-20", name:"Executive No.20", type:"Executive", price:950, beds:"1 cama queen size", guests:2, img:"portada-exec.png",
-    desc:"Suite equipada con una cama queen size. Cocina integral con estufa, refrigerador, horno de microondas y cafetera con kit, vajilla y cubertería, equipo de planchado, mesa de comedor/trabajo, A/C, ventilador, TV con cable, WiFi y baño privado con toallas y amenidades." },
-  { id:"exec-21", name:"Executive No.21", type:"Executive", price:950, beds:"1 cama king size", guests:2, img:"suite-executive.jpg",
-    desc:"Suite equipada con una cama king size. Cocina integral con estufa, refrigerador, horno de microondas y cafetera con kit, vajilla y cubertería, equipo de planchado, mesa de comedor/trabajo, A/C, ventilador, TV con cable, WiFi y baño privado con toallas y amenidades." },
-  { id:"exec-22", name:"Executive No.22", type:"Executive", price:950, beds:"1 cama king size", guests:2, img:"portada-exec.png",
-    desc:"Suite equipada con una cama king size. Cocina integral con estufa, refrigerador, horno de microondas y cafetera con kit, vajilla y cubertería, equipo de planchado, mesa de comedor/trabajo, A/C, ventilador, TV con cable, WiFi y baño privado con toallas y amenidades." },
-  { id:"jr-23", name:"Jr. Suite No.23", type:"Junior", price:1050, beds:"2 camas matrimoniales", guests:4, img:"suite-junior.jpg",
-    desc:"Suite equipada con dos camas matrimoniales. Cocina integral con estufa, refrigerador, horno de microondas y cafetera con kit, vajilla y cubertería, equipo de planchado, mesa de comedor/trabajo, A/C, ventilador, TV con cable, WiFi y baño privado con toallas y amenidades." },
-  { id:"jr-24", name:"Jr. Suite No.24", type:"Junior", price:1050, beds:"2 camas matrimoniales", guests:4, img:"portada-junior.png",
-    desc:"Suite equipada con dos camas matrimoniales. Cocina integral con estufa, refrigerador, horno de microondas y cafetera con kit, vajilla y cubertería, equipo de planchado, mesa de comedor/trabajo, A/C, ventilador, TV con cable, WiFi y baño privado con toallas y amenidades." },
-  { id:"jr-25", name:"Jr. Suite No.25", type:"Junior", price:1050, beds:"2 matrimoniales + 1 individual", guests:5, img:"room-detail-1.jpg",
-    desc:"Suite equipada con 2 camas matrimoniales y una individual. Con refrigerador, horno de microondas y cafetera con kit, vajilla y cubertería, equipo de planchado, mesa de comedor/trabajo, A/C, ventilador, TV con cable, WiFi y baño privado con toallas y amenidades." }
+  { id:"exec-20", name:"Executive No.20", type:"Executive", price:950, beds:"1 cama king size", guests:2, img:"portada-exec.png", floor:"Planta Baja",
+    desc:"Suite en planta baja equipada con una cama king size. Cocina integral con estufa, refrigerador, horno de microondas y cafetera con kit, vajilla y cubertería, equipo de planchado, mesa de comedor/trabajo, A/C, ventilador, TV con cable, WiFi y baño privado con toallas y amenidades." },
+  { id:"exec-21", name:"Executive No.21", type:"Executive", price:950, beds:"1 cama king size", guests:2, img:"suite-executive.jpg", floor:"Planta Baja",
+    desc:"Suite en planta baja equipada con una cama king size. Cocina integral con estufa, refrigerador, horno de microondas y cafetera con kit, vajilla y cubertería, equipo de planchado, mesa de comedor/trabajo, A/C, ventilador, TV con cable, WiFi y baño privado con toallas y amenidades." },
+  { id:"exec-22", name:"Executive No.22", type:"Executive", price:950, beds:"1 cama king size", guests:2, img:"portada-exec.png", floor:"Planta Baja",
+    desc:"Suite en planta baja equipada con una cama king size. Cocina integral con estufa, refrigerador, horno de microondas y cafetera con kit, vajilla y cubertería, equipo de planchado, mesa de comedor/trabajo, A/C, ventilador, TV con cable, WiFi y baño privado con toallas y amenidades." },
+  { id:"jr-23", name:"Jr. Suite No.23", type:"Junior", price:1050, beds:"2 camas matrimoniales", guests:4, img:"suite-junior.jpg", floor:"Planta Baja",
+    desc:"Suite en planta baja equipada con dos camas matrimoniales. Cocina integral con estufa, refrigerador, horno de microondas y cafetera con kit, vajilla y cubertería, equipo de planchado, mesa de comedor/trabajo, A/C, ventilador, TV con cable, WiFi y baño privado con toallas y amenidades." },
+  { id:"jr-24", name:"Jr. Suite No.24", type:"Junior", price:1050, beds:"2 camas matrimoniales", guests:4, img:"portada-junior.png", floor:"Planta Baja",
+    desc:"Suite en planta baja equipada con dos camas matrimoniales. Cocina integral con estufa, refrigerador, horno de microondas y cafetera con kit, vajilla y cubertería, equipo de planchado, mesa de comedor/trabajo, A/C, ventilador, TV con cable, WiFi y baño privado con toallas y amenidades." },
+  { id:"jr-25", name:"Jr. Suite No.25", type:"Junior", price:1050, beds:"2 matrimoniales + 1 individual", guests:5, img:"room-detail-1.jpg", floor:"Planta Baja",
+    desc:"Suite en planta baja equipada con 2 camas matrimoniales y una individual. Con refrigerador, horno de microondas y cafetera con kit, vajilla y cubertería, equipo de planchado, mesa de comedor/trabajo, A/C, ventilador, TV con cable, WiFi y baño privado con toallas y amenidades." }
 ];
 
 function renderRooms(filter, minGuests) {
@@ -59,6 +59,7 @@ function renderRooms(filter, minGuests) {
       <div class="suite-image">
         <img src="assets/images/${r.img}" alt="${r.name}" loading="lazy">
         <span class="suite-badge">Hasta ${r.guests} Personas</span>
+        ${r.floor ? '<span class="suite-badge suite-badge-floor">'+r.floor+'</span>' : ''}
       </div>
       <div class="suite-info">
         <h3>${r.name}</h3>
