@@ -988,12 +988,12 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 }
 
 /* =============================================
-   STUDIO PRICE CARD — Premium look (studio.html sidebar)
+   STUDIO PRICE CARD — Matches /suites listing-card price style
    ============================================= */
 .studio-price-card {
   position: relative;
   padding: 28px;
-  background: linear-gradient(180deg, var(--white) 0%, var(--off-white) 100%);
+  background: var(--white);
   border: 1px solid var(--gray-200);
   border-top: 4px solid var(--teal);
   border-radius: var(--radius);
@@ -1002,25 +1002,28 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 .studio-price-card .price-label {
   display: block;
   font-size: .75rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .8px;
+  letter-spacing: .5px;
   color: var(--gray-500);
   margin-bottom: 6px;
 }
+/* Same character as .suite-pricing .price (font-family: heading,
+   bold, navy) but bigger to match the prominence of this card.
+   The number span (#studio-price) inherits the parent .price font;
+   only the currency span (.price-currency) is overridden to small. */
 .studio-price-card .price {
-  font-size: 3.5rem;
-  font-weight: 800;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
   color: var(--navy);
   line-height: 1;
-  margin-bottom: 10px;
-  letter-spacing: -1px;
+  margin-bottom: 8px;
 }
-.studio-price-card .price .price-currency,
-.studio-price-card .price > span {
-  display: inline-block;
+.studio-price-card .price .price-currency {
+  font-family: var(--font-body);
   font-size: .9375rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--gray-500);
   letter-spacing: 0;
 }
@@ -1062,7 +1065,11 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 /* WhatsApp helper card */
 .studio-wsp-card {
   text-align: center;
-  padding: 20px;
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
 }
 .studio-wsp-text {
   font-size: .875rem;
