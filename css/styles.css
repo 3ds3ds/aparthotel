@@ -864,3 +864,20 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
   font-style: italic;
 }
 
+/* Breadcrumb (studio.html) */
+.breadcrumb {
+  background: var(--off-white);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 12px 0;
+  font-size: .875rem;
+  color: var(--gray-500);
+}
+.breadcrumb .container { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.breadcrumb a {
+  color: var(--gray-500);
+  transition: color var(--transition);
+}
+.breadcrumb a:hover { color: var(--teal); }
+.breadcrumb span { color: var(--gray-300); }
+.breadcrumb span:last-child { color: var(--navy); font-weight: 600; }
+

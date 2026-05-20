@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio — Aparthotel Siete32</title>
+  <meta name="description" content="Detalle de Studio en Aparthotel Siete32, Mérida. Comodidades incluidas, servicios y accesorios bajo solicitud.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo"><img src="assets/images/logo-original.png" alt="Aparthotel Siete32"></a>
+      <nav class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="suites.html">Studios</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="suites.html" class="btn btn-primary nav-cta">Reservar Ahora</a>
+      </nav>
+      <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-menu">
+    <a href="index.html">Inicio</a>
+    <a href="suites.html">Studios</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="suites.html" class="btn btn-primary">Reservar Ahora</a>
+  </div>
+
+  <!-- DETAIL HERO (rendered by JS) -->
+  <section class="detail-hero" id="detail-hero" style="background-image: url('assets/images/hero-room.jpg');">
+    <div class="detail-hero-content fade-up" id="detail-hero-content">
+      <h1 id="studio-name">Cargando...</h1>
+      <div class="detail-meta" id="studio-meta"></div>
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Inicio</a> <span>›</span>
+      <a href="suites.html" id="breadcrumb-type">Studios</a> <span>›</span>
+      <span id="breadcrumb-name">Studio</span>
+    </div>
+  </div>
+
+  <!-- DETAIL BODY (rendered by JS) -->
+  <section class="detail-body">
+    <div class="container">
+      <div class="detail-grid">
+        <div class="fade-up" id="detail-left">
+          <p class="detail-description" id="studio-desc">Cargando descripción...</p>
+
+          <h3 class="detail-amenities-title">Comodidades incluidas</h3>
+          <div class="detail-amenities-grid" id="studio-amenities"></div>
+        </div>
+
+        <div class="detail-sidebar fade-up" id="detail-sidebar">
+          <div class="detail-price-card">
+            <div class="price-label" id="price-label">Precio por noche</div>
+            <div class="price"><span id="studio-price">—</span> <span>MXN</span></div>
+            <p class="price-note" id="price-note">Impuestos incluidos</p>
+            <p class="price-note" style="color: var(--teal); font-weight: 600;">🎉 1 noche de cortesía por cada semana de estancia</p>
+            <p class="price-note" id="children-note"></p>
+            <a href="https://app.littlehotelier.com/properties/aparthotelsiete32direct" target="_blank" rel="noopener" class="btn btn-primary">Reservar Ahora</a>
+          </div>
+
+          <div class="detail-price-card" style="text-align: center; padding: 24px;">
+            <p style="font-size: .875rem; color: var(--gray-500); margin-bottom: 16px;">¿Prefieres llamar para reservar?</p>
+            <a href="https://wa.me/529992551748" target="_blank" rel="noopener" class="btn btn-outline" style="width: 100%;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+              WhatsApp Directo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY (rendered by JS) -->
+  <section class="detail-gallery">
+    <div class="container">
+      <h2 class="fade-up" style="margin-bottom: 32px;">Galería de Fotos</h2>
+      <div class="gallery-grid stagger" id="studio-gallery"></div>
+    </div>
+  </section>
+
+  <!-- ACCESORIOS Y SERVICIOS ADICIONALES -->
+  <section class="extras-section">
+    <div class="container">
+      <div class="section-header fade-up" style="text-align:center; margin-bottom: 32px;">
+        <h2>Servicios y accesorios disponibles</h2>
+        <p class="subtitle">Cuenta con extras para hacer tu estancia más cómoda — algunos sin costo y otros con cargo adicional.</p>
+      </div>
+
+      <div class="extras-grid">
+        <div class="extras-card extras-free fade-up">
+          <div class="extras-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Accesorios bajo solicitud</h3>
+          <p class="extras-sub">Disponibles en recepción sin costo adicional</p>
+          <ul class="extras-list">
+            <li>Licuadora</li>
+            <li>Tostadora</li>
+            <li>Secadora de pelo</li>
+            <li>Plancha</li>
+            <li>Cuna para bebé</li>
+            <li>Abridor de vino</li>
+          </ul>
+        </div>
+
+        <div class="extras-card extras-paid fade-up">
+          <div class="extras-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3>Servicios adicionales con costo</h3>
+          <p class="extras-sub">Solicítalos en recepción</p>
+          <ul class="extras-list">
+            <li>Servicio de lavandería (la recepción recoge y entrega)</li>
+            <li>Servicio de transporte especializado</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/logo-original.png" alt="Aparthotel Siete32">
+          <p>El confort que mereces, al precio que necesitas. Ubicación ideal durante tu estancia en Mérida.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Enlaces</h4>
+          <a href="index.html">Inicio</a><a href="suites.html">Studios</a><a href="servicios.html">Servicios</a><a href="contacto.html">Contacto</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Av. República de Corea x 32 No. 612, Col. Maya, Mérida, Yuc.</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+52 999 255 1748</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Aparthotel Siete32. Todos los derechos reservados.</span>
+        <span>Desarrollado en Mérida, Yucatán.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/529992551748" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <div class="mobile-booking-bar">
+    <div class="price-col"><small id="mobile-studio-name">Studio</small><strong><span id="mobile-studio-price">—</span> <span>MXN</span></strong></div>
+    <a href="https://app.littlehotelier.com/properties/aparthotelsiete32direct" target="_blank" rel="noopener" class="btn btn-primary">Reservar</a>
+  </div>
+
+  <!-- Rooms data + studio renderer -->
+  <script src="js/rooms.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function () {
+      // Read room id from URL hash
+      const id = (window.location.hash || '').replace('#', '').trim();
+      if (!id) {
+        window.location.replace('suites.html');
+        return;
+      }
+      const room = (window.ROOMS || ROOMS).find(r => r.id === id);
+      if (!room) {
+        window.location.replace('suites.html');
+        return;
+      }
+
+      // SVG icons
+      const I = {
+        bed: '<svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>',
+        kitchen: '<svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>',
+        tv: '<svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>',
+        wifi: '<svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>',
+        clean: '<svg viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
+        ac: '<svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><path d="M12 2v4"/><path d="M3 10h18"/><path d="M3 10v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"/><path d="M8 22v-4"/><path d="M16 22v-4"/><path d="M12 22v-4"/></svg>',
+        bath: '<svg viewBox="0 0 24 24"><path d="M4 12h16a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3a1 1 0 0 1 1-1z"/><path d="M6 12V5a2 2 0 0 1 2-2h3v2.25"/></svg>',
+        cal: '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
+        floor: '<svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+        access: '<svg viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2a7 7 0 0 0-14 0v2"/><path d="M5 13l3 8h8l3-8"/></svg>',
+        child: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>'
+      };
+
+      function kitchenText() {
+        if (room.noStove) return 'Microondas, cafetera y frigobar';
+        if (room.frigobar) return 'Cocina totalmente equipada (frigobar)';
+        return 'Cocina totalmente equipada';
+      }
+
+      // Set page title and meta
+      document.title = `${room.name} — Aparthotel Siete32`;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', room.longDesc || room.desc);
+
+      // Hero
+      const heroSection = document.getElementById('detail-hero');
+      if (heroSection) heroSection.style.backgroundImage = `url('assets/images/${room.img}')`;
+      document.getElementById('studio-name').textContent = room.name;
+
+      const meta = document.getElementById('studio-meta');
+      const metaBadges = [];
+      const capLabel = (room.baseGuests === room.guests)
+        ? `Hasta ${room.guests} personas`
+        : (room.baseGuests === 1 && room.guests === 2 ? '1 o 2 personas' : `Desde ${room.baseGuests} hasta ${room.guests} personas`);
+      metaBadges.push(`<span class="badge">${capLabel}</span>`);
+      metaBadges.push(`<span>${room.beds}</span>`);
+      metaBadges.push(`<span>${kitchenText()}</span>`);
+      if (room.floor) metaBadges.push(`<span class="badge">${room.floor}</span>`);
+      meta.innerHTML = metaBadges.join('');
+
+      // Breadcrumb
+      const typeLower = room.type.toLowerCase();
+      const typeLabel = `Studios ${room.type}`;
+      const bcType = document.getElementById('breadcrumb-type');
+      if (bcType) {
+        bcType.href = `suites.html?filter=${room.type}`;
+        bcType.textContent = typeLabel;
+      }
+      document.getElementById('breadcrumb-name').textContent = room.name;
+
+      // Description
+      document.getElementById('studio-desc').textContent = room.longDesc || room.desc;
+
+      // Amenities
+      const amenities = [
+        { icon: I.bed, label: room.beds },
+        { icon: I.kitchen, label: kitchenText() },
+        { icon: I.tv, label: 'Smart TV con cable' },
+        { icon: I.wifi, label: 'Wi-Fi de alta velocidad incluido' },
+        { icon: I.clean, label: 'Limpieza diaria incluida' },
+        { icon: I.ac, label: 'A/C y ventilador' },
+        { icon: I.bath, label: 'Baño privado con toallas y amenidades' },
+        { icon: I.cal, label: 'Tarifa semanal con noche de cortesía' }
+      ];
+      if (room.floor) amenities.push({ icon: I.floor, label: 'Habitación en planta baja (sin escalones)' });
+      if (room.accessible) amenities.push({ icon: I.access, label: 'Habitación accesible para silla de ruedas' });
+      if (room.allowsChildren) amenities.push({ icon: I.child, label: 'Menores de 10 años gratis (hasta 2)' });
+
+      document.getElementById('studio-amenities').innerHTML = amenities.map(a =>
+        `<div class="amenity-item">${a.icon}<span>${a.label}</span></div>`
+      ).join('');
+
+      // Price card
+      const baseLabel = room.baseGuests === 1 ? '1 persona' : `${room.baseGuests} personas`;
+      document.getElementById('price-label').textContent = `Precio por noche desde (${baseLabel})`;
+      document.getElementById('studio-price').textContent = '$' + room.price.toLocaleString();
+
+      const notes = [];
+      if (room.extraCharge) notes.push(`+$${room.extraCharge} por persona adicional`);
+      notes.push('Impuestos incluidos');
+      document.getElementById('price-note').textContent = notes.join(' · ');
+
+      const childrenNote = document.getElementById('children-note');
+      if (room.allowsChildren) {
+        childrenNote.innerHTML = '✓ Menores de 10 años gratis (hasta 2)';
+        childrenNote.style.color = 'var(--gray-500)';
+      } else {
+        childrenNote.innerHTML = 'No aplica para menores';
+        childrenNote.style.color = 'var(--gray-500)';
+      }
+
+      // Mobile booking bar
+      document.getElementById('mobile-studio-name').textContent = room.name;
+      document.getElementById('mobile-studio-price').textContent = '$' + room.price.toLocaleString();
+
+      // Gallery — main image + 3 detail images from the pool
+      const galleryImages = [
+        { src: room.img, alt: `${room.name} - Vista principal` },
+        { src: 'room-detail-1.jpg', alt: `${room.name} - Interior` },
+        { src: 'room-detail-3.jpg', alt: `${room.name} - Detalle` },
+        { src: 'room-detail-4.jpg', alt: `${room.name} - Cocina` }
+      ];
+      document.getElementById('studio-gallery').innerHTML = galleryImages.map(g =>
+        `<img src="assets/images/${g.src}" alt="${g.alt}" loading="lazy">`
+      ).join('');
+
+      // Listen for hash changes so navigation between rooms updates the page
+      window.addEventListener('hashchange', () => {
+        window.location.reload();
+      });
+    })();
+  </script>
+</body>
+</html>
