@@ -1008,24 +1008,20 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
   color: var(--gray-500);
   margin-bottom: 6px;
 }
-/* Same character as .suite-pricing .price (font-family: heading,
-   bold, navy) but bigger to match the prominence of this card.
-   The number span (#studio-price) inherits the parent .price font;
-   only the currency span (.price-currency) is overridden to small. */
+/* Identical to .suite-pricing .price, scaled up. HTML structure
+   mirrors the listing card ("$1,300 <span>MXN / noche</span>") so
+   the .price span selector only catches the currency. */
 .studio-price-card .price {
-  font-family: var(--font-heading);
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: 700;
   color: var(--navy);
   line-height: 1;
   margin-bottom: 8px;
 }
-.studio-price-card .price .price-currency {
-  font-family: var(--font-body);
+.studio-price-card .price span {
   font-size: .9375rem;
   font-weight: 400;
   color: var(--gray-500);
-  letter-spacing: 0;
 }
 .studio-price-card .price-extra {
   display: block;

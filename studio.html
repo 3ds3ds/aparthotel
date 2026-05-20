@@ -65,7 +65,7 @@
         <div class="detail-sidebar fade-up" id="detail-sidebar">
           <div class="studio-price-card">
             <span class="price-label" id="price-label">Precio por noche desde</span>
-            <div class="price"><span id="studio-price">—</span> <span class="price-currency">MXN / noche</span></div>
+            <div class="price" id="studio-price-block">—</div>
             <span class="price-extra" id="price-policy">+$150 por persona adicional · Menores de 10 años gratis (hasta 2)</span>
             <span class="price-tax">Impuestos incluidos</span>
             <a href="https://app.littlehotelier.com/properties/aparthotelsiete32direct" target="_blank" rel="noopener" class="btn btn-primary studio-book-btn">Reservar Ahora</a>
@@ -323,10 +323,11 @@
         `<div class="amenity-item">${a.icon}<span>${a.label}</span></div>`
       ).join('');
 
-      // Price card
+      // Price card — same structure as suites listing card so CSS .price span only catches the currency
       const baseLabel = room.baseGuests === 1 ? '1 persona' : `${room.baseGuests} personas`;
       document.getElementById('price-label').textContent = `Precio por noche desde (${baseLabel})`;
-      document.getElementById('studio-price').textContent = '$' + room.price.toLocaleString();
+      document.getElementById('studio-price-block').innerHTML =
+        `$${room.price.toLocaleString()} <span>MXN / noche</span>`;
 
       // Combine extra-person charge + minors policy into a single line
       const policyParts = [];
