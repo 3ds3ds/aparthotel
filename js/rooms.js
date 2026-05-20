@@ -154,6 +154,13 @@ function renderRooms(filter, minGuests) {
 
   container.innerHTML = filtered.map(r => {
     const baseLabel = r.baseGuests === 1 ? '1 persona' : `${r.baseGuests} personas`;
+
+    // Combine extra-person charge with minors policy into a single line
+    const policyParts = [];
+    if (r.extraCharge) policyParts.push(`+$${r.extraCharge} por persona adicional`);
+    policyParts.push(r.allowsChildren ? 'Menores de 10 años gratis (hasta 2)' : 'No aplica para menores');
+    const policyLine = policyParts.join(' · ');
+
     return `
     <article class="suite-card fade-up" id="${r.id}">
       <div class="suite-image">
@@ -177,9 +184,8 @@ function renderRooms(filter, minGuests) {
           <div>
             <span class="price-label">Desde (${baseLabel})</span>
             <div class="price">$${r.price.toLocaleString()} <span>MXN / noche</span></div>
-            ${r.extraCharge ? '<span class="price-extra">+$'+r.extraCharge+' por persona adicional</span>' : ''}
+            <span class="price-extra">${policyLine}</span>
             <span class="price-tax">Impuestos incluidos</span>
-            ${r.allowsChildren ? '<span class="price-children">Menores de 10 años gratis (hasta 2)</span>' : '<span class="price-children">No aplica para menores</span>'}
           </div>
           <a href="${detailLinkFor(r)}" class="btn btn-primary">Ver Detalles</a>
         </div>

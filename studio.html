@@ -63,21 +63,121 @@
         </div>
 
         <div class="detail-sidebar fade-up" id="detail-sidebar">
-          <div class="detail-price-card">
-            <div class="price-label" id="price-label">Precio por noche</div>
-            <div class="price"><span id="studio-price">—</span> <span>MXN</span></div>
-            <p class="price-note" id="price-note">Impuestos incluidos</p>
-            <p class="price-note" style="color: var(--teal); font-weight: 600;">🎉 1 noche de cortesía por cada semana de estancia</p>
-            <p class="price-note" id="children-note"></p>
-            <a href="https://app.littlehotelier.com/properties/aparthotelsiete32direct" target="_blank" rel="noopener" class="btn btn-primary">Reservar Ahora</a>
+          <div class="detail-price-card studio-price-card">
+            <span class="price-label" id="price-label">Precio por noche desde</span>
+            <div class="price"><span id="studio-price">—</span> <span>MXN / noche</span></div>
+            <span class="price-extra" id="price-policy">+$150 por persona adicional · Menores de 10 años gratis (hasta 2)</span>
+            <span class="price-tax">Impuestos incluidos</span>
+            <div class="suite-promo studio-promo">🎉 1 noche de cortesía por cada semana de estancia</div>
+            <a href="https://app.littlehotelier.com/properties/aparthotelsiete32direct" target="_blank" rel="noopener" class="btn btn-primary studio-book-btn">Reservar Ahora</a>
           </div>
 
-          <div class="detail-price-card" style="text-align: center; padding: 24px;">
-            <p style="font-size: .875rem; color: var(--gray-500); margin-bottom: 16px;">¿Prefieres llamar para reservar?</p>
-            <a href="https://wa.me/529992551748" target="_blank" rel="noopener" class="btn btn-outline" style="width: 100%;">
+          <div class="detail-price-card studio-wsp-card">
+            <p class="studio-wsp-text">¿Prefieres llamar para reservar?</p>
+            <a href="https://wa.me/529992551748" target="_blank" rel="noopener" class="btn btn-outline studio-wsp-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
               WhatsApp Directo
             </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESORIOS Y SERVICIOS ADICIONALES -->
+  <section class="extras-section">
+    <div class="container">
+      <div class="section-header fade-up" style="text-align:center; margin-bottom: 32px;">
+        <h2>Servicios y accesorios disponibles</h2>
+        <p class="subtitle">Extras para hacer tu estancia más cómoda — algunos sin costo y otros con cargo adicional.</p>
+      </div>
+
+      <div class="extras-grid">
+        <!-- Accesorios bajo solicitud (sin costo) -->
+        <div class="extras-card extras-free fade-up">
+          <div class="extras-card-header">
+            <div class="extras-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="extras-card-titles">
+              <span class="extras-tag extras-tag-free">Sin costo</span>
+              <h3>Accesorios bajo solicitud</h3>
+              <p class="extras-sub">Disponibles en recepción cuando los necesites</p>
+            </div>
+          </div>
+
+          <div class="extras-items">
+            <div class="extras-item">
+              <span class="extras-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              </span>
+              <span class="extras-item-label">Licuadora</span>
+            </div>
+            <div class="extras-item">
+              <span class="extras-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="10" rx="2"/><line x1="8" y1="11" x2="8" y2="15"/><line x1="12" y1="11" x2="12" y2="15"/><line x1="16" y1="11" x2="16" y2="15"/><line x1="6" y1="5" x2="6" y2="8"/></svg>
+              </span>
+              <span class="extras-item-label">Tostadora</span>
+            </div>
+            <div class="extras-item">
+              <span class="extras-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"/><path d="M17.73 2.27A2.5 2.5 0 1 1 19.5 6.5H2"/><path d="M14.5 11.5A2.5 2.5 0 1 0 18.5 16H2"/></svg>
+              </span>
+              <span class="extras-item-label">Secadora de pelo</span>
+            </div>
+            <div class="extras-item">
+              <span class="extras-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18h12l-2-7H8z"/><path d="M9 11V8a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v3"/></svg>
+              </span>
+              <span class="extras-item-label">Plancha</span>
+            </div>
+            <div class="extras-item">
+              <span class="extras-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </span>
+              <span class="extras-item-label">Cuna para bebé</span>
+            </div>
+            <div class="extras-item">
+              <span class="extras-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2h8"/><path d="M9 2v3.5L7 9v11a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9l-2-3.5V2"/><line x1="7" y1="14" x2="17" y2="14"/></svg>
+              </span>
+              <span class="extras-item-label">Abridor de vino</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicios adicionales con costo -->
+        <div class="extras-card extras-paid fade-up">
+          <div class="extras-card-header">
+            <div class="extras-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="extras-card-titles">
+              <span class="extras-tag extras-tag-paid">Con costo</span>
+              <h3>Servicios adicionales</h3>
+              <p class="extras-sub">Solicítalos en recepción cuando los necesites</p>
+            </div>
+          </div>
+
+          <div class="extras-items">
+            <div class="extras-item">
+              <span class="extras-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="14" r="4"/><circle cx="8" cy="6" r="1"/></svg>
+              </span>
+              <div class="extras-item-content">
+                <span class="extras-item-label">Servicio de lavandería</span>
+                <span class="extras-item-sub">La recepción recoge y entrega</span>
+              </div>
+            </div>
+            <div class="extras-item">
+              <span class="extras-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l2-5h10l2 5"/><rect x="3" y="12" width="18" height="7" rx="2"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="16.5" cy="19" r="1.5"/></svg>
+              </span>
+              <div class="extras-item-content">
+                <span class="extras-item-label">Transporte especializado</span>
+                <span class="extras-item-sub">Servicio bajo solicitud</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -89,46 +189,6 @@
     <div class="container">
       <h2 class="fade-up" style="margin-bottom: 32px;">Galería de Fotos</h2>
       <div class="gallery-grid stagger" id="studio-gallery"></div>
-    </div>
-  </section>
-
-  <!-- ACCESORIOS Y SERVICIOS ADICIONALES -->
-  <section class="extras-section">
-    <div class="container">
-      <div class="section-header fade-up" style="text-align:center; margin-bottom: 32px;">
-        <h2>Servicios y accesorios disponibles</h2>
-        <p class="subtitle">Cuenta con extras para hacer tu estancia más cómoda — algunos sin costo y otros con cargo adicional.</p>
-      </div>
-
-      <div class="extras-grid">
-        <div class="extras-card extras-free fade-up">
-          <div class="extras-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
-          </div>
-          <h3>Accesorios bajo solicitud</h3>
-          <p class="extras-sub">Disponibles en recepción sin costo adicional</p>
-          <ul class="extras-list">
-            <li>Licuadora</li>
-            <li>Tostadora</li>
-            <li>Secadora de pelo</li>
-            <li>Plancha</li>
-            <li>Cuna para bebé</li>
-            <li>Abridor de vino</li>
-          </ul>
-        </div>
-
-        <div class="extras-card extras-paid fade-up">
-          <div class="extras-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <h3>Servicios adicionales con costo</h3>
-          <p class="extras-sub">Solicítalos en recepción</p>
-          <ul class="extras-list">
-            <li>Servicio de lavandería (la recepción recoge y entrega)</li>
-            <li>Servicio de transporte especializado</li>
-          </ul>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -268,19 +328,11 @@
       document.getElementById('price-label').textContent = `Precio por noche desde (${baseLabel})`;
       document.getElementById('studio-price').textContent = '$' + room.price.toLocaleString();
 
-      const notes = [];
-      if (room.extraCharge) notes.push(`+$${room.extraCharge} por persona adicional`);
-      notes.push('Impuestos incluidos');
-      document.getElementById('price-note').textContent = notes.join(' · ');
-
-      const childrenNote = document.getElementById('children-note');
-      if (room.allowsChildren) {
-        childrenNote.innerHTML = '✓ Menores de 10 años gratis (hasta 2)';
-        childrenNote.style.color = 'var(--gray-500)';
-      } else {
-        childrenNote.innerHTML = 'No aplica para menores';
-        childrenNote.style.color = 'var(--gray-500)';
-      }
+      // Combine extra-person charge + minors policy into a single line
+      const policyParts = [];
+      if (room.extraCharge) policyParts.push(`+$${room.extraCharge} por persona adicional`);
+      policyParts.push(room.allowsChildren ? 'Menores de 10 años gratis (hasta 2)' : 'No aplica para menores');
+      document.getElementById('price-policy').textContent = policyParts.join(' · ');
 
       // Mobile booking bar
       document.getElementById('mobile-studio-name').textContent = room.name;
