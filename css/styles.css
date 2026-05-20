@@ -611,3 +611,256 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 }
 .gallery-grid img:hover { transform: scale(1.02); box-shadow: var(--shadow-hover); }
 
+/* =============================================
+   EXTRAS SECTION (Accesorios / Servicios adicionales)
+   ============================================= */
+.extras-section {
+  padding: 64px 0 80px;
+  background: var(--off-white);
+}
+.extras-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .extras-grid { grid-template-columns: 1fr 1fr; }
+}
+.extras-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px;
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition);
+}
+.extras-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.extras-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.extras-icon svg { width: 28px; height: 28px; }
+.extras-free .extras-icon {
+  background: rgba(93, 148, 161, 0.12);
+  color: var(--teal);
+}
+.extras-paid .extras-icon {
+  background: rgba(15, 23, 42, 0.08);
+  color: var(--navy);
+}
+.extras-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.extras-sub {
+  font-size: .9375rem;
+  color: var(--gray-500);
+  margin-bottom: 20px;
+}
+.extras-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+}
+.extras-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: .9375rem;
+  color: var(--gray-700);
+}
+.extras-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 7px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+.extras-paid .extras-list li::before { background: var(--navy); }
+.extras-note {
+  max-width: 900px;
+  margin: 32px auto 0;
+  padding: 18px 24px;
+  background: var(--white);
+  border-left: 4px solid var(--teal);
+  border-radius: 4px;
+  font-size: .9375rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+/* =============================================
+   TABS (Servicios — por tipo de huésped)
+   ============================================= */
+.tabs-section { padding: 80px 0 64px; }
+.tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  background: var(--off-white);
+  border-radius: 12px;
+  padding: 8px;
+}
+.tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: .9375rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  cursor: pointer;
+  transition: all var(--transition);
+  flex: 1 1 auto;
+  justify-content: center;
+  min-width: 180px;
+}
+.tab-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.tab-btn:hover { color: var(--navy); background: var(--white); }
+.tab-btn.active {
+  background: var(--navy);
+  color: var(--white);
+  box-shadow: var(--shadow-card);
+}
+.tab-btn.active svg { stroke: var(--white); }
+
+.tabs-content {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  padding: 40px;
+  min-height: 380px;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; animation: fadeIn .35s ease-out; }
+.tab-panel-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .tab-panel-grid { grid-template-columns: 1.1fr 1fr; }
+}
+.tab-panel-text h3 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.tab-panel-text > p {
+  color: var(--gray-500);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.tab-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tab-benefits li {
+  position: relative;
+  padding-left: 28px;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+.tab-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0; top: 0;
+  width: 20px; height: 20px;
+  background: var(--teal);
+  color: var(--white);
+  font-size: .75rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tab-benefits li strong { color: var(--navy); }
+.tab-panel-image img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 767px) {
+  .tabs-content { padding: 24px; }
+  .tab-btn { font-size: .875rem; padding: 10px 12px; min-width: 0; flex: 1 1 45%; }
+}
+
+/* =============================================
+   CTA SECTION (Servicios)
+   ============================================= */
+.cta-section { padding: 32px 0 80px; }
+.cta-card {
+  background: linear-gradient(135deg, var(--navy) 0%, #1f2a44 100%);
+  color: var(--white);
+  border-radius: 16px;
+  padding: 56px 32px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-hover);
+}
+.cta-card h2 {
+  color: var(--white);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin-bottom: 12px;
+}
+.cta-card p {
+  color: var(--gray-200);
+  max-width: 700px;
+  margin: 0 auto 28px;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.cta-card .btn-outline {
+  border-color: var(--white);
+  color: var(--white);
+}
+.cta-card .btn-outline:hover {
+  background: var(--white);
+  color: var(--navy);
+}
+
+/* Children price label on suite cards */
+.price-children {
+  display: block;
+  font-size: .75rem;
+  color: var(--gray-500);
+  margin-top: 4px;
+  font-style: italic;
+}
+
