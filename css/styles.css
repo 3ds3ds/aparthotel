@@ -1012,7 +1012,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
    mirrors the listing card ("$1,300 <span>MXN / noche</span>") so
    the .price span selector only catches the currency. */
 .studio-price-card .price {
-  font-size: 2.75rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: var(--navy);
   line-height: 1;
