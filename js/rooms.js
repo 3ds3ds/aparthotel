@@ -10,14 +10,14 @@ const ROOMS = [
     price: 1300, baseGuests: 3, extraCharge: 150, guests: 4,
     beds: "Capacidad para 4 personas", img: "suite-master.jpg", allowsChildren: true,
     desc: "Master Studio amplio con cocina totalmente equipada, ideal para familias y equipos de trabajo.",
-    longDesc: "Nuestro Master Studio No. 10 es un espacio amplio con capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida y tarifa semanal con una noche de cortesía por cada semana de estancia."
+    longDesc: "Nuestro Master Studio No. 10 es un espacio amplio con capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida."
   },
   {
     id: "jr-11", name: "Junior Studio No.11", type: "Junior",
     price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
     beds: "2 camas matrimoniales", img: "suite-junior.jpg", allowsChildren: true,
     desc: "Junior Studio con cocina completa, mesa de comedor y de trabajo, y área de dormitorio. Ideal para familias o estancias cómodas.",
-    longDesc: "El Junior Studio No. 11 cuenta con dos camas matrimoniales y capacidad para 1 a 4 personas. Equipado con cocina completa (estufa, refrigerador, microondas y cafetera, vajilla y cubertería), mesa de comedor, mesa de trabajo y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Tarifa semanal con una noche de cortesía por cada semana."
+    longDesc: "El Junior Studio No. 11 cuenta con dos camas matrimoniales y capacidad para 1 a 4 personas. Equipado con cocina completa (estufa, refrigerador, microondas y cafetera, vajilla y cubertería), mesa de comedor, mesa de trabajo y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida."
   },
   {
     id: "jr-12", name: "Junior Studio No.12", type: "Junior",
@@ -66,7 +66,7 @@ const ROOMS = [
     price: 1300, baseGuests: 3, extraCharge: 150, guests: 5,
     beds: "1 cama king + camas adicionales", img: "suite-master.jpg", allowsChildren: true,
     desc: "Master Studio amplio con cama king y cocina totalmente equipada. Espacio cómodo y funcional para familias o equipos de trabajo.",
-    longDesc: "El Master Studio No. 18 es uno de nuestros espacios más amplios, con capacidad para hasta 5 personas. Equipado con una cama king size más camas adicionales, cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería) y mesa de comedor. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida y tarifa semanal con una noche de cortesía por cada semana."
+    longDesc: "El Master Studio No. 18 es uno de nuestros espacios más amplios, con capacidad para hasta 5 personas. Equipado con una cama king size más camas adicionales, cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería) y mesa de comedor. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida."
   },
   {
     id: "master-19", name: "Master Studio No.19", type: "Master",
