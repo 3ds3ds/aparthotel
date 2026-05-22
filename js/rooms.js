@@ -10,27 +10,27 @@ const ROOMS = [
     price: 1300, baseGuests: 3, extraCharge: 150, guests: 4,
     beds: "Capacidad para 4 personas", img: "suite-master.jpg", allowsChildren: true,
     desc: "Master Studio amplio con cocina totalmente equipada, ideal para familias y equipos de trabajo.",
-    longDesc: "Nuestro Master Studio No. 10 es un espacio amplio con capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
+    longDesc: "Nuestro Master Studio No. 10 es un espacio amplio con capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
   },
   {
     id: "jr-11", name: "Junior Studio No.11", type: "Junior",
     price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
     beds: "2 camas matrimoniales", img: "suite-junior.jpg", allowsChildren: true,
-    desc: "Junior Studio con cocina completa, mesa de comedor y de trabajo, y área de dormitorio. Ideal para familias o estancias cómodas.",
-    longDesc: "El Junior Studio No. 11 cuenta con dos camas matrimoniales y capacidad para 1 a 4 personas. Equipado con cocina completa (estufa, refrigerador, microondas y cafetera, vajilla y cubertería), mesa de comedor, mesa de trabajo y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
+    desc: "Junior Studio con cocina completa, mesa de comedor/trabajo y área de dormitorio. Ideal para familias o estancias cómodas.",
+    longDesc: "El Junior Studio No. 11 cuenta con dos camas matrimoniales y capacidad para 1 a 4 personas. Equipado con cocina completa (estufa, refrigerador, microondas y cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
   },
   {
     id: "jr-12", name: "Junior Studio No.12", type: "Junior",
     price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
     beds: "2 camas matrimoniales", img: "room-detail-3.jpg", allowsChildren: true,
-    desc: "Junior Studio con cocina completa, mesa de comedor y de trabajo, y área de dormitorio. Espacio cómodo para tu estancia en Mérida.",
+    desc: "Junior Studio con cocina completa, mesa de comedor/trabajo y área de dormitorio. Espacio cómodo para tu estancia en Mérida.",
     longDesc: "El Junior Studio No. 12 ofrece dos camas matrimoniales y capacidad para 1 a 4 personas. Cocina completa con estufa, refrigerador, microondas y cafetera, vajilla y cubertería, mesa de comedor/trabajo y área de dormitorio. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para familias o estancias prolongadas en Mérida."
   },
   {
     id: "jr-13", name: "Junior Studio No.13", type: "Junior",
     price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
     beds: "2 camas matrimoniales", img: "room-detail-4.jpg", allowsChildren: true,
-    desc: "Junior Studio equipado con cocina completa, mesa de comedor y de trabajo, y área de dormitorio. Perfecto para familias o equipos de trabajo.",
+    desc: "Junior Studio equipado con cocina completa, mesa de comedor/trabajo y área de dormitorio. Perfecto para familias o equipos de trabajo.",
     longDesc: "El Junior Studio No. 13 cuenta con dos camas matrimoniales y capacidad para 1 a 4 personas. Equipado con cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Limpieza diaria incluida. Recepción 24/7. Cómodo y funcional para familias o equipos de trabajo."
   },
   {
@@ -66,14 +66,14 @@ const ROOMS = [
     price: 1300, baseGuests: 3, extraCharge: 150, guests: 5,
     beds: "1 cama king + camas adicionales", img: "suite-master.jpg", allowsChildren: true,
     desc: "Master Studio amplio con cama king y cocina totalmente equipada. Espacio cómodo y funcional para familias o equipos de trabajo.",
-    longDesc: "El Master Studio No. 18 es uno de nuestros espacios más amplios, con capacidad para hasta 5 personas. Equipado con una cama king size más camas adicionales, cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería) y mesa de comedor. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
+    longDesc: "El Master Studio No. 18 es uno de nuestros espacios más amplios, con capacidad para hasta 5 personas. Equipado con una cama king size más camas adicionales, cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería) y mesa de comedor/trabajo. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
   },
   {
     id: "master-19", name: "Master Studio No.19", type: "Master",
     price: 1300, baseGuests: 3, extraCharge: 150, guests: 5,
     beds: "1 cama queen + camas adicionales", img: "portada-master.png", allowsChildren: true, hasSofa: true,
     desc: "Master Studio con cama queen, sofá y cocina totalmente equipada. Amplio y cómodo para familias o equipos de trabajo.",
-    longDesc: "El Master Studio No. 19 es un espacio amplio con capacidad para hasta 5 personas, con cama queen size más camas adicionales y un sofá para mayor confort. Cocina totalmente equipada, mesa de comedor, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para familias grandes o equipos de trabajo."
+    longDesc: "El Master Studio No. 19 es un espacio amplio con capacidad para hasta 5 personas, con cama queen size más camas adicionales y un sofá para mayor confort. Cocina totalmente equipada, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para familias grandes o equipos de trabajo."
   },
   {
     id: "exec-20", name: "Executive Studio No.20", type: "Executive",
@@ -115,7 +115,7 @@ const ROOMS = [
     price: 1300, baseGuests: 3, extraCharge: 150, guests: 5,
     beds: "Camas para hasta 5 personas", img: "room-detail-1.jpg", floor: "Planta Baja", allowsChildren: true, frigobar: true, accessible: true,
     desc: "Master Studio amplio en planta baja, equipado especialmente para huéspedes con movilidad reducida: agarraderas en el baño y puerta amplia para silla de ruedas. Cocina totalmente equipada y frigobar.",
-    longDesc: "El Master Studio No. 25 es nuestro espacio más accesible: está en planta baja y equipado especialmente para huéspedes con movilidad reducida, con agarraderas en el baño y puerta amplia para silla de ruedas. Capacidad para hasta 5 personas, cocina totalmente equipada con frigobar, mesa de comedor, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado adaptado. Limpieza diaria incluida. Recepción 24/7. Ideal para pacientes en recuperación, acompañantes o familias con un miembro con movilidad reducida."
+    longDesc: "El Master Studio No. 25 es nuestro espacio más accesible: está en planta baja y equipado especialmente para huéspedes con movilidad reducida, con agarraderas en el baño y puerta amplia para silla de ruedas. Capacidad para hasta 5 personas, cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado adaptado. Limpieza diaria incluida. Recepción 24/7. Ideal para pacientes en recuperación, acompañantes o familias con un miembro con movilidad reducida."
   }
 ];
 
