@@ -10,112 +10,112 @@ const ROOMS = [
     price: 1300, baseGuests: 3, extraCharge: 150, guests: 4,
     beds: "Capacidad para 4 personas", img: "suite-master.jpg", allowsChildren: true,
     desc: "Master Studio amplio con cocina totalmente equipada, ideal para familias y equipos de trabajo.",
-    longDesc: "Nuestro Master Studio No. 10 es un espacio amplio con capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida."
+    longDesc: "Nuestro Master Studio No. 10 es un espacio amplio con capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
   },
   {
     id: "jr-11", name: "Junior Studio No.11", type: "Junior",
     price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
     beds: "2 camas matrimoniales", img: "suite-junior.jpg", allowsChildren: true,
     desc: "Junior Studio con cocina completa, mesa de comedor y de trabajo, y área de dormitorio. Ideal para familias o estancias cómodas.",
-    longDesc: "El Junior Studio No. 11 cuenta con dos camas matrimoniales y capacidad para 1 a 4 personas. Equipado con cocina completa (estufa, refrigerador, microondas y cafetera, vajilla y cubertería), mesa de comedor, mesa de trabajo y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida."
+    longDesc: "El Junior Studio No. 11 cuenta con dos camas matrimoniales y capacidad para 1 a 4 personas. Equipado con cocina completa (estufa, refrigerador, microondas y cafetera, vajilla y cubertería), mesa de comedor, mesa de trabajo y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
   },
   {
     id: "jr-12", name: "Junior Studio No.12", type: "Junior",
     price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
     beds: "2 camas matrimoniales", img: "room-detail-3.jpg", allowsChildren: true,
     desc: "Junior Studio con cocina completa, mesa de comedor y de trabajo, y área de dormitorio. Espacio cómodo para tu estancia en Mérida.",
-    longDesc: "El Junior Studio No. 12 ofrece dos camas matrimoniales y capacidad para 1 a 4 personas. Cocina completa con estufa, refrigerador, microondas y cafetera, vajilla y cubertería, mesa de comedor/trabajo y área de dormitorio. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Ideal para familias o estancias prolongadas en Mérida."
+    longDesc: "El Junior Studio No. 12 ofrece dos camas matrimoniales y capacidad para 1 a 4 personas. Cocina completa con estufa, refrigerador, microondas y cafetera, vajilla y cubertería, mesa de comedor/trabajo y área de dormitorio. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para familias o estancias prolongadas en Mérida."
   },
   {
     id: "jr-13", name: "Junior Studio No.13", type: "Junior",
     price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
     beds: "2 camas matrimoniales", img: "room-detail-4.jpg", allowsChildren: true,
     desc: "Junior Studio equipado con cocina completa, mesa de comedor y de trabajo, y área de dormitorio. Perfecto para familias o equipos de trabajo.",
-    longDesc: "El Junior Studio No. 13 cuenta con dos camas matrimoniales y capacidad para 1 a 4 personas. Equipado con cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Limpieza diaria incluida. Cómodo y funcional para familias o equipos de trabajo."
+    longDesc: "El Junior Studio No. 13 cuenta con dos camas matrimoniales y capacidad para 1 a 4 personas. Equipado con cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Limpieza diaria incluida. Recepción 24/7. Cómodo y funcional para familias o equipos de trabajo."
   },
   {
     id: "jr-14", name: "Junior Studio No.14", type: "Junior",
     price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
     beds: "2 camas queen size", img: "suite-junior.jpg", allowsChildren: true,
     desc: "Junior Studio con dos camas queen, cocina completa y mesa de comedor/trabajo. Ideal para familias o grupos pequeños.",
-    longDesc: "El Junior Studio No. 14 cuenta con dos camas queen size y capacidad para 1 a 4 personas. Espacio cómodo con cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Ideal para familias o grupos pequeños que buscan camas más amplias."
+    longDesc: "El Junior Studio No. 14 cuenta con dos camas queen size y capacidad para 1 a 4 personas. Espacio cómodo con cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para familias o grupos pequeños que buscan camas más amplias."
   },
   {
     id: "jr-15", name: "Junior Studio No.15", type: "Junior",
     price: 1150, baseGuests: 1, extraCharge: 150, guests: 3,
     beds: "1 cama king + 1 individual", img: "room-detail-3.jpg", allowsChildren: true,
     desc: "Junior Studio con cama king e individual, cocina completa y mesa de comedor/trabajo. Cómodo para estancias familiares o de trabajo.",
-    longDesc: "El Junior Studio No. 15 cuenta con una cama king size y una cama individual, capacidad para 1 a 3 personas. Cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Limpieza diaria incluida. Ideal para parejas con un menor o estancias familiares cortas."
+    longDesc: "El Junior Studio No. 15 cuenta con una cama king size y una cama individual, capacidad para 1 a 3 personas. Cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para parejas con un menor o estancias familiares cortas."
   },
   {
     id: "jr-16", name: "Junior Studio No.16", type: "Junior",
     price: 1150, baseGuests: 1, extraCharge: 150, guests: 3,
     beds: "1 cama king + 1 individual", img: "room-detail-4.jpg", allowsChildren: true,
     desc: "Junior Studio con cama king e individual, cocina completa y mesa de comedor/trabajo. Espacio funcional y cómodo.",
-    longDesc: "El Junior Studio No. 16 ofrece una cama king size y una cama individual, capacidad para 1 a 3 personas. Cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado. Limpieza diaria incluida. Funcional y cómodo para una pareja con menor o un viajero de trabajo con acompañante."
+    longDesc: "El Junior Studio No. 16 ofrece una cama king size y una cama individual, capacidad para 1 a 3 personas. Cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado. Limpieza diaria incluida. Recepción 24/7. Funcional y cómodo para una pareja con menor o un viajero de trabajo con acompañante."
   },
   {
     id: "exec-17", name: "Executive Studio No.17", type: "Executive",
     price: 950, baseGuests: 1, extraCharge: 0, guests: 2,
     beds: "1 cama queen size", img: "suite-executive.jpg", allowsChildren: true, noStove: true,
     desc: "Executive Studio con microondas, cafetera, frigobar, vajilla y cubertería. Cuenta con mesa de comedor/trabajo, ideal para estancias de 1 o 2 personas.",
-    longDesc: "El Executive Studio No. 17 es ideal para 1 o 2 personas, con una cama queen size. Cuenta con microondas, cafetera, frigobar, vajilla y cubertería (no incluye estufa), mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Perfecto para viajeros que buscan una estancia compacta y cómoda en Mérida."
+    longDesc: "El Executive Studio No. 17 es ideal para 1 o 2 personas, con una cama queen size. Cuenta con microondas, cafetera, frigobar, vajilla y cubertería, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Perfecto para viajeros que buscan una estancia compacta y cómoda en Mérida."
   },
   {
     id: "master-18", name: "Master Studio No.18", type: "Master",
     price: 1300, baseGuests: 3, extraCharge: 150, guests: 5,
     beds: "1 cama king + camas adicionales", img: "suite-master.jpg", allowsChildren: true,
     desc: "Master Studio amplio con cama king y cocina totalmente equipada. Espacio cómodo y funcional para familias o equipos de trabajo.",
-    longDesc: "El Master Studio No. 18 es uno de nuestros espacios más amplios, con capacidad para hasta 5 personas. Equipado con una cama king size más camas adicionales, cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería) y mesa de comedor. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida."
+    longDesc: "El Master Studio No. 18 es uno de nuestros espacios más amplios, con capacidad para hasta 5 personas. Equipado con una cama king size más camas adicionales, cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería) y mesa de comedor. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
   },
   {
     id: "master-19", name: "Master Studio No.19", type: "Master",
     price: 1300, baseGuests: 3, extraCharge: 150, guests: 5,
     beds: "1 cama queen + camas adicionales", img: "portada-master.png", allowsChildren: true, hasSofa: true,
     desc: "Master Studio con cama queen, sofá y cocina totalmente equipada. Amplio y cómodo para familias o equipos de trabajo.",
-    longDesc: "El Master Studio No. 19 es un espacio amplio con capacidad para hasta 5 personas, con cama queen size más camas adicionales y un sofá para mayor confort. Cocina totalmente equipada, mesa de comedor, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Ideal para familias grandes o equipos de trabajo."
+    longDesc: "El Master Studio No. 19 es un espacio amplio con capacidad para hasta 5 personas, con cama queen size más camas adicionales y un sofá para mayor confort. Cocina totalmente equipada, mesa de comedor, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para familias grandes o equipos de trabajo."
   },
   {
     id: "exec-20", name: "Executive Studio No.20", type: "Executive",
     price: 1000, baseGuests: 1, extraCharge: 0, guests: 2,
     beds: "1 cama king size", img: "portada-exec.png", floor: "Planta Baja", allowsChildren: false, frigobar: true,
     desc: "Executive Studio en planta baja con cama king, cocina totalmente equipada y frigobar. Acceso sin escalones, ideal para 1 o 2 personas.",
-    longDesc: "El Executive Studio No. 20 está en planta baja, con cama king size y capacidad para 1 o 2 personas. Equipado con cocina totalmente equipada (con frigobar en lugar de refrigerador), mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Acceso sin escalones. Limpieza diaria incluida. No aplica para menores."
+    longDesc: "El Executive Studio No. 20 está en planta baja, con cama king size y capacidad para 1 o 2 personas. Cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Acceso sin escalones. Limpieza diaria incluida. Recepción 24/7. Habitación para adultos."
   },
   {
     id: "exec-21", name: "Executive Studio No.21", type: "Executive",
     price: 1000, baseGuests: 1, extraCharge: 0, guests: 2,
     beds: "1 cama king size", img: "suite-executive.jpg", floor: "Planta Baja", allowsChildren: false, frigobar: true,
     desc: "Executive Studio en planta baja con cama king, cocina totalmente equipada y frigobar. Acceso sin escalones, ideal para 1 o 2 personas.",
-    longDesc: "El Executive Studio No. 21 está en planta baja, con cama king size y capacidad para 1 o 2 personas. Cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Acceso sin escalones, ideal para huéspedes que prefieren evitar escaleras. Limpieza diaria incluida. No aplica para menores."
+    longDesc: "El Executive Studio No. 21 está en planta baja, con cama king size y capacidad para 1 o 2 personas. Cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Acceso sin escalones, ideal para huéspedes que prefieren evitar escaleras. Limpieza diaria incluida. Recepción 24/7. Habitación para adultos."
   },
   {
     id: "exec-22", name: "Executive Studio No.22", type: "Executive",
     price: 1000, baseGuests: 1, extraCharge: 0, guests: 2,
     beds: "1 cama king size", img: "portada-exec.png", floor: "Planta Baja", allowsChildren: false, frigobar: true,
     desc: "Executive Studio en planta baja con cama king, cocina totalmente equipada y frigobar. Acceso sin escalones, ideal para 1 o 2 personas.",
-    longDesc: "El Executive Studio No. 22 está en planta baja, con cama king size y capacidad para 1 o 2 personas. Cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Acceso sin escalones. Limpieza diaria incluida. No aplica para menores."
+    longDesc: "El Executive Studio No. 22 está en planta baja, con cama king size y capacidad para 1 o 2 personas. Cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Acceso sin escalones. Limpieza diaria incluida. Recepción 24/7. Habitación para adultos."
   },
   {
     id: "jr-23", name: "Junior Studio No.23", type: "Junior",
     price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
     beds: "2 camas matrimoniales", img: "suite-junior.jpg", floor: "Planta Baja", allowsChildren: true, frigobar: true,
     desc: "Junior Studio amplio en planta baja con dos camas matrimoniales, cocina totalmente equipada y frigobar. Acceso sin escalones.",
-    longDesc: "El Junior Studio No. 23 está en planta baja, con acceso sin escalones. Cuenta con dos camas matrimoniales y capacidad para 1 a 4 personas. Cocina totalmente equipada con frigobar (en lugar de refrigerador), mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Ideal para familias o huéspedes que prefieren evitar escaleras."
+    longDesc: "El Junior Studio No. 23 está en planta baja, con acceso sin escalones. Cuenta con dos camas matrimoniales y capacidad para 1 a 4 personas. Cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para familias o huéspedes que prefieren evitar escaleras."
   },
   {
     id: "jr-24", name: "Junior Studio No.24", type: "Junior",
     price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
     beds: "2 camas matrimoniales", img: "portada-junior.png", floor: "Planta Baja", allowsChildren: true, frigobar: true,
     desc: "Junior Studio amplio en planta baja con dos camas matrimoniales, cocina totalmente equipada y frigobar. Acceso sin escalones.",
-    longDesc: "El Junior Studio No. 24 está en planta baja con acceso sin escalones. Dos camas matrimoniales, capacidad para 1 a 4 personas, cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Limpieza diaria incluida. Cómodo para familias en estancias prolongadas."
+    longDesc: "El Junior Studio No. 24 está en planta baja con acceso sin escalones. Dos camas matrimoniales, capacidad para 1 a 4 personas, cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Limpieza diaria incluida. Recepción 24/7. Cómodo para familias en estancias prolongadas."
   },
   {
     id: "master-25", name: "Master Studio No.25", type: "Master",
     price: 1300, baseGuests: 3, extraCharge: 150, guests: 5,
     beds: "Camas para hasta 5 personas", img: "room-detail-1.jpg", floor: "Planta Baja", allowsChildren: true, frigobar: true, accessible: true,
     desc: "Master Studio amplio en planta baja, equipado especialmente para huéspedes con movilidad reducida: agarraderas en el baño y puerta amplia para silla de ruedas. Cocina totalmente equipada y frigobar.",
-    longDesc: "El Master Studio No. 25 es nuestro espacio más accesible: está en planta baja y equipado especialmente para huéspedes con movilidad reducida, con agarraderas en el baño y puerta amplia para silla de ruedas. Capacidad para hasta 5 personas, cocina totalmente equipada con frigobar (en lugar de refrigerador), mesa de comedor, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado adaptado. Limpieza diaria incluida. Ideal para pacientes en recuperación, acompañantes o familias con un miembro con movilidad reducida."
+    longDesc: "El Master Studio No. 25 es nuestro espacio más accesible: está en planta baja y equipado especialmente para huéspedes con movilidad reducida, con agarraderas en el baño y puerta amplia para silla de ruedas. Capacidad para hasta 5 personas, cocina totalmente equipada con frigobar, mesa de comedor, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado adaptado. Limpieza diaria incluida. Recepción 24/7. Ideal para pacientes en recuperación, acompañantes o familias con un miembro con movilidad reducida."
   }
 ];
 
@@ -149,16 +149,18 @@ function renderRooms(filter, minGuests) {
     wifi: '<svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>',
     tv: '<svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>',
     clean: '<svg viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
-    accessible: '<svg viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2a7 7 0 0 0-14 0v2"/><path d="M5 13l3 8h8l3-8"/></svg>'
+    accessible: '<svg viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2a7 7 0 0 0-14 0v2"/><path d="M5 13l3 8h8l3-8"/></svg>',
+    reception: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>'
   };
 
   container.innerHTML = filtered.map(r => {
     const baseLabel = r.baseGuests === 1 ? '1 persona' : `${r.baseGuests} personas`;
 
-    // Combine extra-person charge with minors policy into a single line
+    // Build the policy line. We never write "no aplica para menores":
+    // if the room doesn't allow children, the line is just omitted.
     const policyParts = [];
     if (r.extraCharge) policyParts.push(`+$${r.extraCharge} por persona adicional`);
-    policyParts.push(r.allowsChildren ? 'Menores de 10 años gratis (hasta 2)' : 'No aplica para menores');
+    if (r.allowsChildren) policyParts.push('Menores de 10 años gratis (hasta 2)');
     const policyLine = policyParts.join(' · ');
 
     return `
@@ -178,13 +180,14 @@ function renderRooms(filter, minGuests) {
           <div class="suite-amenity">${icons.wifi}<span>Wi-Fi de alta velocidad</span></div>
           <div class="suite-amenity">${icons.clean}<span>Limpieza diaria incluida</span></div>
           <div class="suite-amenity">${icons.ac}<span>A/C y ventilador</span></div>
+          <div class="suite-amenity">${icons.reception}<span>Recepción 24/7</span></div>
           ${r.accessible ? '<div class="suite-amenity">'+icons.accessible+'<span>Habitación accesible (silla de ruedas)</span></div>' : ''}
         </div>
         <div class="suite-pricing">
           <div>
             <span class="price-label">Desde (${baseLabel})</span>
             <div class="price">$${r.price.toLocaleString()} <span>MXN / noche</span></div>
-            <span class="price-extra">${policyLine}</span>
+            ${policyLine ? '<span class="price-extra">'+policyLine+'</span>' : ''}
             <span class="price-tax">Impuestos incluidos</span>
           </div>
           <a href="${detailLinkFor(r)}" class="btn btn-primary">Ver Detalles</a>
