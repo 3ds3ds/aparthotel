@@ -130,6 +130,27 @@ function detailLinkFor(r) {
   return `studio.html#${r.id}`;
 }
 
+// Label that explains who the base price covers.
+// Master rooms have a 3-person minimum; everything else lets the
+// base price cover 1 OR 2 people, and surcharges start at the 3rd.
+function basePriceLabel(r) {
+  if (r.type === 'Master') return `Desde (${r.baseGuests} personas)`;
+  return 'Desde (1 o 2 personas)';
+}
+
+// Extra-person charge text. The threshold (when the surcharge
+// starts) is the 4th person for Master rooms and the 3rd for
+// Junior. Returns null if the room has no surcharge.
+function extraChargeLabel(r) {
+  if (!r.extraCharge) return null;
+  const threshold = r.type === 'Master' ? 4 : 3;
+  const ord = threshold === 3 ? '3.ª' : '4.ª';
+  if (r.guests === threshold) {
+    return `+$${r.extraCharge} por la ${ord} persona (máx. ${r.guests})`;
+  }
+  return `+$${r.extraCharge} por persona adicional desde la ${ord} (máx. ${r.guests})`;
+}
+
 function renderRooms(filter, minGuests) {
   minGuests = minGuests || 0;
   const container = document.getElementById('rooms-grid');
@@ -154,12 +175,12 @@ function renderRooms(filter, minGuests) {
   };
 
   container.innerHTML = filtered.map(r => {
-    const baseLabel = r.baseGuests === 1 ? '1 persona' : `${r.baseGuests} personas`;
-
-    // Build the policy line. We never write "no aplica para menores":
-    // if the room doesn't allow children, the line is just omitted.
+    // Build the policy line (extra-person charge + minors policy).
+    // We never write "no aplica para menores": if the room doesn't
+    // allow children, the line is just omitted.
     const policyParts = [];
-    if (r.extraCharge) policyParts.push(`+$${r.extraCharge} por persona adicional`);
+    const extra = extraChargeLabel(r);
+    if (extra) policyParts.push(extra);
     if (r.allowsChildren) policyParts.push('Menores de 10 años gratis (hasta 2)');
     const policyLine = policyParts.join(' · ');
 
@@ -185,14 +206,14 @@ function renderRooms(filter, minGuests) {
         </div>
         <div class="suite-pricing">
           <div>
-            <span class="price-label">Desde (${baseLabel})</span>
+            <span class="price-label">${basePriceLabel(r)}</span>
             <div class="price">$${r.price.toLocaleString()} <span>MXN / noche</span></div>
             ${policyLine ? '<span class="price-extra">'+policyLine+'</span>' : ''}
             <span class="price-tax">Impuestos incluidos</span>
           </div>
           <a href="${detailLinkFor(r)}" class="btn btn-primary">Ver Detalles</a>
         </div>
-        <div class="suite-promo">🎉 1 noche de cortesía por cada semana de estancia</div>
+        <div class="suite-promo">🎉 Paga 6 noches, la 7.ª es de cortesía</div>
       </div>
     </article>
   `; }).join('');

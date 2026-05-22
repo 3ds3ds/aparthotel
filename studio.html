@@ -66,10 +66,10 @@
           <div class="studio-price-card">
             <span class="price-label" id="price-label">Precio por noche desde</span>
             <div class="price" id="studio-price-block">—</div>
-            <span class="price-extra" id="price-policy">+$150 por persona adicional · Menores de 10 años gratis (hasta 2)</span>
+            <span class="price-extra" id="price-policy">+$150 por persona adicional desde la 3.ª · Menores de 10 años gratis (hasta 2)</span>
             <span class="price-tax">Impuestos incluidos</span>
             <a href="https://app.littlehotelier.com/properties/aparthotelsiete32direct" target="_blank" rel="noopener" class="btn btn-primary studio-book-btn">Reservar Ahora</a>
-            <p class="studio-promo">🎉 1 noche de cortesía por cada semana de estancia</p>
+            <p class="studio-promo">🎉 Paga 6 noches, la 7.ª es de cortesía</p>
           </div>
 
           <div class="studio-wsp-card">
@@ -325,15 +325,30 @@
       ).join('');
 
       // Price card — same structure as suites listing card so CSS .price span only catches the currency
-      const baseLabel = room.baseGuests === 1 ? '1 persona' : `${room.baseGuests} personas`;
-      document.getElementById('price-label').textContent = `Precio por noche desde (${baseLabel})`;
+      // The base price covers up to baseGuests people for Master, or 1 o 2 personas for Junior/Executive
+      const baseLabelText = room.type === 'Master'
+        ? `${room.baseGuests} personas`
+        : '1 o 2 personas';
+      document.getElementById('price-label').textContent = `Precio por noche (desde ${baseLabelText})`;
       document.getElementById('studio-price-block').innerHTML =
         `$${room.price.toLocaleString()} <span>MXN / noche</span>`;
+
+      // Extra-person surcharge text. Threshold = 3 for Junior, 4 for Master.
+      function extraChargeText() {
+        if (!room.extraCharge) return null;
+        const threshold = room.type === 'Master' ? 4 : 3;
+        const ord = threshold === 3 ? '3.ª' : '4.ª';
+        if (room.guests === threshold) {
+          return `+$${room.extraCharge} por la ${ord} persona (máx. ${room.guests})`;
+        }
+        return `+$${room.extraCharge} por persona adicional desde la ${ord} (máx. ${room.guests})`;
+      }
 
       // Build the policy line. We never say "no aplica para menores":
       // if the room doesn't allow children, the line is just omitted.
       const policyParts = [];
-      if (room.extraCharge) policyParts.push(`+$${room.extraCharge} por persona adicional`);
+      const extra = extraChargeText();
+      if (extra) policyParts.push(extra);
       if (room.allowsChildren) policyParts.push('Menores de 10 años gratis (hasta 2)');
       const policyEl = document.getElementById('price-policy');
       if (policyParts.length) {
