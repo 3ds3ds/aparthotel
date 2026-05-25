@@ -8,9 +8,9 @@ const ROOMS = [
   {
     id: "master-10", name: "Master Studio No.10", type: "Master",
     price: 1300, baseGuests: 3, extraCharge: 150, guests: 4,
-    beds: "Capacidad para 4 personas", img: "suite-master.jpg", allowsChildren: true,
-    desc: "Master Studio amplio con cocina totalmente equipada, ideal para familias y equipos de trabajo.",
-    longDesc: "Nuestro Master Studio No. 10 es un espacio amplio con capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
+    beds: "4 camas individuales", img: "suite-master.jpg", allowsChildren: true,
+    desc: "Master Studio amplio con cuatro camas individuales y cocina totalmente equipada. Ideal para familias y equipos de trabajo.",
+    longDesc: "Nuestro Master Studio No. 10 es un espacio amplio con cuatro camas individuales y capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
   },
   {
     id: "jr-11", name: "Junior Studio No.11", type: "Junior",
@@ -43,15 +43,15 @@ const ROOMS = [
   {
     id: "jr-15", name: "Junior Studio No.15", type: "Junior",
     price: 1150, baseGuests: 1, extraCharge: 150, guests: 3,
-    beds: "1 cama king + 1 individual", img: "room-detail-3.jpg", allowsChildren: true,
-    desc: "Junior Studio con cama king e individual, cocina completa y mesa de comedor/trabajo. Cómodo para estancias familiares o de trabajo.",
+    beds: "1 cama king size + 1 cama individual", img: "room-detail-3.jpg", allowsChildren: true,
+    desc: "Junior Studio con cama king size e individual, cocina completa y mesa de comedor/trabajo. Cómodo para estancias familiares o de trabajo.",
     longDesc: "El Junior Studio No. 15 cuenta con una cama king size y una cama individual, capacidad para 1 a 3 personas. Cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para parejas con un menor o estancias familiares cortas."
   },
   {
     id: "jr-16", name: "Junior Studio No.16", type: "Junior",
     price: 1150, baseGuests: 1, extraCharge: 150, guests: 3,
-    beds: "1 cama king + 1 individual", img: "room-detail-4.jpg", allowsChildren: true,
-    desc: "Junior Studio con cama king e individual, cocina completa y mesa de comedor/trabajo. Espacio funcional y cómodo.",
+    beds: "1 cama king size + 1 cama individual", img: "room-detail-4.jpg", allowsChildren: true,
+    desc: "Junior Studio con cama king size e individual, cocina completa y mesa de comedor/trabajo. Espacio funcional y cómodo.",
     longDesc: "El Junior Studio No. 16 ofrece una cama king size y una cama individual, capacidad para 1 a 3 personas. Cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado. Limpieza diaria incluida. Recepción 24/7. Funcional y cómodo para una pareja con menor o un viajero de trabajo con acompañante."
   },
   {
@@ -64,16 +64,16 @@ const ROOMS = [
   {
     id: "master-18", name: "Master Studio No.18", type: "Master",
     price: 1300, baseGuests: 3, extraCharge: 150, guests: 5,
-    beds: "1 cama king + camas adicionales", img: "suite-master.jpg", allowsChildren: true,
-    desc: "Master Studio amplio con cama king y cocina totalmente equipada. Espacio cómodo y funcional para familias o equipos de trabajo.",
-    longDesc: "El Master Studio No. 18 es uno de nuestros espacios más amplios, con capacidad para hasta 5 personas. Equipado con una cama king size más camas adicionales, cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería) y mesa de comedor/trabajo. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
+    beds: "1 cama king size + 3 camas individuales", img: "suite-master.jpg", allowsChildren: true,
+    desc: "Master Studio amplio con una cama king size y tres camas individuales, cocina totalmente equipada. Espacio cómodo y funcional para familias o equipos de trabajo.",
+    longDesc: "El Master Studio No. 18 es uno de nuestros espacios más amplios, con capacidad para hasta 5 personas. Equipado con una cama king size y tres camas individuales, cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería) y mesa de comedor/trabajo. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
   },
   {
     id: "master-19", name: "Master Studio No.19", type: "Master",
     price: 1300, baseGuests: 3, extraCharge: 150, guests: 5,
-    beds: "1 cama queen + camas adicionales", img: "portada-master.png", allowsChildren: true, hasSofa: true,
-    desc: "Master Studio con cama queen, sofá y cocina totalmente equipada. Amplio y cómodo para familias o equipos de trabajo.",
-    longDesc: "El Master Studio No. 19 es un espacio amplio con capacidad para hasta 5 personas, con cama queen size más camas adicionales y un sofá para mayor confort. Cocina totalmente equipada, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para familias grandes o equipos de trabajo."
+    beds: "1 cama queen size + 3 camas individuales", img: "portada-master.png", allowsChildren: true, hasSofa: true,
+    desc: "Master Studio con una cama queen size, tres camas individuales, sofá y cocina totalmente equipada. Amplio y cómodo para familias o equipos de trabajo.",
+    longDesc: "El Master Studio No. 19 es un espacio amplio con capacidad para hasta 5 personas, con una cama queen size, tres camas individuales y un sofá para mayor confort. Cocina totalmente equipada, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para familias grandes o equipos de trabajo."
   },
   {
     id: "exec-20", name: "Executive Studio No.20", type: "Executive",
@@ -113,9 +113,9 @@ const ROOMS = [
   {
     id: "master-25", name: "Master Studio No.25", type: "Master",
     price: 1300, baseGuests: 3, extraCharge: 150, guests: 5,
-    beds: "Camas para hasta 5 personas", img: "room-detail-1.jpg", floor: "Planta Baja", allowsChildren: true, frigobar: true, accessible: true,
-    desc: "Master Studio amplio en planta baja, equipado especialmente para huéspedes con movilidad reducida: agarraderas en el baño y puerta amplia para silla de ruedas. Cocina totalmente equipada y frigobar.",
-    longDesc: "El Master Studio No. 25 es nuestro espacio más accesible: está en planta baja y equipado especialmente para huéspedes con movilidad reducida, con agarraderas en el baño y puerta amplia para silla de ruedas. Capacidad para hasta 5 personas, cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado adaptado. Limpieza diaria incluida. Recepción 24/7. Ideal para pacientes en recuperación, acompañantes o familias con un miembro con movilidad reducida."
+    beds: "2 camas matrimoniales + 1 cama individual", img: "room-detail-1.jpg", floor: "Planta Baja", allowsChildren: true, frigobar: true, accessible: true,
+    desc: "Master Studio amplio en planta baja con dos camas matrimoniales y una individual, equipado especialmente para huéspedes con movilidad reducida: agarraderas en el baño y puerta amplia para silla de ruedas. Cocina totalmente equipada y frigobar.",
+    longDesc: "El Master Studio No. 25 es nuestro espacio más accesible: está en planta baja y equipado especialmente para huéspedes con movilidad reducida, con agarraderas en el baño y puerta amplia para silla de ruedas. Capacidad para hasta 5 personas con dos camas matrimoniales y una cama individual, cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado adaptado. Limpieza diaria incluida. Recepción 24/7. Ideal para pacientes en recuperación, acompañantes o familias con un miembro con movilidad reducida."
   }
 ];
 
