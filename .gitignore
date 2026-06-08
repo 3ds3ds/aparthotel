@@ -8,3 +8,7 @@ Thumbs.db
 
 # Node (local dev server)
 node_modules/
+
+# Cloudflare local dev
+.wrangler/
+.dev.vars

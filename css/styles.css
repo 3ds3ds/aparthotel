@@ -1074,3 +1074,30 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 }
 .studio-wsp-btn { width: 100%; }
 
+/* =============================================
+   ANNOUNCEMENT BANNER  (managed from /admin)
+   ============================================= */
+.site-banner {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: var(--teal); color: var(--white);
+  text-align: center; padding: 9px 44px;
+  font-size: .875rem; font-weight: 600; line-height: 1.4;
+}
+.site-banner a { color: inherit; text-decoration: underline; }
+body.has-banner { padding-top: var(--banner-h, 0); }
+body.has-banner .header { top: var(--banner-h, 0); }
+
+/* =============================================
+   PROMO / SALE markers on suite cards  (managed from /admin)
+   ============================================= */
+.promo-badge {
+  position: absolute; top: 16px; right: 16px; z-index: 3;
+  background: var(--teal); color: var(--white);
+  padding: 6px 12px; border-radius: 4px;
+  font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
+  box-shadow: var(--shadow-card);
+}
+.promo-note {
+  font-size: .8125rem; font-weight: 600; color: var(--teal);
+  padding-top: 8px; margin-top: 4px; border-top: 1px solid var(--gray-200);
+}

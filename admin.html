@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Panel de Administración — Aparthotel Siete32</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0F172A; --teal:#5D94A1; --teal-hover:#4d8090; --white:#fff;
+      --off:#F8FAFC; --g100:#F1F5F9; --g200:#E2E8F0; --g300:#CBD5E1;
+      --g500:#475569; --g700:#334155; --danger:#b91c1c; --ok:#15803d;
+      --radius:12px; --shadow:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.06);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;color:var(--navy);background:var(--off);line-height:1.5}
+    h1,h2{font-weight:700}
+    a{color:var(--teal)}
+    .hidden{display:none !important}
+
+    /* ---- Login ---- */
+    .login-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+    .login-card{background:#fff;border:1px solid var(--g200);border-radius:var(--radius);box-shadow:var(--shadow);
+      padding:32px;width:100%;max-width:380px;text-align:center}
+    .login-card h1{font-size:1.25rem;margin-bottom:6px}
+    .login-card p{color:var(--g500);font-size:.875rem;margin-bottom:20px}
+    .login-card input{width:100%;padding:12px 14px;border:1px solid var(--g300);border-radius:8px;font-size:1rem;margin-bottom:12px}
+    .login-card input:focus{outline:2px solid var(--teal);border-color:var(--teal)}
+
+    /* ---- App shell ---- */
+    .topbar{position:sticky;top:0;z-index:10;background:var(--navy);color:#fff;
+      display:flex;align-items:center;gap:16px;padding:14px 20px;flex-wrap:wrap}
+    .topbar h1{font-size:1.0625rem;margin-right:auto}
+    .topbar .muted{color:#cbd5e1;font-size:.8125rem}
+    .wrap{max-width:920px;margin:0 auto;padding:24px 20px 80px}
+
+    .section{background:#fff;border:1px solid var(--g200);border-radius:var(--radius);box-shadow:var(--shadow);
+      padding:24px;margin-bottom:24px}
+    .section > h2{font-size:1.125rem;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+    .section > .hint{color:var(--g500);font-size:.8125rem;margin-bottom:18px}
+
+    label.field{display:block;font-size:.8125rem;font-weight:600;color:var(--g700);margin:14px 0 6px}
+    input[type=text],input[type=url],input[type=number],select{
+      width:100%;padding:10px 12px;border:1px solid var(--g300);border-radius:8px;font-size:.9375rem;font-family:inherit;background:#fff}
+    input:focus,select:focus{outline:2px solid var(--teal);border-color:var(--teal)}
+
+    /* switch */
+    .switch{display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-size:.875rem;font-weight:600;color:var(--g700);user-select:none}
+    .switch input{appearance:none;width:42px;height:24px;background:var(--g300);border-radius:99px;position:relative;cursor:pointer;transition:.2s;flex:none}
+    .switch input::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;background:#fff;border-radius:50%;transition:.2s}
+    .switch input:checked{background:var(--teal)}
+    .switch input:checked::after{left:21px}
+
+    /* buttons */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-weight:600;
+      font-size:.9375rem;padding:11px 22px;border-radius:8px;border:none;cursor:pointer;transition:.2s}
+    .btn-primary{background:var(--teal);color:#fff}
+    .btn-primary:hover{background:var(--teal-hover)}
+    .btn-primary:disabled{opacity:.6;cursor:default}
+    .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+    .btn-ghost:hover{background:rgba(255,255,255,.1)}
+    .btn-add{background:var(--g100);color:var(--navy);border:1px dashed var(--g300)}
+    .btn-add:hover{background:var(--g200)}
+    .iconbtn{width:32px;height:32px;border:1px solid var(--g300);background:#fff;border-radius:6px;cursor:pointer;font-size:.875rem;line-height:1;color:var(--g700)}
+    .iconbtn:hover:not(:disabled){background:var(--g100)}
+    .iconbtn:disabled{opacity:.35;cursor:default}
+    .iconbtn.danger{color:var(--danger);border-color:#fca5a5}
+    .iconbtn.danger:hover{background:#fef2f2}
+
+    /* banner preview */
+    .banner-preview{margin-top:14px;border-radius:8px;padding:10px 16px;text-align:center;font-size:.875rem;font-weight:600}
+    .row2{display:flex;gap:16px;flex-wrap:wrap}
+    .row2 > div{flex:1;min-width:160px}
+    .color-field{display:flex;align-items:center;gap:10px}
+    .color-field input[type=color]{width:44px;height:38px;padding:2px;border:1px solid var(--g300);border-radius:8px;background:#fff;cursor:pointer}
+
+    /* card rows */
+    .card-row{display:flex;gap:14px;align-items:flex-start;padding:16px;border:1px solid var(--g200);border-radius:10px;margin-bottom:12px;background:var(--off)}
+    .reorder{display:flex;flex-direction:column;gap:6px}
+    .thumb{width:84px;height:64px;object-fit:cover;border-radius:6px;flex:none;background:var(--g200)}
+    .card-fields{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;align-items:center}
+    .card-fields .full{grid-column:1 / -1}
+    .inline{display:flex;align-items:center;gap:8px}
+    .inline .prefix{font-weight:700;color:var(--g700)}
+    .inline .suffix{font-size:.8125rem;color:var(--g500);white-space:nowrap}
+
+    /* promo rows */
+    .promo-row{display:grid;grid-template-columns:auto 1fr 1fr 1fr auto;gap:12px;align-items:center;
+      padding:14px;border:1px solid var(--g200);border-radius:10px;margin-bottom:12px;background:var(--off)}
+
+    .status{font-size:.8125rem;font-weight:600}
+    .status.ok{color:#bbf7d0}
+    .status.err{color:#fecaca}
+    .msg{font-size:.875rem;margin-top:10px;min-height:1.2em}
+    .msg.ok{color:var(--ok)} .msg.err{color:var(--danger)}
+
+    @media (max-width:620px){
+      .card-fields{grid-template-columns:1fr}
+      .promo-row{grid-template-columns:1fr 1fr;gap:10px}
+      .thumb{width:64px;height:50px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ LOGIN ============ -->
+  <div id="login" class="login-wrap">
+    <form class="login-card" id="login-form">
+      <h1>Panel de Administración</h1>
+      <p>Aparthotel Siete32</p>
+      <input type="password" id="pw" placeholder="Contraseña" autocomplete="current-password" required>
+      <button type="submit" class="btn btn-primary" style="width:100%">Entrar</button>
+      <div class="msg err" id="login-msg"></div>
+    </form>
+  </div>
+
+  <!-- ============ APP ============ -->
+  <div id="app" class="hidden">
+    <div class="topbar">
+      <h1>Panel — Aparthotel Siete32</h1>
+      <span class="status" id="status"></span>
+      <a href="index.html" target="_blank" class="muted">Ver sitio ↗</a>
+      <button class="btn btn-primary" id="save-top">Guardar cambios</button>
+      <button class="btn btn-ghost" id="logout">Salir</button>
+    </div>
+
+    <div class="wrap">
+
+      <!-- Banner -->
+      <section class="section">
+        <h2>📢 Banner de anuncios</h2>
+        <p class="hint">Una barra que aparece arriba de todo en la página de inicio. Úsala para avisos u ofertas. Si la apagas, no se muestra.</p>
+
+        <label class="switch"><input type="checkbox" id="banner-enabled"><span>Mostrar el banner</span></label>
+
+        <label class="field" for="banner-text">Texto del banner</label>
+        <input type="text" id="banner-text" maxlength="200" placeholder="Ej. ¡Reserva 6 noches y la 7ª es gratis!">
+
+        <label class="field" for="banner-link">Enlace al hacer clic (opcional)</label>
+        <input type="url" id="banner-link" placeholder="Ej. suites.html  (déjalo vacío si no quieres enlace)">
+
+        <div class="row2" style="margin-top:14px">
+          <div>
+            <label class="field">Color de fondo</label>
+            <div class="color-field"><input type="color" id="banner-color"><input type="text" id="banner-color-hex" maxlength="7"></div>
+          </div>
+          <div>
+            <label class="field">Color del texto</label>
+            <div class="color-field"><input type="color" id="banner-textColor"><input type="text" id="banner-textColor-hex" maxlength="7"></div>
+          </div>
+        </div>
+
+        <div class="banner-preview" id="banner-preview">Vista previa del banner</div>
+      </section>
+
+      <!-- Cards -->
+      <section class="section">
+        <h2>🏠 Orden de las tarjetas (página de inicio)</h2>
+        <p class="hint">Usa las flechas ▲▼ para cambiar el orden en que aparecen las tarjetas. Puedes ocultar una, cambiar su título, su precio "desde" y su foto.</p>
+        <div id="cards-list"></div>
+      </section>
+
+      <!-- Promos -->
+      <section class="section">
+        <h2>🎉 Ofertas</h2>
+        <p class="hint">Agrega una etiqueta de oferta sobre las tarjetas. Elige a cuáles aplica, una etiqueta corta (ej. "-15%") y un texto opcional. Desactívala cuando termine.</p>
+        <div id="promos-list"></div>
+        <button class="btn btn-add" id="add-promo" style="width:100%;margin-top:6px">＋ Agregar oferta</button>
+      </section>
+
+      <div style="display:flex;align-items:center;gap:16px">
+        <button class="btn btn-primary" id="save-bottom">Guardar cambios</button>
+        <span class="msg" id="msg"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    "use strict";
+
+    var API = "/api/content";
+    var PW_KEY = "s32_admin_pw";
+    var state = null;
+    var pw = sessionStorage.getItem(PW_KEY) || "";
+
+    // Photos available in /assets/images for the card pictures.
+    var IMAGES = [
+      "suite-master.jpg","suite-junior.jpg","suite-executive.jpg",
+      "portada-master.png","portada-junior.png","portada-exec.png",
+      "portada-3.png","portada-4.png",
+      "room-detail-1.jpg","room-detail-2.jpg","room-detail-3.jpg",
+      "room-detail-4.jpg","room-detail-5.png","room-detail-6.jpg","room-detail-7.jpg",
+      "hero-room.jpg","slider-2.jpg","slider-3.jpg","slider-4.jpg"
+    ];
+    var CARD_LABELS = { master: "Master Studio", junior: "Junior Studio", executive: "Executive Studio" };
+
+    /* ----------------------------- helpers ---------------------------- */
+    function $(id){ return document.getElementById(id); }
+    function esc(s){ return String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;"); }
+    function authHeaders(){ return { "Authorization": "Bearer " + pw, "Content-Type": "application/json" }; }
+
+    /* ------------------------------ login ----------------------------- */
+    $("login-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      pw = $("pw").value;
+      $("login-msg").textContent = "Verificando…";
+      fetch(API, { method: "POST", headers: authHeaders() })
+        .then(function (r) {
+          if (r.ok) return r.json();
+          return r.json().then(function (d) { throw new Error(d.error || "Error"); });
+        })
+        .then(function () {
+          sessionStorage.setItem(PW_KEY, pw);
+          $("login-msg").textContent = "";
+          loadAndShow();
+        })
+        .catch(function (err) { $("login-msg").textContent = err.message || "Contraseña incorrecta."; });
+    });
+
+    $("logout").addEventListener("click", function () {
+      sessionStorage.removeItem(PW_KEY); pw = "";
+      $("app").classList.add("hidden");
+      $("login").classList.remove("hidden");
+      $("pw").value = "";
+    });
+
+    function loadAndShow() {
+      fetch(API, { headers: { Accept: "application/json" } })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          state = normalize(data);
+          $("login").classList.add("hidden");
+          $("app").classList.remove("hidden");
+          renderAll();
+        })
+        .catch(function () { $("login-msg").textContent = "No se pudo cargar el contenido."; });
+    }
+
+    // Make sure the shape is always complete even if the API is empty.
+    function normalize(d) {
+      d = d && typeof d === "object" ? d : {};
+      var banner = d.banner || {};
+      var ids = ["master", "junior", "executive"];
+      var byId = {};
+      (Array.isArray(d.cards) ? d.cards : []).forEach(function (c) { if (c && c.id) byId[c.id] = c; });
+      var cards = (Array.isArray(d.cards) ? d.cards : [])
+        .filter(function (c) { return c && ids.indexOf(c.id) !== -1; })
+        .sort(function (a, b) { return (a.order || 0) - (b.order || 0); });
+      ids.forEach(function (id) { if (!byId[id]) cards.push({ id: id }); });
+      var defaults = { master: 1300, junior: 1150, executive: 1000 };
+      cards = cards.map(function (c) {
+        return {
+          id: c.id,
+          visible: c.visible === undefined ? true : !!c.visible,
+          title: c.title || CARD_LABELS[c.id],
+          priceFrom: Number.isFinite(+c.priceFrom) ? +c.priceFrom : defaults[c.id],
+          image: c.image || (c.id === "junior" ? "suite-junior.jpg" : c.id === "executive" ? "suite-executive.jpg" : "suite-master.jpg")
+        };
+      });
+      return {
+        banner: {
+          enabled: !!banner.enabled,
+          text: banner.text || "",
+          color: banner.color || "#5D94A1",
+          textColor: banner.textColor || "#FFFFFF",
+          link: banner.link || ""
+        },
+        cards: cards,
+        promos: Array.isArray(d.promos) ? d.promos.map(function (p, i) {
+          return {
+            id: p.id || ("p" + (i + 1)),
+            active: !!p.active,
+            scope: ["all","master","junior","executive"].indexOf(p.scope) !== -1 ? p.scope : "all",
+            badge: p.badge || "",
+            note: p.note || ""
+          };
+        }) : []
+      };
+    }
+
+    /* ------------------------------ render ---------------------------- */
+    function renderAll(){ renderBanner(); renderCards(); renderPromos(); }
+
+    function renderBanner() {
+      var b = state.banner;
+      $("banner-enabled").checked = b.enabled;
+      $("banner-text").value = b.text;
+      $("banner-link").value = b.link;
+      $("banner-color").value = b.color;
+      $("banner-color-hex").value = b.color;
+      $("banner-textColor").value = b.textColor;
+      $("banner-textColor-hex").value = b.textColor;
+      updateBannerPreview();
+    }
+
+    function updateBannerPreview() {
+      var b = state.banner, p = $("banner-preview");
+      p.style.background = b.color; p.style.color = b.textColor;
+      p.textContent = b.text || "Vista previa del banner";
+      p.style.opacity = b.enabled ? "1" : ".45";
+    }
+
+    function renderCards() {
+      var total = state.cards.length;
+      $("cards-list").innerHTML = state.cards.map(function (c, i) {
+        return '' +
+        '<div class="card-row" data-i="' + i + '">' +
+          '<div class="reorder">' +
+            '<button type="button" class="iconbtn" data-act="up" ' + (i === 0 ? "disabled" : "") + ' title="Subir">▲</button>' +
+            '<button type="button" class="iconbtn" data-act="down" ' + (i === total - 1 ? "disabled" : "") + ' title="Bajar">▼</button>' +
+          '</div>' +
+          '<img class="thumb" src="assets/images/' + esc(c.image) + '" alt="">' +
+          '<div class="card-fields">' +
+            '<label class="switch"><input type="checkbox" data-field="visible" ' + (c.visible ? "checked" : "") + '><span>Visible</span></label>' +
+            '<div></div>' +
+            '<div class="full"><input type="text" data-field="title" value="' + esc(c.title) + '" placeholder="Título"></div>' +
+            '<div class="inline"><span class="prefix">$</span><input type="number" data-field="priceFrom" value="' + (Number(c.priceFrom) || 0) + '" min="0" step="50"><span class="suffix">MXN/noche</span></div>' +
+            '<select data-field="image">' + imageOptions(c.image) + '</select>' +
+          '</div>' +
+        '</div>';
+      }).join("");
+    }
+
+    function imageOptions(selected) {
+      return IMAGES.map(function (f) {
+        return '<option value="' + f + '"' + (f === selected ? " selected" : "") + '>' + f + '</option>';
+      }).join("");
+    }
+
+    function renderPromos() {
+      $("promos-list").innerHTML = state.promos.map(function (p, i) {
+        return '' +
+        '<div class="promo-row" data-i="' + i + '">' +
+          '<label class="switch"><input type="checkbox" data-field="active" ' + (p.active ? "checked" : "") + '><span>Activa</span></label>' +
+          '<select data-field="scope">' +
+            opt("all", "Todas", p.scope) + opt("master", "Master", p.scope) +
+            opt("junior", "Junior", p.scope) + opt("executive", "Executive", p.scope) +
+          '</select>' +
+          '<input type="text" data-field="badge" value="' + esc(p.badge) + '" placeholder="Etiqueta (ej. -15%)" maxlength="24">' +
+          '<input type="text" data-field="note" value="' + esc(p.note) + '" placeholder="Texto (ej. Oferta de verano)" maxlength="160">' +
+          '<button type="button" class="iconbtn danger" data-act="delete" title="Eliminar">✕</button>' +
+        '</div>';
+      }).join("");
+      if (!state.promos.length) $("promos-list").innerHTML = '<p class="hint" style="margin:0 0 12px">No hay ofertas. Agrega una abajo.</p>';
+    }
+    function opt(v, label, sel){ return '<option value="' + v + '"' + (v === sel ? " selected" : "") + '>' + label + '</option>'; }
+
+    /* ---------------------------- bindings ---------------------------- */
+    // Banner inputs
+    $("banner-enabled").addEventListener("change", function (e) { state.banner.enabled = e.target.checked; updateBannerPreview(); });
+    $("banner-text").addEventListener("input", function (e) { state.banner.text = e.target.value; updateBannerPreview(); });
+    $("banner-link").addEventListener("input", function (e) { state.banner.link = e.target.value; });
+    bindColor("banner-color", "color");
+    bindColor("banner-textColor", "textColor");
+    function bindColor(idBase, field) {
+      var picker = $(idBase), hex = $(idBase + "-hex");
+      picker.addEventListener("input", function () { state.banner[field] = picker.value; hex.value = picker.value; updateBannerPreview(); });
+      hex.addEventListener("input", function () {
+        var v = hex.value.trim();
+        if (/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(v)) { state.banner[field] = v; picker.value = v; updateBannerPreview(); }
+      });
+    }
+
+    // Cards (event delegation)
+    $("cards-list").addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-act]"); if (!btn) return;
+      var i = +btn.closest(".card-row").dataset.i;
+      if (btn.dataset.act === "up" && i > 0) swap(state.cards, i, i - 1);
+      if (btn.dataset.act === "down" && i < state.cards.length - 1) swap(state.cards, i, i + 1);
+      renderCards();
+    });
+    $("cards-list").addEventListener("input", function (e) {
+      var f = e.target.dataset.field; if (!f) return;
+      var i = +e.target.closest(".card-row").dataset.i, c = state.cards[i];
+      if (f === "visible") c.visible = e.target.checked;
+      else if (f === "priceFrom") c.priceFrom = +e.target.value;
+      else if (f === "image") { c.image = e.target.value; e.target.closest(".card-row").querySelector(".thumb").src = "assets/images/" + e.target.value; }
+      else c[f] = e.target.value;
+    });
+
+    // Promos
+    $("add-promo").addEventListener("click", function () {
+      state.promos.push({ id: "p" + (Date.now()), active: true, scope: "all", badge: "", note: "" });
+      renderPromos();
+    });
+    $("promos-list").addEventListener("click", function (e) {
+      var btn = e.target.closest('[data-act="delete"]'); if (!btn) return;
+      var i = +btn.closest(".promo-row").dataset.i;
+      state.promos.splice(i, 1); renderPromos();
+    });
+    $("promos-list").addEventListener("input", function (e) {
+      var f = e.target.dataset.field; if (!f) return;
+      var i = +e.target.closest(".promo-row").dataset.i, p = state.promos[i];
+      if (f === "active") p.active = e.target.checked;
+      else p[f] = e.target.value;
+    });
+
+    function swap(arr, a, b){ var t = arr[a]; arr[a] = arr[b]; arr[b] = t; }
+
+    /* ------------------------------ save ------------------------------ */
+    $("save-top").addEventListener("click", save);
+    $("save-bottom").addEventListener("click", save);
+
+    function save() {
+      setStatus("Guardando…", "");
+      setMsg("", "");
+      // Stamp order from current array position.
+      state.cards.forEach(function (c, i) { c.order = i + 1; });
+      fetch(API, { method: "PUT", headers: authHeaders(), body: JSON.stringify(state) })
+        .then(function (r) {
+          if (r.ok) return r.json();
+          if (r.status === 401) { throw new Error("Tu sesión expiró o la contraseña cambió. Vuelve a entrar."); }
+          return r.json().then(function (d) { throw new Error(d.error || "No se pudo guardar."); });
+        })
+        .then(function (res) {
+          if (res.content) { state = normalize(res.content); renderAll(); }
+          setStatus("Guardado ✓", "ok");
+          setMsg("Cambios guardados. Abre el sitio y actualiza para verlos.", "ok");
+          setTimeout(function () { setStatus("", ""); }, 4000);
+        })
+        .catch(function (err) {
+          setStatus("", "");
+          setMsg(err.message || "Error al guardar.", "err");
+          if (/sesión|contraseña/i.test(err.message || "")) { sessionStorage.removeItem(PW_KEY); }
+        });
+    }
+
+    function setStatus(t, cls){ var el = $("status"); el.textContent = t; el.className = "status " + (cls || ""); }
+    function setMsg(t, cls){ var el = $("msg"); el.textContent = t; el.className = "msg " + (cls || ""); }
+
+    /* --------------------------- auto-resume -------------------------- */
+    if (pw) { loadAndShow(); }  // try the saved session password
+  })();
+  </script>
+</body>
+</html>
