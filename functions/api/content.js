@@ -29,9 +29,11 @@ const DEFAULT_CONTENT = {
     link: ""
   },
   cards: [
-    { id: "master",    order: 1, visible: true, title: "Master Studio",    priceFrom: 1300, image: "suite-master.jpg" },
-    { id: "junior",    order: 2, visible: true, title: "Junior Studio",    priceFrom: 1150, image: "suite-junior.jpg" },
-    { id: "executive", order: 3, visible: true, title: "Executive Studio", priceFrom: 1000, image: "suite-executive.jpg" }
+    { id: "executive",      order: 1, visible: true, title: "Executive",        priceFrom: 1000, image: "portada-exec.png" },
+    { id: "executive-jr",   order: 2, visible: true, title: "Executive Jr.",    priceFrom: 950,  image: "suite-executive.jpg" },
+    { id: "junior-suite",   order: 3, visible: true, title: "Junior Suite",     priceFrom: 1150, image: "suite-junior.jpg" },
+    { id: "master-suite",   order: 4, visible: true, title: "Master Suite",     priceFrom: 1300, image: "portada-master.png" },
+    { id: "master-suite-jr", order: 5, visible: true, title: "Master Suite Jr.", priceFrom: 1300, image: "suite-master.jpg" }
   ],
   promos: []
 };
@@ -153,7 +155,7 @@ function sanitize(body) {
   }
 
   if (Array.isArray(body.promos)) {
-    const scopes = ["all", "master", "junior", "executive"];
+    const scopes = ["all", "executive", "executive-jr", "junior-suite", "master-suite", "master-suite-jr"];
     out.promos = body.promos
       .slice(0, 20)
       .map((p, i) => ({

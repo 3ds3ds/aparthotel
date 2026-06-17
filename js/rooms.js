@@ -1,233 +1,236 @@
 /* =========================================================
-   APARTHOTEL SIETE32 — Datos de habitaciones
-   - "desc" = descripción corta para tarjetas en suites.html
-   - "longDesc" = descripción tailored para studio.html (página individual)
+   APARTHOTEL SIETE32 — Tipos de habitación
+   ---------------------------------------------------------
+   El sitio se organiza por TIPO de habitación (igual que en
+   Little Hotelier, Booking, Expedia y Airbnb), no por unidad
+   individual. Cada tipo agrupa varias unidades físicas: el
+   huésped reserva el tipo y la propiedad asigna la unidad.
+
+   - "units"      = números de suite que pertenecen al tipo
+   - "desc"       = descripción corta para las tarjetas
+   - "longDesc"   = descripción para la página de detalle
+   - "gallery"    = fotos del tipo, cada una etiquetada con su suite
    ========================================================= */
 
-const ROOMS = [
+// Motor de reservas de Little Hotelier (provisional hasta tener
+// la URL por tipo/propiedad). Agrega `bookingUrl` a un tipo para
+// sobreescribirla.
+const BOOKING_URL = "https://app.littlehotelier.com/properties/aparthotelsiete32direct";
+
+const ROOM_TYPES = [
   {
-    id: "master-10", name: "Master Studio No.10", type: "Master",
-    price: 1300, baseGuests: 3, extraCharge: 150, guests: 4,
-    beds: "4 camas individuales", img: "suite-master.jpg", allowsChildren: true,
-    desc: "Master Studio amplio con cuatro camas individuales y cocina totalmente equipada. Ideal para familias y equipos de trabajo.",
-    longDesc: "Nuestro Master Studio No. 10 es un espacio amplio con cuatro camas individuales y capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
+    id: "executive",
+    name: "Executive",
+    units: ["20", "21", "22"],
+    guestsMin: 1, guestsMax: 2,
+    priceFrom: 1000,
+    capacity: "1 a 2 personas",
+    badge: "Hasta 2 Personas",
+    beds: "1 cama king size",
+    kitchen: "full-frigobar",
+    adultsOnly: true,
+    groundFloor: "all",
+    accessible: null,
+    allowsChildren: false,
+    cardImg: "portada-exec.png",
+    gallery: [
+      { img: "portada-exec.png", room: "20" },
+      { img: "room-detail-2.jpg", room: "21" },
+      { img: "room-detail-6.jpg", room: "22" }
+    ],
+    desc: "Studio en planta baja con cama king y cocina equipada con frigobar. Para 1 o 2 personas, solo adultos.",
+    longDesc: "El Executive es un studio en planta baja con cama king size y capacidad para 1 o 2 personas. Cuenta con cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Acceso sin escalones, ideal para quienes prefieren evitar escaleras. Limpieza diaria incluida. Recepción 24/7. Habitación para adultos. Este tipo incluye las suites 20, 21 y 22."
   },
   {
-    id: "jr-11", name: "Junior Studio No.11", type: "Junior",
-    price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
-    beds: "2 camas matrimoniales", img: "suite-junior.jpg", allowsChildren: true,
-    desc: "Junior Studio con cocina completa, mesa de comedor/trabajo y área de dormitorio. Ideal para familias o estancias cómodas.",
-    longDesc: "El Junior Studio No. 11 cuenta con dos camas matrimoniales y capacidad para 1 a 4 personas. Equipado con cocina completa (estufa, refrigerador, microondas y cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
+    id: "executive-jr",
+    name: "Executive Jr.",
+    units: ["17"],
+    guestsMin: 1, guestsMax: 2,
+    priceFrom: 950,
+    capacity: "1 a 2 personas",
+    badge: "Hasta 2 Personas",
+    beds: "1 cama queen size",
+    kitchen: "kitchenette",
+    adultsOnly: false,
+    groundFloor: false,
+    accessible: null,
+    allowsChildren: true,
+    cardImg: "suite-executive.jpg",
+    gallery: [
+      { img: "suite-executive.jpg", room: "17" }
+    ],
+    desc: "Compacto y económico, con cama queen, microondas, cafetera y frigobar. Para 1 o 2 personas.",
+    longDesc: "El Executive Jr. es ideal para 1 o 2 personas, con una cama queen size. Cuenta con microondas, cafetera y frigobar (sin estufa), vajilla y cubertería, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Perfecto para viajeros que buscan una estancia compacta y cómoda en Mérida. Este tipo corresponde a la suite 17."
   },
   {
-    id: "jr-12", name: "Junior Studio No.12", type: "Junior",
-    price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
-    beds: "2 camas matrimoniales", img: "room-detail-3.jpg", allowsChildren: true,
-    desc: "Junior Studio con cocina completa, mesa de comedor/trabajo y área de dormitorio. Espacio cómodo para tu estancia en Mérida.",
-    longDesc: "El Junior Studio No. 12 ofrece dos camas matrimoniales y capacidad para 1 a 4 personas. Cocina completa con estufa, refrigerador, microondas y cafetera, vajilla y cubertería, mesa de comedor/trabajo y área de dormitorio. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para familias o estancias prolongadas en Mérida."
+    id: "junior-suite",
+    name: "Junior Suite",
+    units: ["11", "12", "13", "14", "15", "16", "23", "24"],
+    guestsMin: 2, guestsMax: 4,
+    priceFrom: 1150,
+    capacity: "2 a 4 personas",
+    badge: "Hasta 4 Personas",
+    beds: "Camas matrimoniales, queen o king + individual (según unidad)",
+    kitchen: "full",
+    adultsOnly: false,
+    groundFloor: "some",
+    accessible: null,
+    allowsChildren: true,
+    cardImg: "suite-junior.jpg",
+    gallery: [
+      { img: "suite-junior.jpg", room: "11" },
+      { img: "room-detail-3.jpg", room: "12" },
+      { img: "room-detail-4.jpg", room: "13" },
+      { img: "slider-2.jpg", room: "14" },
+      { img: "slider-3.jpg", room: "15" },
+      { img: "slider-4.jpg", room: "16" },
+      { img: "room-detail-7.jpg", room: "23" },
+      { img: "portada-junior.png", room: "24" }
+    ],
+    desc: "Cocina completa y mesa de comedor/trabajo, con distintas configuraciones de cama. Para 2 a 4 personas.",
+    longDesc: "El Junior Suite es nuestro tipo con mayor disponibilidad. Cuenta con cocina completa (estufa, refrigerador, microondas y cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Capacidad de 2 a 4 personas, con distintas configuraciones de cama según la unidad: dos camas matrimoniales, dos camas queen size, o una cama king size con una individual. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Algunas unidades están en planta baja (suites 23 y 24). Limpieza diaria incluida. Recepción 24/7. Este tipo incluye las suites 11, 12, 13, 14, 15, 16, 23 y 24."
   },
   {
-    id: "jr-13", name: "Junior Studio No.13", type: "Junior",
-    price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
-    beds: "2 camas matrimoniales", img: "room-detail-4.jpg", allowsChildren: true,
-    desc: "Junior Studio equipado con cocina completa, mesa de comedor/trabajo y área de dormitorio. Perfecto para familias o equipos de trabajo.",
-    longDesc: "El Junior Studio No. 13 cuenta con dos camas matrimoniales y capacidad para 1 a 4 personas. Equipado con cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Limpieza diaria incluida. Recepción 24/7. Cómodo y funcional para familias o equipos de trabajo."
+    id: "master-suite",
+    name: "Master Suite",
+    units: ["18", "19", "25"],
+    guestsMin: 3, guestsMax: 5,
+    priceFrom: 1300,
+    capacity: "Hasta 5 personas",
+    badge: "Hasta 5 Personas",
+    beds: "King o queen + 3 individuales (según unidad)",
+    kitchen: "full",
+    adultsOnly: false,
+    groundFloor: "some",
+    accessible: { room: "25" },
+    allowsChildren: true,
+    cardImg: "portada-master.png",
+    gallery: [
+      { img: "portada-master.png", room: "18" },
+      { img: "room-detail-1.jpg", room: "19" },
+      { img: "room-detail-5.png", room: "25" }
+    ],
+    desc: "Nuestro espacio más amplio, hasta 5 personas. Una unidad accesible para silla de ruedas (Suite 25).",
+    longDesc: "El Master Suite es nuestro espacio más amplio, con capacidad para hasta 5 personas y cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Distintas configuraciones según la unidad: cama king o queen con tres camas individuales (y sofá en una de ellas). Limpieza diaria incluida. Recepción 24/7. ♿ Una de nuestras unidades, la Suite 25, está en planta baja y adaptada para huéspedes con movilidad reducida (agarraderas en el baño y puerta amplia para silla de ruedas). Si necesitas esta habitación específica, contáctanos para asegurarla. Este tipo incluye las suites 18, 19 y 25."
   },
   {
-    id: "jr-14", name: "Junior Studio No.14", type: "Junior",
-    price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
-    beds: "2 camas queen size", img: "suite-junior.jpg", allowsChildren: true,
-    desc: "Junior Studio con dos camas queen, cocina completa y mesa de comedor/trabajo. Ideal para familias o grupos pequeños.",
-    longDesc: "El Junior Studio No. 14 cuenta con dos camas queen size y capacidad para 1 a 4 personas. Espacio cómodo con cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para familias o grupos pequeños que buscan camas más amplias."
-  },
-  {
-    id: "jr-15", name: "Junior Studio No.15", type: "Junior",
-    price: 1150, baseGuests: 1, extraCharge: 150, guests: 3,
-    beds: "1 cama king size + 1 cama individual", img: "room-detail-3.jpg", allowsChildren: true,
-    desc: "Junior Studio con cama king size e individual, cocina completa y mesa de comedor/trabajo. Cómodo para estancias familiares o de trabajo.",
-    longDesc: "El Junior Studio No. 15 cuenta con una cama king size y una cama individual, capacidad para 1 a 3 personas. Cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para parejas con un menor o estancias familiares cortas."
-  },
-  {
-    id: "jr-16", name: "Junior Studio No.16", type: "Junior",
-    price: 1150, baseGuests: 1, extraCharge: 150, guests: 3,
-    beds: "1 cama king size + 1 cama individual", img: "room-detail-4.jpg", allowsChildren: true,
-    desc: "Junior Studio con cama king size e individual, cocina completa y mesa de comedor/trabajo. Espacio funcional y cómodo.",
-    longDesc: "El Junior Studio No. 16 ofrece una cama king size y una cama individual, capacidad para 1 a 3 personas. Cocina completa, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado. Limpieza diaria incluida. Recepción 24/7. Funcional y cómodo para una pareja con menor o un viajero de trabajo con acompañante."
-  },
-  {
-    id: "exec-17", name: "Executive Studio No.17", type: "Executive",
-    price: 950, baseGuests: 1, extraCharge: 0, guests: 2,
-    beds: "1 cama queen size", img: "suite-executive.jpg", allowsChildren: true, noStove: true,
-    desc: "Executive Studio con microondas, cafetera, frigobar, vajilla y cubertería. Cuenta con mesa de comedor/trabajo, ideal para estancias de 1 o 2 personas.",
-    longDesc: "El Executive Studio No. 17 es ideal para 1 o 2 personas, con una cama queen size. Cuenta con microondas, cafetera, frigobar, vajilla y cubertería, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Perfecto para viajeros que buscan una estancia compacta y cómoda en Mérida."
-  },
-  {
-    id: "master-18", name: "Master Studio No.18", type: "Master",
-    price: 1300, baseGuests: 3, extraCharge: 150, guests: 5,
-    beds: "1 cama king size + 3 camas individuales", img: "suite-master.jpg", allowsChildren: true,
-    desc: "Master Studio amplio con una cama king size y tres camas individuales, cocina totalmente equipada. Espacio cómodo y funcional para familias o equipos de trabajo.",
-    longDesc: "El Master Studio No. 18 es uno de nuestros espacios más amplios, con capacidad para hasta 5 personas. Equipado con una cama king size y tres camas individuales, cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería) y mesa de comedor/trabajo. Incluye Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7."
-  },
-  {
-    id: "master-19", name: "Master Studio No.19", type: "Master",
-    price: 1300, baseGuests: 3, extraCharge: 150, guests: 5,
-    beds: "1 cama queen size + 3 camas individuales", img: "portada-master.png", allowsChildren: true, hasSofa: true,
-    desc: "Master Studio con una cama queen size, tres camas individuales, sofá y cocina totalmente equipada. Amplio y cómodo para familias o equipos de trabajo.",
-    longDesc: "El Master Studio No. 19 es un espacio amplio con capacidad para hasta 5 personas, con una cama queen size, tres camas individuales y un sofá para mayor confort. Cocina totalmente equipada, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para familias grandes o equipos de trabajo."
-  },
-  {
-    id: "exec-20", name: "Executive Studio No.20", type: "Executive",
-    price: 1000, baseGuests: 1, extraCharge: 0, guests: 2,
-    beds: "1 cama king size", img: "portada-exec.png", floor: "Planta Baja", allowsChildren: false, frigobar: true,
-    desc: "Executive Studio en planta baja con cama king, cocina totalmente equipada y frigobar. Acceso sin escalones, ideal para 1 o 2 personas.",
-    longDesc: "El Executive Studio No. 20 está en planta baja, con cama king size y capacidad para 1 o 2 personas. Cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Acceso sin escalones. Limpieza diaria incluida. Recepción 24/7. Habitación para adultos."
-  },
-  {
-    id: "exec-21", name: "Executive Studio No.21", type: "Executive",
-    price: 1000, baseGuests: 1, extraCharge: 0, guests: 2,
-    beds: "1 cama king size", img: "suite-executive.jpg", floor: "Planta Baja", allowsChildren: false, frigobar: true,
-    desc: "Executive Studio en planta baja con cama king, cocina totalmente equipada y frigobar. Acceso sin escalones, ideal para 1 o 2 personas.",
-    longDesc: "El Executive Studio No. 21 está en planta baja, con cama king size y capacidad para 1 o 2 personas. Cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Acceso sin escalones, ideal para huéspedes que prefieren evitar escaleras. Limpieza diaria incluida. Recepción 24/7. Habitación para adultos."
-  },
-  {
-    id: "exec-22", name: "Executive Studio No.22", type: "Executive",
-    price: 1000, baseGuests: 1, extraCharge: 0, guests: 2,
-    beds: "1 cama king size", img: "portada-exec.png", floor: "Planta Baja", allowsChildren: false, frigobar: true,
-    desc: "Executive Studio en planta baja con cama king, cocina totalmente equipada y frigobar. Acceso sin escalones, ideal para 1 o 2 personas.",
-    longDesc: "El Executive Studio No. 22 está en planta baja, con cama king size y capacidad para 1 o 2 personas. Cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Acceso sin escalones. Limpieza diaria incluida. Recepción 24/7. Habitación para adultos."
-  },
-  {
-    id: "jr-23", name: "Junior Studio No.23", type: "Junior",
-    price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
-    beds: "2 camas matrimoniales", img: "suite-junior.jpg", floor: "Planta Baja", allowsChildren: true, frigobar: true,
-    desc: "Junior Studio amplio en planta baja con dos camas matrimoniales, cocina totalmente equipada y frigobar. Acceso sin escalones.",
-    longDesc: "El Junior Studio No. 23 está en planta baja, con acceso sin escalones. Cuenta con dos camas matrimoniales y capacidad para 1 a 4 personas. Cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Ideal para familias o huéspedes que prefieren evitar escaleras."
-  },
-  {
-    id: "jr-24", name: "Junior Studio No.24", type: "Junior",
-    price: 1150, baseGuests: 1, extraCharge: 150, guests: 4,
-    beds: "2 camas matrimoniales", img: "portada-junior.png", floor: "Planta Baja", allowsChildren: true, frigobar: true,
-    desc: "Junior Studio amplio en planta baja con dos camas matrimoniales, cocina totalmente equipada y frigobar. Acceso sin escalones.",
-    longDesc: "El Junior Studio No. 24 está en planta baja con acceso sin escalones. Dos camas matrimoniales, capacidad para 1 a 4 personas, cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con amenidades. Limpieza diaria incluida. Recepción 24/7. Cómodo para familias en estancias prolongadas."
-  },
-  {
-    id: "master-25", name: "Master Studio No.25", type: "Master",
-    price: 1300, baseGuests: 3, extraCharge: 150, guests: 5,
-    beds: "2 camas matrimoniales + 1 cama individual", img: "room-detail-1.jpg", floor: "Planta Baja", allowsChildren: true, frigobar: true, accessible: true,
-    desc: "Master Studio amplio en planta baja con dos camas matrimoniales y una individual, equipado especialmente para huéspedes con movilidad reducida: agarraderas en el baño y puerta amplia para silla de ruedas. Cocina totalmente equipada y frigobar.",
-    longDesc: "El Master Studio No. 25 es nuestro espacio más accesible: está en planta baja y equipado especialmente para huéspedes con movilidad reducida, con agarraderas en el baño y puerta amplia para silla de ruedas. Capacidad para hasta 5 personas con dos camas matrimoniales y una cama individual, cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado adaptado. Limpieza diaria incluida. Recepción 24/7. Ideal para pacientes en recuperación, acompañantes o familias con un miembro con movilidad reducida."
+    id: "master-suite-jr",
+    name: "Master Suite Jr.",
+    units: ["10"],
+    guestsMin: 3, guestsMax: 4,
+    priceFrom: 1300,
+    capacity: "Hasta 4 personas",
+    badge: "Hasta 4 Personas",
+    beds: "4 camas individuales",
+    kitchen: "full",
+    adultsOnly: false,
+    groundFloor: false,
+    accessible: null,
+    allowsChildren: true,
+    cardImg: "suite-master.jpg",
+    gallery: [
+      { img: "suite-master.jpg", room: "10" }
+    ],
+    desc: "Cuatro camas individuales y cocina totalmente equipada. Ideal para familias o equipos, hasta 4 personas.",
+    longDesc: "El Master Suite Jr. es un espacio amplio con cuatro camas individuales y capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Este tipo corresponde a la suite 10."
   }
 ];
 
 /* --- Helpers --- */
-function kitchenLabel(r) {
-  if (r.noStove) return "Microondas, cafetera y frigobar";
-  if (r.frigobar) return "Cocina totalmente equipada (frigobar)";
-  return "Cocina totalmente equipada";
+function bookingUrlFor(t) { return (t && t.bookingUrl) || BOOKING_URL; }
+
+function kitchenLabel(t) {
+  if (t.kitchen === 'kitchenette') return 'Microondas, cafetera y frigobar';
+  if (t.kitchen === 'full-frigobar') return 'Cocina totalmente equipada (frigobar)';
+  return 'Cocina totalmente equipada';
 }
 
-function detailLinkFor(r) {
-  return `studio.html#${r.id}`;
+function detailLinkFor(t) { return 'studio.html#' + t.id; }
+
+// Build a Little Hotelier booking link, optionally with the dates/guests
+// the visitor entered in the suites.html search bar.
+function bookingUrlWithSearch(t) {
+  const base = bookingUrlFor(t);
+  const ci = (document.getElementById('search-checkin') || {}).value || '';
+  const co = (document.getElementById('search-checkout') || {}).value || '';
+  const g = parseInt(((document.getElementById('search-guests') || {}).value || '0'), 10) || 0;
+  const params = [];
+  if (ci) params.push('check_in=' + encodeURIComponent(ci));
+  if (co) params.push('check_out=' + encodeURIComponent(co));
+  if (g > 0) params.push('number_of_guests=' + g);
+  return params.length ? base + '?' + params.join('&') : base;
 }
 
-// Label that explains who the base price covers.
-// Master rooms have a 3-person minimum; everything else lets the
-// base price cover 1 OR 2 people, and surcharges start at the 3rd.
-function basePriceLabel(r) {
-  if (r.type === 'Master') return `Desde (${r.baseGuests} personas)`;
-  return 'Desde (1 o 2 personas)';
+const ICONS = {
+  bed: '<svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>',
+  kitchen: '<svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>',
+  ac: '<svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><path d="M12 2v4"/><path d="M3 10h18"/><path d="M3 10v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"/><path d="M8 22v-4"/><path d="M16 22v-4"/><path d="M12 22v-4"/></svg>',
+  wifi: '<svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>',
+  tv: '<svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>',
+  clean: '<svg viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
+  accessible: '<svg viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2a7 7 0 0 0-14 0v2"/><path d="M5 13l3 8h8l3-8"/></svg>',
+  reception: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>'
+};
+
+function typeCardHTML(t) {
+  const adultsBadge = t.adultsOnly
+    ? '<span class="suite-badge suite-badge-floor">Solo adultos</span>' : '';
+  const accessibleAmenity = t.accessible
+    ? '<div class="suite-amenity">' + ICONS.accessible + '<span>Unidad accesible disponible (Suite ' + t.accessible.room + ')</span></div>'
+    : '';
+  return '' +
+  '<article class="suite-card fade-up" id="' + t.id + '">' +
+    '<div class="suite-image">' +
+      '<img src="assets/images/' + t.cardImg + '" alt="' + t.name + '" loading="lazy">' +
+      '<span class="suite-badge">' + t.badge + '</span>' +
+      adultsBadge +
+    '</div>' +
+    '<div class="suite-info">' +
+      '<h3>' + t.name + '</h3>' +
+      '<p class="suite-desc">' + t.desc + '</p>' +
+      '<div class="suite-amenities">' +
+        '<div class="suite-amenity">' + ICONS.bed + '<span>' + t.beds + '</span></div>' +
+        '<div class="suite-amenity">' + ICONS.kitchen + '<span>' + kitchenLabel(t) + '</span></div>' +
+        '<div class="suite-amenity">' + ICONS.tv + '<span>Smart TV con cable</span></div>' +
+        '<div class="suite-amenity">' + ICONS.wifi + '<span>Wi-Fi de alta velocidad</span></div>' +
+        '<div class="suite-amenity">' + ICONS.clean + '<span>Limpieza diaria incluida</span></div>' +
+        '<div class="suite-amenity">' + ICONS.ac + '<span>A/C y ventilador</span></div>' +
+        '<div class="suite-amenity">' + ICONS.reception + '<span>Recepción 24/7</span></div>' +
+        accessibleAmenity +
+      '</div>' +
+      '<div class="suite-pricing">' +
+        '<div>' +
+          '<span class="price-label">Desde · ' + t.capacity + '</span>' +
+          '<div class="price">$' + t.priceFrom.toLocaleString('en-US') + ' <span>MXN / noche</span></div>' +
+          '<span class="price-tax">Impuestos incluidos</span>' +
+          '<a class="suite-detail-link" href="' + detailLinkFor(t) + '">Ver detalles y fotos →</a>' +
+        '</div>' +
+        '<a href="' + bookingUrlWithSearch(t) + '" target="_blank" rel="noopener" class="btn btn-primary">Reservar</a>' +
+      '</div>' +
+      '<div class="suite-promo">🎉 Paga 6 noches, la 7.ª es de cortesía</div>' +
+    '</div>' +
+  '</article>';
 }
 
-// Extra-person charge text. The threshold (when the surcharge
-// starts) is the 4th person for Master rooms and the 3rd for
-// Junior. Returns null if the room has no surcharge.
-function extraChargeLabel(r) {
-  if (!r.extraCharge) return null;
-  const threshold = r.type === 'Master' ? 4 : 3;
-  const ord = threshold === 3 ? '3.ª' : '4.ª';
-  if (r.guests === threshold) {
-    return `+$${r.extraCharge} por la ${ord} persona (máx. ${r.guests})`;
-  }
-  return `+$${r.extraCharge} por persona adicional desde la ${ord} (máx. ${r.guests})`;
-}
-
-function renderRooms(filter, minGuests) {
+function renderTypes(minGuests) {
   minGuests = minGuests || 0;
   const container = document.getElementById('rooms-grid');
   if (!container) return;
-  let filtered = filter === 'all' ? ROOMS : ROOMS.filter(r => r.type === filter);
-  if (minGuests > 0) filtered = filtered.filter(r => r.guests >= minGuests);
 
-  if (filtered.length === 0) {
-    container.innerHTML = '<p class="no-results">No se encontraron studios para esa cantidad de huéspedes. Intenta con menos personas o cambia el tipo.</p>';
+  let list = ROOM_TYPES;
+  if (minGuests > 0) list = list.filter(t => t.guestsMax >= minGuests);
+
+  if (list.length === 0) {
+    container.innerHTML = '<p class="no-results">No tenemos un tipo para esa cantidad de huéspedes. Prueba con menos personas o escríbenos por WhatsApp.</p>';
     return;
   }
 
-  const icons = {
-    bed: '<svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>',
-    kitchen: '<svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>',
-    ac: '<svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><path d="M12 2v4"/><path d="M3 10h18"/><path d="M3 10v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"/><path d="M8 22v-4"/><path d="M16 22v-4"/><path d="M12 22v-4"/></svg>',
-    wifi: '<svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>',
-    tv: '<svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>',
-    clean: '<svg viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
-    accessible: '<svg viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2a7 7 0 0 0-14 0v2"/><path d="M5 13l3 8h8l3-8"/></svg>',
-    reception: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>'
-  };
+  container.innerHTML = list.map(typeCardHTML).join('');
 
-  container.innerHTML = filtered.map(r => {
-    // Build the policy line (extra-person charge + minors policy).
-    // We never write "no aplica para menores": if the room doesn't
-    // allow children, the line is just omitted.
-    const policyParts = [];
-    const extra = extraChargeLabel(r);
-    if (extra) policyParts.push(extra);
-    if (r.allowsChildren) policyParts.push('Menores de 10 años gratis (hasta 2)');
-    const policyLine = policyParts.join(' · ');
-
-    return `
-    <article class="suite-card fade-up" id="${r.id}">
-      <div class="suite-image">
-        <img src="assets/images/${r.img}" alt="${r.name}" loading="lazy">
-        <span class="suite-badge">Hasta ${r.guests} Personas</span>
-        ${r.floor ? '<span class="suite-badge suite-badge-floor">'+r.floor+'</span>' : ''}
-      </div>
-      <div class="suite-info">
-        <h3>${r.name}</h3>
-        <p class="suite-desc">${r.desc}</p>
-        <div class="suite-amenities">
-          <div class="suite-amenity">${icons.bed}<span>${r.beds}</span></div>
-          <div class="suite-amenity">${icons.kitchen}<span>${kitchenLabel(r)}</span></div>
-          <div class="suite-amenity">${icons.tv}<span>Smart TV con cable</span></div>
-          <div class="suite-amenity">${icons.wifi}<span>Wi-Fi de alta velocidad</span></div>
-          <div class="suite-amenity">${icons.clean}<span>Limpieza diaria incluida</span></div>
-          <div class="suite-amenity">${icons.ac}<span>A/C y ventilador</span></div>
-          <div class="suite-amenity">${icons.reception}<span>Recepción 24/7</span></div>
-          ${r.accessible ? '<div class="suite-amenity">'+icons.accessible+'<span>Habitación accesible (silla de ruedas)</span></div>' : ''}
-        </div>
-        <div class="suite-pricing">
-          <div>
-            <span class="price-label">${basePriceLabel(r)}</span>
-            <div class="price">$${r.price.toLocaleString()} <span>MXN / noche</span></div>
-            ${policyLine ? '<span class="price-extra">'+policyLine+'</span>' : ''}
-            <span class="price-tax">Impuestos incluidos</span>
-          </div>
-          <a href="${detailLinkFor(r)}" class="btn btn-primary">Ver Detalles</a>
-        </div>
-        <div class="suite-promo">🎉 Paga 6 noches, la 7.ª es de cortesía</div>
-      </div>
-    </article>
-  `; }).join('');
-
-  // Re-observe for animations
   document.querySelectorAll('#rooms-grid .fade-up').forEach(el => {
     el.classList.remove('visible');
     if (window._roomObserver) window._roomObserver.observe(el);
   });
-}
-
-function getActiveFilter() {
-  const active = document.querySelector('.filter-btn.active');
-  return active ? active.dataset.filter : 'all';
 }
 
 function getSelectedGuests() {
@@ -235,56 +238,22 @@ function getSelectedGuests() {
   return sel ? parseInt(sel.value, 10) || 0 : 0;
 }
 
-// Read ?filter= from the URL and return one of: all|Master|Junior|Executive
-function getFilterFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  const f = (params.get('filter') || '').toLowerCase();
-  if (f === 'master') return 'Master';
-  if (f === 'junior') return 'Junior';
-  if (f === 'executive') return 'Executive';
-  return 'all';
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   window._roomObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); window._roomObserver.unobserve(e.target); } });
   }, { threshold: 0.1 });
 
-  // Apply initial filter from URL (e.g., suites.html?filter=Master)
-  const initialFilter = getFilterFromUrl();
-  renderRooms(initialFilter, 0);
+  // Render all types
+  renderTypes(0);
 
-  // Sync the active filter button
-  document.querySelectorAll('.filter-btn').forEach(b => {
-    b.classList.toggle('active', b.dataset.filter === initialFilter);
-  });
-
-  // Type filter buttons
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderRooms(btn.dataset.filter, getSelectedGuests());
-    });
-  });
-
-  // Search button
-  const applyBtn = document.getElementById('search-apply');
-  if (applyBtn) {
-    applyBtn.addEventListener('click', () => {
-      renderRooms(getActiveFilter(), getSelectedGuests());
-    });
-  }
-
-  // Filter on guest change instantly
+  // Re-filter when the guest count changes or "Buscar" is pressed.
   const guestSel = document.getElementById('search-guests');
-  if (guestSel) {
-    guestSel.addEventListener('change', () => {
-      renderRooms(getActiveFilter(), getSelectedGuests());
-    });
-  }
+  if (guestSel) guestSel.addEventListener('change', () => renderTypes(getSelectedGuests()));
 
-  // Scroll to the right card if URL has hash (#master-10)
+  const applyBtn = document.getElementById('search-apply');
+  if (applyBtn) applyBtn.addEventListener('click', () => renderTypes(getSelectedGuests()));
+
+  // Scroll to a type card if the URL has a hash (e.g. suites.html#master-suite)
   if (window.location.hash && document.getElementById('rooms-grid')) {
     setTimeout(() => {
       const target = document.querySelector(window.location.hash);
