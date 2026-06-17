@@ -238,14 +238,14 @@
   <script src="js/content.js"></script>
   <script>
     (function () {
-      // Read room id from URL hash
+      // Read room TYPE id from URL hash
       const id = (window.location.hash || '').replace('#', '').trim();
       if (!id) {
         window.location.replace('suites.html');
         return;
       }
-      const room = (window.ROOMS || ROOMS).find(r => r.id === id);
-      if (!room) {
+      const t = (window.ROOM_TYPES || ROOM_TYPES).find(x => x.id === id);
+      if (!t) {
         window.location.replace('suites.html');
         return;
       }
@@ -267,48 +267,42 @@
       };
 
       function kitchenText() {
-        if (room.noStove) return 'Microondas, cafetera y frigobar';
-        if (room.frigobar) return 'Cocina totalmente equipada (frigobar)';
+        if (t.kitchen === 'kitchenette') return 'Microondas, cafetera y frigobar';
+        if (t.kitchen === 'full-frigobar') return 'Cocina totalmente equipada (frigobar)';
         return 'Cocina totalmente equipada';
       }
 
       // Set page title and meta
-      document.title = `${room.name} — Aparthotel Siete32`;
+      document.title = `${t.name} — Aparthotel Siete32`;
       const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) metaDesc.setAttribute('content', room.longDesc || room.desc);
+      if (metaDesc) metaDesc.setAttribute('content', t.longDesc || t.desc);
 
       // Hero
       const heroSection = document.getElementById('detail-hero');
-      if (heroSection) heroSection.style.backgroundImage = `url('assets/images/${room.img}')`;
-      document.getElementById('studio-name').textContent = room.name;
+      if (heroSection) heroSection.style.backgroundImage = `url('assets/images/${t.cardImg}')`;
+      document.getElementById('studio-name').textContent = t.name;
 
       const meta = document.getElementById('studio-meta');
       const metaBadges = [];
-      const capLabel = (room.baseGuests === room.guests)
-        ? `Hasta ${room.guests} personas`
-        : (room.baseGuests === 1 && room.guests === 2 ? '1 o 2 personas' : `Desde ${room.baseGuests} hasta ${room.guests} personas`);
-      metaBadges.push(`<span class="badge">${capLabel}</span>`);
-      metaBadges.push(`<span>${room.beds}</span>`);
+      metaBadges.push(`<span class="badge">${t.capacity}</span>`);
+      metaBadges.push(`<span>${t.beds}</span>`);
       metaBadges.push(`<span>${kitchenText()}</span>`);
-      if (room.floor) metaBadges.push(`<span class="badge">${room.floor}</span>`);
+      if (t.adultsOnly) metaBadges.push('<span class="badge">Solo adultos</span>');
+      if (t.accessible) metaBadges.push('<span class="badge">Unidad accesible</span>');
       meta.innerHTML = metaBadges.join('');
 
       // Breadcrumb
-      const typeLower = room.type.toLowerCase();
-      const typeLabel = `Studios ${room.type}`;
       const bcType = document.getElementById('breadcrumb-type');
-      if (bcType) {
-        bcType.href = `suites.html?filter=${room.type}`;
-        bcType.textContent = typeLabel;
-      }
-      document.getElementById('breadcrumb-name').textContent = room.name;
+      if (bcType) { bcType.href = 'suites.html'; bcType.textContent = 'Habitaciones'; }
+      document.getElementById('breadcrumb-name').textContent = t.name;
 
       // Description
-      document.getElementById('studio-desc').textContent = room.longDesc || room.desc;
+      document.getElementById('studio-desc').textContent = t.longDesc || t.desc;
 
-      // Amenities (no "tarifa semanal" line here — that promo lives in the price card only)
+      // Amenities
+      const adultsIcon = '<svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg>';
       const amenities = [
-        { icon: I.bed, label: room.beds },
+        { icon: I.bed, label: t.beds },
         { icon: I.kitchen, label: kitchenText() },
         { icon: I.tv, label: 'Smart TV con cable' },
         { icon: I.wifi, label: 'Wi-Fi de alta velocidad incluido' },
@@ -317,40 +311,25 @@
         { icon: I.bath, label: 'Baño privado con toallas y amenidades' },
         { icon: I.reception, label: 'Recepción 24/7' }
       ];
-      if (room.floor) amenities.push({ icon: I.floor, label: 'Habitación en planta baja (sin escalones)' });
-      if (room.accessible) amenities.push({ icon: I.access, label: 'Habitación accesible para silla de ruedas' });
-      if (room.allowsChildren) amenities.push({ icon: I.child, label: 'Menores de 10 años gratis (hasta 2)' });
+      if (t.groundFloor === 'all') amenities.push({ icon: I.floor, label: 'En planta baja, sin escalones' });
+      else if (t.groundFloor === 'some') amenities.push({ icon: I.floor, label: 'Algunas unidades en planta baja' });
+      if (t.accessible) amenities.push({ icon: I.access, label: `Unidad accesible para silla de ruedas (Suite ${t.accessible.room}, a solicitud)` });
+      if (t.adultsOnly) amenities.push({ icon: adultsIcon, label: 'Habitación para adultos' });
+      else if (t.allowsChildren) amenities.push({ icon: I.child, label: 'Menores de 10 años gratis (hasta 2)' });
 
       document.getElementById('studio-amenities').innerHTML = amenities.map(a =>
         `<div class="amenity-item">${a.icon}<span>${a.label}</span></div>`
       ).join('');
 
-      // Price card — same structure as suites listing card so CSS .price span only catches the currency
-      // The base price covers up to baseGuests people for Master, or 1 o 2 personas for Junior/Executive
-      const baseLabelText = room.type === 'Master'
-        ? `${room.baseGuests} personas`
-        : '1 o 2 personas';
-      document.getElementById('price-label').textContent = `Precio por noche (desde ${baseLabelText})`;
+      // Price card
+      document.getElementById('price-label').textContent = `Precio por noche (desde · ${t.capacity})`;
       document.getElementById('studio-price-block').innerHTML =
-        `$${room.price.toLocaleString()} <span>MXN / noche</span>`;
+        `$${t.priceFrom.toLocaleString('en-US')} <span>MXN / noche</span>`;
 
-      // Extra-person surcharge text. Threshold = 3 for Junior, 4 for Master.
-      function extraChargeText() {
-        if (!room.extraCharge) return null;
-        const threshold = room.type === 'Master' ? 4 : 3;
-        const ord = threshold === 3 ? '3.ª' : '4.ª';
-        if (room.guests === threshold) {
-          return `+$${room.extraCharge} por la ${ord} persona (máx. ${room.guests})`;
-        }
-        return `+$${room.extraCharge} por persona adicional desde la ${ord} (máx. ${room.guests})`;
-      }
-
-      // Build the policy line. We never say "no aplica para menores":
-      // if the room doesn't allow children, the line is just omitted.
+      // Policy line (children + accessible note)
       const policyParts = [];
-      const extra = extraChargeText();
-      if (extra) policyParts.push(extra);
-      if (room.allowsChildren) policyParts.push('Menores de 10 años gratis (hasta 2)');
+      if (t.allowsChildren) policyParts.push('Menores de 10 años gratis (hasta 2)');
+      if (t.accessible) policyParts.push(`Unidad accesible a solicitud (Suite ${t.accessible.room})`);
       const policyEl = document.getElementById('price-policy');
       if (policyParts.length) {
         policyEl.textContent = policyParts.join(' · ');
@@ -359,22 +338,22 @@
         policyEl.style.display = 'none';
       }
 
-      // Mobile booking bar
-      document.getElementById('mobile-studio-name').textContent = room.name;
-      document.getElementById('mobile-studio-price').textContent = '$' + room.price.toLocaleString();
+      // Booking links — set dynamically so per-type Little Hotelier URLs work later
+      const bookUrl = (typeof bookingUrlFor === 'function') ? bookingUrlFor(t) : (t.bookingUrl || '');
+      if (bookUrl) {
+        document.querySelectorAll('.studio-book-btn, .mobile-booking-bar a.btn').forEach(a => { a.href = bookUrl; });
+      }
 
-      // Gallery — main image + 3 detail images from the pool
-      const galleryImages = [
-        { src: room.img, alt: `${room.name} - Vista principal` },
-        { src: 'room-detail-1.jpg', alt: `${room.name} - Interior` },
-        { src: 'room-detail-3.jpg', alt: `${room.name} - Detalle` },
-        { src: 'room-detail-4.jpg', alt: `${room.name} - Cocina` }
-      ];
-      document.getElementById('studio-gallery').innerHTML = galleryImages.map(g =>
-        `<img src="assets/images/${g.src}" alt="${g.alt}" loading="lazy">`
+      // Mobile booking bar
+      document.getElementById('mobile-studio-name').textContent = t.name;
+      document.getElementById('mobile-studio-price').textContent = '$' + t.priceFrom.toLocaleString('en-US');
+
+      // Gallery — every unit's photo, each captioned with its suite number
+      document.getElementById('studio-gallery').innerHTML = t.gallery.map(g =>
+        `<figure class="gallery-item"><img src="assets/images/${g.img}" alt="${t.name} — Suite ${g.room}" loading="lazy"><figcaption>Suite ${g.room}</figcaption></figure>`
       ).join('');
 
-      // Listen for hash changes so navigation between rooms updates the page
+      // Reload when navigating between types via hash
       window.addEventListener('hashchange', () => {
         window.location.reload();
       });

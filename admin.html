@@ -196,7 +196,7 @@
       "room-detail-4.jpg","room-detail-5.png","room-detail-6.jpg","room-detail-7.jpg",
       "hero-room.jpg","slider-2.jpg","slider-3.jpg","slider-4.jpg"
     ];
-    var CARD_LABELS = { master: "Master Studio", junior: "Junior Studio", executive: "Executive Studio" };
+    var CARD_LABELS = { executive: "Executive", "executive-jr": "Executive Jr.", "junior-suite": "Junior Suite", "master-suite": "Master Suite", "master-suite-jr": "Master Suite Jr." };
 
     /* ----------------------------- helpers ---------------------------- */
     function $(id){ return document.getElementById(id); }
@@ -244,21 +244,22 @@
     function normalize(d) {
       d = d && typeof d === "object" ? d : {};
       var banner = d.banner || {};
-      var ids = ["master", "junior", "executive"];
+      var ids = ["executive", "executive-jr", "junior-suite", "master-suite", "master-suite-jr"];
       var byId = {};
       (Array.isArray(d.cards) ? d.cards : []).forEach(function (c) { if (c && c.id) byId[c.id] = c; });
       var cards = (Array.isArray(d.cards) ? d.cards : [])
         .filter(function (c) { return c && ids.indexOf(c.id) !== -1; })
         .sort(function (a, b) { return (a.order || 0) - (b.order || 0); });
       ids.forEach(function (id) { if (!byId[id]) cards.push({ id: id }); });
-      var defaults = { master: 1300, junior: 1150, executive: 1000 };
+      var defaults = { executive: 1000, "executive-jr": 950, "junior-suite": 1150, "master-suite": 1300, "master-suite-jr": 1300 };
+      var defaultImg = { executive: "portada-exec.png", "executive-jr": "suite-executive.jpg", "junior-suite": "suite-junior.jpg", "master-suite": "portada-master.png", "master-suite-jr": "suite-master.jpg" };
       cards = cards.map(function (c) {
         return {
           id: c.id,
           visible: c.visible === undefined ? true : !!c.visible,
           title: c.title || CARD_LABELS[c.id],
           priceFrom: Number.isFinite(+c.priceFrom) ? +c.priceFrom : defaults[c.id],
-          image: c.image || (c.id === "junior" ? "suite-junior.jpg" : c.id === "executive" ? "suite-executive.jpg" : "suite-master.jpg")
+          image: c.image || defaultImg[c.id] || "suite-master.jpg"
         };
       });
       return {
@@ -274,7 +275,7 @@
           return {
             id: p.id || ("p" + (i + 1)),
             active: !!p.active,
-            scope: ["all","master","junior","executive"].indexOf(p.scope) !== -1 ? p.scope : "all",
+            scope: ["all","executive","executive-jr","junior-suite","master-suite","master-suite-jr"].indexOf(p.scope) !== -1 ? p.scope : "all",
             badge: p.badge || "",
             note: p.note || ""
           };
@@ -337,8 +338,10 @@
         '<div class="promo-row" data-i="' + i + '">' +
           '<label class="switch"><input type="checkbox" data-field="active" ' + (p.active ? "checked" : "") + '><span>Activa</span></label>' +
           '<select data-field="scope">' +
-            opt("all", "Todas", p.scope) + opt("master", "Master", p.scope) +
-            opt("junior", "Junior", p.scope) + opt("executive", "Executive", p.scope) +
+            opt("all", "Todas", p.scope) +
+            opt("executive", "Executive", p.scope) + opt("executive-jr", "Executive Jr.", p.scope) +
+            opt("junior-suite", "Junior Suite", p.scope) + opt("master-suite", "Master Suite", p.scope) +
+            opt("master-suite-jr", "Master Suite Jr.", p.scope) +
           '</select>' +
           '<input type="text" data-field="badge" value="' + esc(p.badge) + '" placeholder="Etiqueta (ej. -15%)" maxlength="24">' +
           '<input type="text" data-field="note" value="' + esc(p.note) + '" placeholder="Texto (ej. Oferta de verano)" maxlength="160">' +
