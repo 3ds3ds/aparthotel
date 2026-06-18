@@ -32,11 +32,14 @@ const ROOM_TYPES = [
     groundFloor: "all",
     accessible: null,
     allowsChildren: false,
-    cardImg: "portada-exec.png",
+    cardImg: "exec-21-22-1.jpg",
     gallery: [
-      { img: "portada-exec.png", room: "20" },
-      { img: "room-detail-2.jpg", room: "21" },
-      { img: "room-detail-6.jpg", room: "22" }
+      { img: "exec-21-22-1.jpg", room: "21 y 22" },
+      { img: "exec-21-22-2.jpg", room: "21 y 22" },
+      { img: "exec-21-22-3.jpg", room: "21 y 22" },
+      { img: "exec-22-1.jpg", room: "22" },
+      { img: "exec-22-2.jpg", room: "22" },
+      { img: "exec-22-3.jpg", room: "22" }
     ],
     desc: "Studio en planta baja con cama king y cocina equipada con frigobar. Para 1 o 2 personas, solo adultos.",
     longDesc: "El Executive es un studio en planta baja con cama king size y capacidad para 1 o 2 personas. Cuenta con cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Acceso sin escalones, ideal para quienes prefieren evitar escaleras. Limpieza diaria incluida. Recepción 24/7. Habitación para adultos. Este tipo incluye las suites 20, 21 y 22."
@@ -55,9 +58,10 @@ const ROOM_TYPES = [
     groundFloor: false,
     accessible: null,
     allowsChildren: true,
-    cardImg: "suite-executive.jpg",
+    cardImg: "execjr-17-1.jpg",
     gallery: [
-      { img: "suite-executive.jpg", room: "17" }
+      { img: "execjr-17-1.jpg", room: "17" },
+      { img: "execjr-17-2.jpg", room: "17" }
     ],
     desc: "Compacto y económico, con cama queen, microondas, cafetera y frigobar. Para 1 o 2 personas.",
     longDesc: "El Executive Jr. es ideal para 1 o 2 personas, con una cama queen size. Cuenta con microondas, cafetera y frigobar (sin estufa), vajilla y cubertería, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Perfecto para viajeros que buscan una estancia compacta y cómoda en Mérida. Este tipo corresponde a la suite 17."
@@ -76,16 +80,17 @@ const ROOM_TYPES = [
     groundFloor: "some",
     accessible: null,
     allowsChildren: true,
-    cardImg: "suite-junior.jpg",
+    cardImg: "jr-11-14-1.jpg",
     gallery: [
-      { img: "suite-junior.jpg", room: "11" },
-      { img: "room-detail-3.jpg", room: "12" },
-      { img: "room-detail-4.jpg", room: "13" },
-      { img: "slider-2.jpg", room: "14" },
-      { img: "slider-3.jpg", room: "15" },
-      { img: "slider-4.jpg", room: "16" },
-      { img: "room-detail-7.jpg", room: "23" },
-      { img: "portada-junior.png", room: "24" }
+      { img: "jr-11-14-1.jpg", room: "11, 12, 13 y 14" },
+      { img: "jr-11-14-2.jpg", room: "11, 12, 13 y 14" },
+      { img: "jr-11-14-3.jpg", room: "11, 12, 13 y 14" },
+      { img: "jr-15-16-1.jpg", room: "15 y 16" },
+      { img: "jr-15-16-2.jpg", room: "15 y 16" },
+      { img: "jr-15-16-3.jpg", room: "15 y 16" },
+      { img: "jr-23-24-1.jpg", room: "23 y 24" },
+      { img: "jr-23-24-2.jpg", room: "23 y 24" },
+      { img: "jr-23-24-3.jpg", room: "23 y 24" }
     ],
     desc: "Cocina completa y mesa de comedor/trabajo, con distintas configuraciones de cama. Para 2 a 4 personas.",
     longDesc: "El Junior Suite es nuestro tipo con mayor disponibilidad. Cuenta con cocina completa (estufa, refrigerador, microondas y cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Capacidad de 2 a 4 personas, con distintas configuraciones de cama según la unidad: dos camas matrimoniales, dos camas queen size, o una cama king size con una individual. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Algunas unidades están en planta baja (suites 23 y 24). Limpieza diaria incluida. Recepción 24/7. Este tipo incluye las suites 11, 12, 13, 14, 15, 16, 23 y 24."
@@ -104,11 +109,19 @@ const ROOM_TYPES = [
     groundFloor: "some",
     accessible: { room: "25" },
     allowsChildren: true,
-    cardImg: "portada-master.png",
+    cardImg: "master-18-1.jpg",
     gallery: [
-      { img: "portada-master.png", room: "18" },
-      { img: "room-detail-1.jpg", room: "19" },
-      { img: "room-detail-5.png", room: "25" }
+      { img: "master-18-1.jpg", room: "18" },
+      { img: "master-18-2.jpg", room: "18" },
+      { img: "master-18-3.jpg", room: "18" },
+      { img: "master-18-4.jpg", room: "18" },
+      { img: "master-19-1.jpg", room: "19" },
+      { img: "master-19-2.jpg", room: "19" },
+      { img: "master-19-3.jpg", room: "19" },
+      { img: "master-25-1.jpg", room: "25" },
+      { img: "master-25-2.jpg", room: "25" },
+      { img: "master-25-3.jpg", room: "25" },
+      { img: "master-25-4.jpg", room: "25" }
     ],
     desc: "Nuestro espacio más amplio, hasta 5 personas. Una unidad accesible para silla de ruedas (Suite 25).",
     longDesc: "El Master Suite es nuestro espacio más amplio, con capacidad para hasta 5 personas y cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Distintas configuraciones según la unidad: cama king o queen con tres camas individuales (y sofá en una de ellas). Limpieza diaria incluida. Recepción 24/7. ♿ Una de nuestras unidades, la Suite 25, está en planta baja y adaptada para huéspedes con movilidad reducida (agarraderas en el baño y puerta amplia para silla de ruedas). Si necesitas esta habitación específica, contáctanos para asegurarla. Este tipo incluye las suites 18, 19 y 25."
@@ -127,9 +140,12 @@ const ROOM_TYPES = [
     groundFloor: false,
     accessible: null,
     allowsChildren: true,
-    cardImg: "suite-master.jpg",
+    cardImg: "masterjr-10-1.jpg",
     gallery: [
-      { img: "suite-master.jpg", room: "10" }
+      { img: "masterjr-10-1.jpg", room: "10" },
+      { img: "masterjr-10-2.jpg", room: "10" },
+      { img: "masterjr-10-3.jpg", room: "10" },
+      { img: "masterjr-10-4.jpg", room: "10" }
     ],
     desc: "Cuatro camas individuales y cocina totalmente equipada. Ideal para familias o equipos, hasta 4 personas.",
     longDesc: "El Master Suite Jr. es un espacio amplio con cuatro camas individuales y capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Este tipo corresponde a la suite 10."

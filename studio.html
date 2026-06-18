@@ -348,10 +348,11 @@
       document.getElementById('mobile-studio-name').textContent = t.name;
       document.getElementById('mobile-studio-price').textContent = '$' + t.priceFrom.toLocaleString('en-US');
 
-      // Gallery — every unit's photo, each captioned with its suite number
-      document.getElementById('studio-gallery').innerHTML = t.gallery.map(g =>
-        `<figure class="gallery-item"><img src="assets/images/${g.img}" alt="${t.name} — Suite ${g.room}" loading="lazy"><figcaption>Suite ${g.room}</figcaption></figure>`
-      ).join('');
+      // Gallery — every unit's photo, each captioned with its suite number(s)
+      document.getElementById('studio-gallery').innerHTML = t.gallery.map(function (g) {
+        var cap = (/[,y]/.test(String(g.room)) ? 'Suites ' : 'Suite ') + g.room;
+        return `<figure class="gallery-item"><img src="assets/images/${g.img}" alt="${t.name} — ${cap}" loading="lazy"><figcaption>${cap}</figcaption></figure>`;
+      }).join('');
 
       // Reload when navigating between types via hash
       window.addEventListener('hashchange', () => {
