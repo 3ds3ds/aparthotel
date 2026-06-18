@@ -29,11 +29,11 @@ const DEFAULT_CONTENT = {
     link: ""
   },
   cards: [
-    { id: "executive",      order: 1, visible: true, title: "Executive",        priceFrom: 1000, image: "portada-exec.png" },
-    { id: "executive-jr",   order: 2, visible: true, title: "Executive Jr.",    priceFrom: 950,  image: "suite-executive.jpg" },
-    { id: "junior-suite",   order: 3, visible: true, title: "Junior Suite",     priceFrom: 1150, image: "suite-junior.jpg" },
-    { id: "master-suite",   order: 4, visible: true, title: "Master Suite",     priceFrom: 1300, image: "portada-master.png" },
-    { id: "master-suite-jr", order: 5, visible: true, title: "Master Suite Jr.", priceFrom: 1300, image: "suite-master.jpg" }
+    { id: "executive",      order: 1, visible: true, title: "Executive",        priceFrom: 1000, image: "exec-21-22-1.jpg" },
+    { id: "executive-jr",   order: 2, visible: true, title: "Executive Jr.",    priceFrom: 950,  image: "execjr-17-1.jpg" },
+    { id: "junior-suite",   order: 3, visible: true, title: "Junior Suite",     priceFrom: 1150, image: "jr-11-14-1.jpg" },
+    { id: "master-suite",   order: 4, visible: true, title: "Master Suite",     priceFrom: 1300, image: "master-18-1.jpg" },
+    { id: "master-suite-jr", order: 5, visible: true, title: "Master Suite Jr.", priceFrom: 1300, image: "masterjr-10-1.jpg" }
   ],
   promos: []
 };

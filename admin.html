@@ -189,12 +189,12 @@
 
     // Photos available in /assets/images for the card pictures.
     var IMAGES = [
-      "suite-master.jpg","suite-junior.jpg","suite-executive.jpg",
-      "portada-master.png","portada-junior.png","portada-exec.png",
-      "portada-3.png","portada-4.png",
-      "room-detail-1.jpg","room-detail-2.jpg","room-detail-3.jpg",
-      "room-detail-4.jpg","room-detail-5.png","room-detail-6.jpg","room-detail-7.jpg",
-      "hero-room.jpg","slider-2.jpg","slider-3.jpg","slider-4.jpg"
+      "exec-21-22-1.jpg","exec-21-22-2.jpg","exec-22-1.jpg",
+      "execjr-17-1.jpg","execjr-17-2.jpg",
+      "jr-11-14-1.jpg","jr-15-16-1.jpg","jr-23-24-1.jpg",
+      "master-18-1.jpg","master-19-1.jpg","master-25-1.jpg",
+      "masterjr-10-1.jpg",
+      "common-1.jpg","common-6.jpg"
     ];
     var CARD_LABELS = { executive: "Executive", "executive-jr": "Executive Jr.", "junior-suite": "Junior Suite", "master-suite": "Master Suite", "master-suite-jr": "Master Suite Jr." };
 
@@ -252,7 +252,7 @@
         .sort(function (a, b) { return (a.order || 0) - (b.order || 0); });
       ids.forEach(function (id) { if (!byId[id]) cards.push({ id: id }); });
       var defaults = { executive: 1000, "executive-jr": 950, "junior-suite": 1150, "master-suite": 1300, "master-suite-jr": 1300 };
-      var defaultImg = { executive: "portada-exec.png", "executive-jr": "suite-executive.jpg", "junior-suite": "suite-junior.jpg", "master-suite": "portada-master.png", "master-suite-jr": "suite-master.jpg" };
+      var defaultImg = { executive: "exec-21-22-1.jpg", "executive-jr": "execjr-17-1.jpg", "junior-suite": "jr-11-14-1.jpg", "master-suite": "master-18-1.jpg", "master-suite-jr": "masterjr-10-1.jpg" };
       cards = cards.map(function (c) {
         return {
           id: c.id,
