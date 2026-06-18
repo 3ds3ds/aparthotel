@@ -16,7 +16,9 @@
  * built-in defaults so the public site keeps working no matter what.
  */
 
-const KV_KEY = "site-content";
+// Bumped from "site-content" so any cards saved under the old 3-type
+// structure are ignored; GET then falls back to the new 5-type defaults.
+const KV_KEY = "site-content-v2";
 
 // Shipped defaults — these mirror the current hardcoded home page, so the
 // very first visit (before anyone edits anything) looks identical to today.
