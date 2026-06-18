@@ -313,7 +313,7 @@
       ];
       if (t.groundFloor === 'all') amenities.push({ icon: I.floor, label: 'En planta baja, sin escalones' });
       else if (t.groundFloor === 'some') amenities.push({ icon: I.floor, label: 'Algunas unidades en planta baja' });
-      if (t.accessible) amenities.push({ icon: I.access, label: `Unidad accesible para silla de ruedas (Suite ${t.accessible.room}, a solicitud)` });
+      if (t.accessible) amenities.push({ icon: I.access, label: `Unidad accesible para silla de ruedas (Studio ${t.accessible.room}, a solicitud)` });
       if (t.adultsOnly) amenities.push({ icon: adultsIcon, label: 'Habitación para adultos' });
       else if (t.allowsChildren) amenities.push({ icon: I.child, label: 'Menores de 10 años gratis (hasta 2)' });
 
@@ -329,7 +329,7 @@
       // Policy line (children + accessible note)
       const policyParts = [];
       if (t.allowsChildren) policyParts.push('Menores de 10 años gratis (hasta 2)');
-      if (t.accessible) policyParts.push(`Unidad accesible a solicitud (Suite ${t.accessible.room})`);
+      if (t.accessible) policyParts.push(`Unidad accesible a solicitud (Studio ${t.accessible.room})`);
       const policyEl = document.getElementById('price-policy');
       if (policyParts.length) {
         policyEl.textContent = policyParts.join(' · ');
@@ -350,7 +350,7 @@
 
       // Gallery — every unit's photo, each captioned with its suite number(s)
       document.getElementById('studio-gallery').innerHTML = t.gallery.map(function (g) {
-        var cap = (/[,y]/.test(String(g.room)) ? 'Suites ' : 'Suite ') + g.room;
+        var cap = (/[,y]/.test(String(g.room)) ? 'Studios ' : 'Studio ') + g.room;
         return `<figure class="gallery-item"><img src="assets/images/${g.img}" alt="${t.name} — ${cap}" loading="lazy"><figcaption>${cap}</figcaption></figure>`;
       }).join('');
 
