@@ -15,13 +15,14 @@
 // Motor de reservas de Little Hotelier (provisional hasta tener
 // la URL por tipo/propiedad). Agrega `bookingUrl` a un tipo para
 // sobreescribirla.
-const BOOKING_URL = "https://app.littlehotelier.com/properties/aparthotelsiete32direct";
+const BOOKING_URL = "https://direct-book.com/properties/aparthotelsiete32direct";
 
 const ROOM_TYPES = [
   {
     id: "executive",
     name: "Executive",
     units: ["20", "21", "22"],
+    bookingUrl: "https://direct-book.com/properties/aparthotelsiete32direct?room_type=182367",
     guestsMin: 1, guestsMax: 2,
     priceFrom: 1000,
     capacity: "1 a 2 personas",
@@ -70,6 +71,7 @@ const ROOM_TYPES = [
     id: "junior-suite",
     name: "Junior Studio",
     units: ["11", "12", "13", "14", "15", "16", "23", "24"],
+    bookingUrl: "https://direct-book.com/properties/aparthotelsiete32direct?room_type=182368",
     guestsMin: 2, guestsMax: 4,
     priceFrom: 1150,
     capacity: "2 a 4 personas",
@@ -99,6 +101,7 @@ const ROOM_TYPES = [
     id: "master-suite",
     name: "Master Studio",
     units: ["18", "19", "25"],
+    bookingUrl: "https://direct-book.com/properties/aparthotelsiete32direct?room_type=182369",
     guestsMin: 3, guestsMax: 5,
     priceFrom: 1300,
     capacity: "Hasta 5 personas",
@@ -174,7 +177,8 @@ function bookingUrlWithSearch(t) {
   if (ci) params.push('check_in=' + encodeURIComponent(ci));
   if (co) params.push('check_out=' + encodeURIComponent(co));
   if (g > 0) params.push('number_of_guests=' + g);
-  return params.length ? base + '?' + params.join('&') : base;
+  var sep = base.indexOf('?') === -1 ? '?' : '&';
+  return params.length ? base + sep + params.join('&') : base;
 }
 
 const ICONS = {
