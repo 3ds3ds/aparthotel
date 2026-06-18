@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const guests = document.getElementById('guests')?.value || '2';
 
       // Redirect to Little Hotelier booking page with pre-filled dates
-      const bookingUrl = `https://app.littlehotelier.com/properties/aparthotelsiete32direct?check_in=${checkin}&check_out=${checkout}&number_of_guests=${guests}`;
+      const bookingUrl = `https://direct-book.com/properties/aparthotelsiete32direct?check_in=${checkin}&check_out=${checkout}&number_of_guests=${guests}`;
       window.open(bookingUrl, '_blank');
     });
   }
