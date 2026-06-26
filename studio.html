@@ -313,7 +313,7 @@
         { icon: I.reception, label: 'Recepción 24/7' }
       ];
       if (t.groundFloor === 'all') amenities.push({ icon: I.floor, label: 'En planta baja, sin escalones' });
-      else if (t.groundFloor === 'some') amenities.push({ icon: I.floor, label: 'Algunas unidades en planta baja' });
+      else if (t.groundFloor === 'some') amenities.push({ icon: I.floor, label: 'Studios en planta alta y planta baja' });
       if (t.accessible) amenities.push({ icon: I.access, label: `Unidad accesible para silla de ruedas (Studio ${t.accessible.room}, a solicitud)` });
       if (t.adultsOnly) amenities.push({ icon: adultsIcon, label: 'Habitación para adultos' });
       else if (t.allowsChildren) amenities.push({ icon: I.child, label: 'Menores de 10 años gratis (hasta 2)' });
