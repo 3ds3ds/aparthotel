@@ -29,7 +29,7 @@ const ROOM_TYPES = [
     badge: "Hasta 2 Personas",
     beds: "1 cama king size",
     kitchen: "full-frigobar",
-    adultsOnly: true,
+    adultsOnly: false,
     groundFloor: "all",
     accessible: null,
     allowsChildren: false,
@@ -42,13 +42,14 @@ const ROOM_TYPES = [
       { img: "exec-22-2.jpg", room: "22" },
       { img: "exec-22-3.jpg", room: "22" }
     ],
-    desc: "Studio en planta baja con cama king y cocina equipada con frigobar. Para 1 o 2 personas, solo adultos.",
-    longDesc: "El Executive es un studio en planta baja con cama king size y capacidad para 1 o 2 personas. Cuenta con cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Acceso sin escalones, ideal para quienes prefieren evitar escaleras. Limpieza diaria incluida. Recepción 24/7. Habitación para adultos. Este tipo incluye los studios 20, 21 y 22."
+    desc: "Studio en planta baja con cama king y cocina equipada con frigobar. Para 1 o 2 personas.",
+    longDesc: "El Executive es un studio en planta baja con cama king size y capacidad para 1 o 2 personas. Cuenta con cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Acceso sin escalones, ideal para quienes prefieren evitar escaleras. Limpieza diaria incluida. Recepción 24/7. Este tipo incluye los studios 20, 21 y 22."
   },
   {
     id: "executive-jr",
     name: "Executive Jr.",
     units: ["17"],
+    bookingUrl: "https://direct-book.com/properties/aparthotelsiete32direct?room_type=493878",
     guestsMin: 1, guestsMax: 2,
     priceFrom: 950,
     capacity: "1 a 2 personas",
@@ -58,14 +59,14 @@ const ROOM_TYPES = [
     adultsOnly: false,
     groundFloor: false,
     accessible: null,
-    allowsChildren: true,
+    allowsChildren: false,
     cardImg: "execjr-17-1.jpg",
     gallery: [
       { img: "execjr-17-1.jpg", room: "17" },
       { img: "execjr-17-2.jpg", room: "17" }
     ],
-    desc: "Compacto y económico, con cama queen, microondas, cafetera y frigobar. Para 1 o 2 personas.",
-    longDesc: "El Executive Jr. es ideal para 1 o 2 personas, con una cama queen size. Cuenta con microondas, cafetera y frigobar (sin estufa), vajilla y cubertería, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Perfecto para viajeros que buscan una estancia compacta y cómoda en Mérida. Este tipo corresponde al studio 17."
+    desc: "Económico, con cama queen, microondas, cafetera y frigobar. Para 1 o 2 personas.",
+    longDesc: "El Executive Jr. es ideal para 1 o 2 personas, con una cama queen size. Cuenta con microondas, cafetera y frigobar, vajilla y cubertería, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Perfecto para viajeros que buscan una estancia cómoda en Mérida. Este tipo corresponde al studio 17."
   },
   {
     id: "junior-suite",
@@ -76,7 +77,7 @@ const ROOM_TYPES = [
     priceFrom: 1150,
     capacity: "2 a 4 personas",
     badge: "Hasta 4 Personas",
-    beds: "Camas matrimoniales, queen o king + individual (según unidad)",
+    beds: "Dos matrimoniales, dos queen size o una king size + una individual",
     kitchen: "full",
     adultsOnly: false,
     groundFloor: "some",
@@ -94,8 +95,8 @@ const ROOM_TYPES = [
       { img: "jr-23-24-2.jpg", room: "23 y 24" },
       { img: "jr-23-24-3.jpg", room: "23 y 24" }
     ],
-    desc: "Cocina completa y mesa de comedor/trabajo, con distintas configuraciones de cama. Para 2 a 4 personas.",
-    longDesc: "El Junior Studio es nuestro tipo con mayor disponibilidad. Cuenta con cocina completa (estufa, refrigerador, microondas y cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Capacidad de 2 a 4 personas, con distintas configuraciones de cama según la unidad: dos camas matrimoniales, dos camas queen size, o una cama king size con una individual. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Algunas unidades están en planta baja (studios 23 y 24). Limpieza diaria incluida. Recepción 24/7. Este tipo incluye los studios 11, 12, 13, 14, 15, 16, 23 y 24."
+    desc: "Cocina completa. Ofrecemos variedad en la configuración de las camas: dos matrimoniales, dos queen size o una king size + una individual.",
+    longDesc: "El Junior Studio es nuestro tipo con mayor disponibilidad. Cuenta con cocina completa (estufa, refrigerador, microondas y cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Capacidad de 2 a 4 personas, con distintas configuraciones de cama según la unidad: dos camas matrimoniales, dos camas queen size, o una cama king size con una individual. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Contamos con studios en planta alta y planta baja. Limpieza diaria incluida. Recepción 24/7. Este tipo incluye los studios 11, 12, 13, 14, 15, 16, 23 y 24."
   },
   {
     id: "master-suite",
@@ -106,7 +107,7 @@ const ROOM_TYPES = [
     priceFrom: 1300,
     capacity: "Hasta 5 personas",
     badge: "Hasta 5 Personas",
-    beds: "King o queen + 3 individuales (según unidad)",
+    beds: "King/queen + 3 individuales, o 2 matrimoniales + 1 individual (según unidad)",
     kitchen: "full",
     adultsOnly: false,
     groundFloor: "some",
@@ -127,12 +128,13 @@ const ROOM_TYPES = [
       { img: "master-25-4.jpg", room: "25" }
     ],
     desc: "Nuestro espacio más amplio, hasta 5 personas. Una unidad accesible para silla de ruedas (Studio 25).",
-    longDesc: "El Master Studio es nuestro espacio más amplio, con capacidad para hasta 5 personas y cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Distintas configuraciones según la unidad: cama king o queen con tres camas individuales (y sofá en una de ellas). Limpieza diaria incluida. Recepción 24/7. ♿ Una de nuestras unidades, el Studio 25, está en planta baja y adaptada para huéspedes con movilidad reducida (agarraderas en el baño y puerta amplia para silla de ruedas). Si necesitas esta habitación específica, contáctanos para asegurarla. Este tipo incluye los studios 18, 19 y 25."
+    longDesc: "El Master Studio es nuestro espacio más amplio, con capacidad para hasta 5 personas y cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Distintas configuraciones según la unidad: cama king o queen con tres camas individuales (y sofá en una de ellas); el Studio 25 cuenta con dos camas matrimoniales y una individual, en planta baja. Limpieza diaria incluida. Recepción 24/7. ♿ Una de nuestras unidades, el Studio 25, está en planta baja y adaptada para huéspedes con movilidad reducida (agarraderas en el baño y puerta amplia para silla de ruedas). Si necesitas esta habitación específica, contáctanos para asegurarla. Este tipo incluye los studios 18, 19 y 25."
   },
   {
     id: "master-suite-jr",
     name: "Master Studio Jr.",
     units: ["10"],
+    bookingUrl: "https://direct-book.com/properties/aparthotelsiete32direct?room_type=493879",
     guestsMin: 3, guestsMax: 4,
     priceFrom: 1300,
     capacity: "Hasta 4 personas",
