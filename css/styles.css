@@ -331,13 +331,16 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 
 .suite-pricing {
   display: flex; align-items: flex-end; justify-content: space-between;
+  flex-wrap: wrap; gap: 10px 16px;
   margin-top: auto; padding-top: 16px;
 }
 .suite-pricing .price-label { font-size: .75rem; font-weight: 600; text-transform: uppercase; color: var(--gray-500); }
 .suite-pricing .price {
   font-size: 1.75rem; font-weight: 700; color: var(--navy);
+  line-height: 1.2; white-space: nowrap;
 }
-.suite-pricing .price span { font-size: .875rem; font-weight: 400; color: var(--gray-500); }
+.suite-pricing .price span { font-size: .875rem; font-weight: 400; color: var(--gray-500); white-space: nowrap; }
+.suite-pricing .btn { white-space: nowrap; }
 .suite-pricing .price-extra { display: block; font-size: .8125rem; color: var(--gray-500); margin-top: 2px; }
 .suite-pricing .price-tax { display: block; font-size: .75rem; color: var(--gray-500); margin-top: 2px; }
 .suite-pricing .price-tax strong { color: var(--teal); }

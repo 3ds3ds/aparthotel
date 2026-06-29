@@ -65,7 +65,7 @@ const ROOM_TYPES = [
       { img: "execjr-17-1.jpg", room: "17" },
       { img: "execjr-17-2.jpg", room: "17" }
     ],
-    desc: "Económico, con cama queen, microondas, cafetera y frigobar. Para 1 o 2 personas.",
+    desc: "Studio con cama queen, microondas, cafetera y frigobar. Ideal para 1 o 2 personas.",
     longDesc: "El Executive Jr. es ideal para 1 o 2 personas, con una cama queen size. Cuenta con microondas, cafetera y frigobar, vajilla y cubertería, mesa de comedor/trabajo, Smart TV, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Perfecto para viajeros que buscan una estancia cómoda en Mérida. Este tipo corresponde al studio 17."
   },
   {
@@ -127,7 +127,7 @@ const ROOM_TYPES = [
       { img: "master-25-3.jpg", room: "25" },
       { img: "master-25-4.jpg", room: "25" }
     ],
-    desc: "Nuestro espacio más amplio, hasta 5 personas. Una unidad accesible para silla de ruedas (Studio 25).",
+    desc: "Nuestro espacio más amplio, hasta 5 personas. Contamos con una habitación accesible para silla de ruedas (Studio 25).",
     longDesc: "El Master Studio es nuestro espacio más amplio, con capacidad para hasta 5 personas y cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo, Smart TV, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Distintas configuraciones según la unidad: cama king o queen con tres camas individuales (y sofá en una de ellas); el Studio 25 cuenta con dos camas matrimoniales y una individual, en planta baja. Limpieza diaria incluida. Recepción 24/7. ♿ Una de nuestras unidades, el Studio 25, está en planta baja y adaptada para huéspedes con movilidad reducida (agarraderas en el baño y puerta amplia para silla de ruedas). Si necesitas esta habitación específica, contáctanos para asegurarla. Este tipo incluye los studios 18, 19 y 25."
   },
   {
@@ -241,6 +241,9 @@ function renderTypes(minGuests) {
 
   let list = ROOM_TYPES;
   if (minGuests > 0) list = list.filter(t => t.guestsMax >= minGuests);
+  // Mostrar de la tarifa más baja a la más alta; a igual precio, primero la
+  // de menor capacidad (p. ej. Master Studio Jr. antes que Master Studio).
+  list = list.slice().sort((a, b) => a.priceFrom - b.priceFrom || a.guestsMax - b.guestsMax);
 
   if (list.length === 0) {
     container.innerHTML = '<p class="no-results">No tenemos un tipo para esa cantidad de huéspedes. Prueba con menos personas o escríbenos por WhatsApp.</p>';
