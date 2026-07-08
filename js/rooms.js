@@ -6,10 +6,10 @@
    individual. Cada tipo agrupa varias unidades físicas: el
    huésped reserva el tipo y la propiedad asigna la unidad.
 
-   - "units"      = números de studio que pertenecen al tipo
+   - "units"      = números de suite que pertenecen al tipo
    - "desc"       = descripción corta para las tarjetas
    - "longDesc"   = descripción para la página de detalle
-   - "gallery"    = fotos del tipo, cada una etiquetada con su studio
+   - "gallery"    = fotos del tipo, cada una etiquetada con su suite
    ========================================================= */
 
 // Motor de reservas de Little Hotelier (provisional hasta tener
@@ -42,8 +42,8 @@ const ROOM_TYPES = [
       { img: "exec-22-2.jpg", room: "22" },
       { img: "exec-22-3.jpg", room: "22" }
     ],
-    desc: "Studio en planta baja con cama king y cocina equipada con frigobar. Para 1 o 2 personas.",
-    longDesc: "El Executive es un studio en planta baja con cama king size y capacidad para 1 o 2 personas. Cuenta con cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Acceso sin escalones, ideal para quienes prefieren evitar escaleras. Limpieza diaria incluida. Recepción 24/7. Este tipo incluye los studios 20, 21 y 22."
+    desc: "Suite en planta baja con cama king y cocina equipada con frigobar. Para 1 o 2 personas.",
+    longDesc: "La Executive es una suite en planta baja con cama king size y capacidad para 1 o 2 personas. Cuenta con cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Acceso sin escalones, ideal para quienes prefieren evitar escaleras. Limpieza diaria incluida. Recepción 24/7. Este tipo incluye las suites 20, 21 y 22."
   },
   {
     id: "executive-jr",
@@ -65,12 +65,12 @@ const ROOM_TYPES = [
       { img: "execjr-17-1.jpg", room: "17" },
       { img: "execjr-17-2.jpg", room: "17" }
     ],
-    desc: "Studio con cama queen, microondas, cafetera y frigobar. Ideal para 1 o 2 personas.",
-    longDesc: "El Executive Jr. es ideal para 1 o 2 personas, con una cama queen size. Cuenta con microondas, cafetera y frigobar, vajilla y cubertería, mesa de comedor/trabajo, Smart TV, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Perfecto para viajeros que buscan una estancia cómoda en Mérida. Este tipo corresponde al studio 17."
+    desc: "Suite con cama queen, microondas, cafetera y frigobar. Ideal para 1 o 2 personas.",
+    longDesc: "La Executive Jr. es ideal para 1 o 2 personas, con una cama queen size. Cuenta con microondas, cafetera y frigobar, vajilla y cubertería, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Perfecta para viajeros que buscan una estancia cómoda en Mérida. Este tipo corresponde a la suite 17."
   },
   {
     id: "junior-suite",
-    name: "Junior Studio",
+    name: "Junior Suite",
     units: ["11", "12", "13", "14", "15", "16", "23", "24"],
     bookingUrl: "https://direct-book.com/properties/aparthotelsiete32direct?room_type=182368",
     guestsMin: 2, guestsMax: 4,
@@ -96,11 +96,11 @@ const ROOM_TYPES = [
       { img: "jr-23-24-3.jpg", room: "23 y 24" }
     ],
     desc: "Cocina completa. Ofrecemos variedad en la configuración de las camas: dos matrimoniales, dos queen size o una king size + una individual.",
-    longDesc: "El Junior Studio es nuestro tipo con mayor disponibilidad. Cuenta con cocina completa (estufa, refrigerador, microondas y cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Capacidad de 2 a 4 personas, con distintas configuraciones de cama según la unidad: dos camas matrimoniales, dos camas queen size, o una cama king size con una individual. Smart TV, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Contamos con studios en planta alta y planta baja. Limpieza diaria incluida. Recepción 24/7. Este tipo incluye los studios 11, 12, 13, 14, 15, 16, 23 y 24."
+    longDesc: "La Junior Suite es nuestro tipo con mayor disponibilidad. Cuenta con cocina completa (estufa, refrigerador, microondas y cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Capacidad de 2 a 4 personas, con distintas configuraciones de cama según la unidad: dos camas matrimoniales, dos camas queen size, o una cama king size con una individual. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Contamos con suites en planta alta y planta baja. Limpieza diaria incluida. Recepción 24/7. Este tipo incluye las suites 11, 12, 13, 14, 15, 16, 23 y 24."
   },
   {
     id: "master-suite",
-    name: "Master Studio",
+    name: "Master Suite",
     units: ["18", "19", "25"],
     bookingUrl: "https://direct-book.com/properties/aparthotelsiete32direct?room_type=182369",
     guestsMin: 3, guestsMax: 5,
@@ -127,12 +127,12 @@ const ROOM_TYPES = [
       { img: "master-25-3.jpg", room: "25" },
       { img: "master-25-4.jpg", room: "25" }
     ],
-    desc: "Nuestro espacio más amplio, hasta 5 personas. Contamos con una habitación accesible para silla de ruedas (Studio 25).",
-    longDesc: "El Master Studio es nuestro espacio más amplio, con capacidad para hasta 5 personas y cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo, Smart TV, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Distintas configuraciones según la unidad: cama king o queen con tres camas individuales (y sofá en una de ellas); el Studio 25 cuenta con dos camas matrimoniales y una individual, en planta baja. Limpieza diaria incluida. Recepción 24/7. ♿ Una de nuestras unidades, el Studio 25, está en planta baja y adaptada para huéspedes con movilidad reducida (agarraderas en el baño y puerta amplia para silla de ruedas). Si necesitas esta habitación específica, contáctanos para asegurarla. Este tipo incluye los studios 18, 19 y 25."
+    desc: "Nuestro espacio más amplio, hasta 5 personas. Contamos con una habitación accesible para silla de ruedas (Suite 25).",
+    longDesc: "La Master Suite es nuestro espacio más amplio, con capacidad para hasta 5 personas y cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Distintas configuraciones según la unidad: cama king o queen con tres camas individuales (y sofá en una de ellas); la Suite 25 cuenta con dos camas matrimoniales y una individual, en planta baja. Limpieza diaria incluida. Recepción 24/7. ♿ Una de nuestras unidades, la Suite 25, está en planta baja y adaptada para huéspedes con movilidad reducida (agarraderas en el baño y puerta amplia para silla de ruedas). Si necesitas esta habitación específica, contáctanos para asegurarla. Este tipo incluye las suites 18, 19 y 25."
   },
   {
     id: "master-suite-jr",
-    name: "Master Studio Jr.",
+    name: "Master Suite Jr.",
     units: ["10"],
     bookingUrl: "https://direct-book.com/properties/aparthotelsiete32direct?room_type=493879",
     guestsMin: 3, guestsMax: 4,
@@ -153,7 +153,7 @@ const ROOM_TYPES = [
       { img: "masterjr-10-4.jpg", room: "10" }
     ],
     desc: "Cuatro camas individuales y cocina totalmente equipada. Ideal para familias o equipos, hasta 4 personas.",
-    longDesc: "El Master Studio Jr. es un espacio amplio con cuatro camas individuales y capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Smart TV, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Este tipo corresponde al studio 10."
+    longDesc: "La Master Suite Jr. es un espacio amplio con cuatro camas individuales y capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Este tipo corresponde a la suite 10."
   }
 ];
 
@@ -198,7 +198,7 @@ function typeCardHTML(t) {
   const adultsBadge = t.adultsOnly
     ? '<span class="suite-badge suite-badge-floor">Solo adultos</span>' : '';
   const accessibleAmenity = t.accessible
-    ? '<div class="suite-amenity">' + ICONS.accessible + '<span>Unidad accesible disponible (Studio ' + t.accessible.room + ')</span></div>'
+    ? '<div class="suite-amenity">' + ICONS.accessible + '<span>Unidad accesible disponible (Suite ' + t.accessible.room + ')</span></div>'
     : '';
   return '' +
   '<article class="suite-card fade-up" id="' + t.id + '">' +
@@ -213,7 +213,7 @@ function typeCardHTML(t) {
       '<div class="suite-amenities">' +
         '<div class="suite-amenity">' + ICONS.bed + '<span>' + t.beds + '</span></div>' +
         '<div class="suite-amenity">' + ICONS.kitchen + '<span>' + kitchenLabel(t) + '</span></div>' +
-        '<div class="suite-amenity">' + ICONS.tv + '<span>Smart TV</span></div>' +
+        '<div class="suite-amenity">' + ICONS.tv + '<span>Smart TV con cable</span></div>' +
         '<div class="suite-amenity">' + ICONS.wifi + '<span>Wi-Fi de alta velocidad</span></div>' +
         '<div class="suite-amenity">' + ICONS.clean + '<span>Limpieza diaria incluida</span></div>' +
         '<div class="suite-amenity">' + ICONS.ac + '<span>A/C y ventilador</span></div>' +
@@ -242,7 +242,7 @@ function renderTypes(minGuests) {
   let list = ROOM_TYPES;
   if (minGuests > 0) list = list.filter(t => t.guestsMax >= minGuests);
   // Mostrar de la tarifa más baja a la más alta; a igual precio, primero la
-  // de menor capacidad (p. ej. Master Studio Jr. antes que Master Studio).
+  // de menor capacidad (p. ej. Master Suite Jr. antes que Master Suite).
   list = list.slice().sort((a, b) => a.priceFrom - b.priceFrom || a.guestsMax - b.guestsMax);
 
   if (list.length === 0) {

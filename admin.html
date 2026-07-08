@@ -196,7 +196,7 @@
       "masterjr-10-1.jpg",
       "common-1.jpg","common-6.jpg"
     ];
-    var CARD_LABELS = { executive: "Executive", "executive-jr": "Executive Jr.", "junior-suite": "Junior Studio", "master-suite": "Master Studio", "master-suite-jr": "Master Studio Jr." };
+    var CARD_LABELS = { executive: "Executive", "executive-jr": "Executive Jr.", "junior-suite": "Junior Suite", "master-suite": "Master Suite", "master-suite-jr": "Master Suite Jr." };
 
     /* ----------------------------- helpers ---------------------------- */
     function $(id){ return document.getElementById(id); }
@@ -340,8 +340,8 @@
           '<select data-field="scope">' +
             opt("all", "Todas", p.scope) +
             opt("executive", "Executive", p.scope) + opt("executive-jr", "Executive Jr.", p.scope) +
-            opt("junior-suite", "Junior Studio", p.scope) + opt("master-suite", "Master Studio", p.scope) +
-            opt("master-suite-jr", "Master Studio Jr.", p.scope) +
+            opt("junior-suite", "Junior Suite", p.scope) + opt("master-suite", "Master Suite", p.scope) +
+            opt("master-suite-jr", "Master Suite Jr.", p.scope) +
           '</select>' +
           '<input type="text" data-field="badge" value="' + esc(p.badge) + '" placeholder="Etiqueta (ej. -15%)" maxlength="24">' +
           '<input type="text" data-field="note" value="' + esc(p.note) + '" placeholder="Texto (ej. Oferta de verano)" maxlength="160">' +
