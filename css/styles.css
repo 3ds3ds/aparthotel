@@ -150,7 +150,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 }
 .hero-content {
   position: relative; z-index: 2; text-align: center;
-  max-width: 700px; color: var(--white);
+  max-width: 940px; color: var(--white);
 }
 .hero-content h1 { margin-bottom: 16px; }
 .hero-content p { font-size: clamp(1rem, 2vw, 1.25rem); opacity: .9; margin-bottom: 0; }
@@ -222,7 +222,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
    DIFFERENTIATORS
    ============================================= */
 .differentiators { padding: 80px 0; }
-.differentiators .section-header { text-align: center; max-width: 600px; margin: 0 auto 60px; }
+.differentiators .section-header { text-align: center; max-width: 940px; margin: 0 auto 60px; }
 .diff-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 32px; max-width: var(--max-w); margin: 0 auto;
