@@ -42,8 +42,8 @@ const ROOM_TYPES = [
       { img: "exec-22-2.jpg", room: "22" },
       { img: "exec-22-3.jpg", room: "22" }
     ],
-    desc: "Suite en planta baja con cama king y cocina equipada con frigobar. Para 1 o 2 personas.",
-    longDesc: "La Executive es una suite en planta baja con cama king size y capacidad para 1 o 2 personas. Cuenta con cocina totalmente equipada con frigobar, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Acceso sin escalones, ideal para quienes prefieren evitar escaleras. Limpieza diaria incluida. Recepción 24/7. Este tipo incluye las suites 20, 21 y 22."
+    desc: "Suite en planta baja con cama king y cocina equipada con refrigerador. Para 1 o 2 personas.",
+    longDesc: "La Executive es una suite en planta baja con cama king size y capacidad para 1 o 2 personas. Cuenta con cocina totalmente equipada con refrigerador, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Acceso sin escalones, ideal para quienes prefieren evitar escaleras. Limpieza diaria incluida. Recepción 24/7. Este tipo incluye las suites 20, 21 y 22."
   },
   {
     id: "executive-jr",
@@ -65,8 +65,8 @@ const ROOM_TYPES = [
       { img: "execjr-17-1.jpg", room: "17" },
       { img: "execjr-17-2.jpg", room: "17" }
     ],
-    desc: "Suite con cama queen, microondas, cafetera y frigobar. Ideal para 1 o 2 personas.",
-    longDesc: "La Executive Jr. es ideal para 1 o 2 personas, con una cama queen size. Cuenta con microondas, cafetera y frigobar, vajilla y cubertería, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Perfecta para viajeros que buscan una estancia cómoda en Mérida. Este tipo corresponde a la suite 17."
+    desc: "Suite con cama queen, microondas, cafetera y refrigerador. Ideal para 1 o 2 personas.",
+    longDesc: "La Executive Jr. es ideal para 1 o 2 personas, con una cama queen size. Cuenta con microondas, cafetera y refrigerador, vajilla y cubertería, mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Perfecta para viajeros que buscan una estancia cómoda en Mérida. Este tipo corresponde a la suite 17."
   },
   {
     id: "junior-suite",
@@ -77,7 +77,7 @@ const ROOM_TYPES = [
     priceFrom: 1150,
     capacity: "2 a 4 personas",
     badge: "Hasta 4 Personas",
-    beds: "Dos matrimoniales, dos queen size o una king size + una individual",
+    beds: "Dos matrimoniales, o dos queen size, o una king size + una individual",
     kitchen: "full",
     adultsOnly: false,
     groundFloor: "some",
@@ -95,8 +95,8 @@ const ROOM_TYPES = [
       { img: "jr-23-24-2.jpg", room: "23 y 24" },
       { img: "jr-23-24-3.jpg", room: "23 y 24" }
     ],
-    desc: "Cocina completa. Ofrecemos variedad en la configuración de las camas: dos matrimoniales, dos queen size o una king size + una individual.",
-    longDesc: "La Junior Suite es nuestro tipo con mayor disponibilidad. Cuenta con cocina completa (estufa, refrigerador, microondas y cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Capacidad de 2 a 4 personas, con distintas configuraciones de cama según la unidad: dos camas matrimoniales, dos camas queen size, o una cama king size con una individual. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Contamos con suites en planta alta y planta baja. Limpieza diaria incluida. Recepción 24/7. Este tipo incluye las suites 11, 12, 13, 14, 15, 16, 23 y 24."
+    desc: "Cocina completa. Ofrecemos variedad en la configuración de las camas: dos matrimoniales, o dos queen size, o una king size + una individual.",
+    longDesc: "La Junior Suite es nuestro tipo con mayor disponibilidad. Cuenta con cocina completa (estufa, refrigerador, microondas, cafetera, vajilla, cubertería y utensilios de cocina), mesa de comedor/trabajo y área de dormitorio cómoda. Capacidad de 2 a 4 personas, con distintas configuraciones de cama según la unidad: dos camas matrimoniales, o dos camas queen size, o una cama king size + una cama individual. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Contamos con suites en planta alta y planta baja. Limpieza diaria incluida. Recepción 24/7. Este tipo incluye las suites 11, 12, 13, 14, 15, 16, 23 y 24."
   },
   {
     id: "master-suite",
@@ -128,7 +128,7 @@ const ROOM_TYPES = [
       { img: "master-25-4.jpg", room: "25" }
     ],
     desc: "Nuestro espacio más amplio, hasta 5 personas. Contamos con una habitación accesible para silla de ruedas (Suite 25).",
-    longDesc: "La Master Suite es nuestro espacio más amplio, con capacidad para hasta 5 personas y cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Distintas configuraciones según la unidad: cama king o queen con tres camas individuales (y sofá en una de ellas); la Suite 25 cuenta con dos camas matrimoniales y una individual, en planta baja. Limpieza diaria incluida. Recepción 24/7. ♿ Una de nuestras unidades, la Suite 25, está en planta baja y adaptada para huéspedes con movilidad reducida (agarraderas en el baño y puerta amplia para silla de ruedas). Si necesitas esta habitación específica, contáctanos para asegurarla. Este tipo incluye las suites 18, 19 y 25."
+    longDesc: "La Master Suite es nuestro espacio más amplio, con capacidad para hasta 5 personas y cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla, cubertería y utensilios de cocina), mesa de comedor/trabajo, Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Distintas configuraciones según la unidad: cama king o queen con tres camas individuales (y sofá en una de ellas); la Suite 25 cuenta con dos camas matrimoniales y una individual, en planta baja. Limpieza diaria incluida. Recepción 24/7. ♿ Una de nuestras unidades, la Suite 25, está en planta baja y adaptada para huéspedes con movilidad reducida (agarraderas en el baño y puerta amplia para silla de ruedas). Si necesitas esta habitación específica, contáctanos para asegurarla. Este tipo incluye las suites 18, 19 y 25."
   },
   {
     id: "master-suite-jr",
@@ -153,7 +153,7 @@ const ROOM_TYPES = [
       { img: "masterjr-10-4.jpg", room: "10" }
     ],
     desc: "Cuatro camas individuales y cocina totalmente equipada. Ideal para familias o equipos, hasta 4 personas.",
-    longDesc: "La Master Suite Jr. es un espacio amplio con cuatro camas individuales y capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla y cubertería), mesa de comedor/trabajo y área de dormitorio cómoda. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Este tipo corresponde a la suite 10."
+    longDesc: "La Master Suite Jr. es un espacio amplio con cuatro camas individuales y capacidad para hasta 4 personas, ideal para familias y equipos de trabajo. Cuenta con cocina totalmente equipada (estufa, refrigerador, microondas, cafetera, vajilla, cubertería y utensilios de cocina), mesa de comedor/trabajo y área de dormitorio cómoda. Smart TV con cable, Wi-Fi de alta velocidad, A/C, ventilador y baño privado con toallas y amenidades. Limpieza diaria incluida. Recepción 24/7. Este tipo corresponde a la suite 10."
   }
 ];
 
@@ -161,8 +161,7 @@ const ROOM_TYPES = [
 function bookingUrlFor(t) { return (t && t.bookingUrl) || BOOKING_URL; }
 
 function kitchenLabel(t) {
-  if (t.kitchen === 'kitchenette') return 'Microondas, cafetera y frigobar';
-  if (t.kitchen === 'full-frigobar') return 'Cocina totalmente equipada (frigobar)';
+  if (t.kitchen === 'kitchenette') return 'Microondas, cafetera y refrigerador';
   return 'Cocina totalmente equipada';
 }
 
@@ -198,7 +197,7 @@ function typeCardHTML(t) {
   const adultsBadge = t.adultsOnly
     ? '<span class="suite-badge suite-badge-floor">Solo adultos</span>' : '';
   const accessibleAmenity = t.accessible
-    ? '<div class="suite-amenity">' + ICONS.accessible + '<span>Unidad accesible disponible (Suite ' + t.accessible.room + ')</span></div>'
+    ? '<div class="suite-amenity">' + ICONS.accessible + '<span>Unidad con acceso a silla de ruedas disponible (Suite ' + t.accessible.room + ')</span></div>'
     : '';
   return '' +
   '<article class="suite-card fade-up" id="' + t.id + '">' +
