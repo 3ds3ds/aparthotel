@@ -155,6 +155,12 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 .hero-content h1 { margin-bottom: 16px; }
 .hero-content p { font-size: clamp(1rem, 2vw, 1.25rem); opacity: .9; margin-bottom: 0; }
 
+/* Icono de WhatsApp junto al teléfono del footer */
+.footer-contact-item .footer-wsp svg {
+  width: 16px; height: 16px; fill: #25D366; stroke: none;
+  vertical-align: -3px; margin-left: 4px;
+}
+
 /* Booking Widget — floats between hero and next section */
 .booking-wrapper {
   position: relative; z-index: 10;
