@@ -51,7 +51,7 @@
     },
     {
       q: "¿Cuáles son los horarios de entrada y salida?",
-      a: "Escríbenos por WhatsApp y con gusto te confirmamos los horarios de entrada (check-in) y salida (check-out) para tu reservación."
+      a: "El check-in (entrada) es a las 3:00 pm y el check-out (salida) es a las 12:00 pm."
     },
     {
       q: "¿Cómo reservo?",
