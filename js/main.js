@@ -88,37 +88,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* --- Contact Form (Formspree placeholder) --- */
+  /* --- Contact Form → WhatsApp ---
+     El mensaje se arma con los datos del formulario y se abre el
+     WhatsApp del hotel con el texto prellenado. Sin servicios externos:
+     los mensajes llegan al mismo número que ya atiende recepción. --- */
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
+    contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const formData = new FormData(contactForm);
+      const val = (id) => {
+        const el = document.getElementById(id);
+        return el ? el.value.trim() : '';
+      };
+      let text = 'Hola, soy ' + val('name') + '.\n';
+      if (val('phone')) text += 'Teléfono: ' + val('phone') + '\n';
+      if (val('email')) text += 'Correo: ' + val('email') + '\n';
+      text += '\n' + val('message');
+
+      window.open('https://wa.me/529992551748?text=' + encodeURIComponent(text), '_blank', 'noopener');
+
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
-      submitBtn.textContent = 'Enviando...';
-      submitBtn.disabled = true;
-
-      try {
-        // Replace YOUR_FORM_ID with actual Formspree endpoint
-        const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-          submitBtn.textContent = '✓ Enviado';
-          contactForm.reset();
-          setTimeout(() => { submitBtn.textContent = originalText; submitBtn.disabled = false; }, 3000);
-        } else {
-          throw new Error('Error');
-        }
-      } catch (err) {
-        submitBtn.textContent = 'Error — Intenta de nuevo';
-        submitBtn.disabled = false;
-        setTimeout(() => { submitBtn.textContent = originalText; }, 3000);
-      }
+      submitBtn.textContent = '✓ Abriendo WhatsApp…';
+      setTimeout(() => { submitBtn.textContent = originalText; }, 4000);
     });
   }
 
