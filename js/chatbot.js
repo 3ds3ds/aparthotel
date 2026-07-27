@@ -11,12 +11,81 @@
 (function () {
   "use strict";
 
-  var WSP_URL = "https://wa.me/529992551748?text=" +
-    encodeURIComponent("Hola, tengo una duda sobre Aparthotel Siete32");
+  // Idioma: las páginas bajo /en/ declaran <html lang="en">.
+  var IS_EN = (document.documentElement.lang || "es").toLowerCase().indexOf("en") === 0;
 
-  var GREETING = "¡Hola! 👋 Bienvenido a Aparthotel Siete32. Elige una pregunta y te respondo al momento:";
+  var UI = IS_EN ? {
+    wspText: "Hello, I have a question about Aparthotel Siete32",
+    greeting: "Hi! 👋 Welcome to Aparthotel Siete32. Pick a question and I'll answer right away:",
+    title: "Virtual Reception",
+    subtitle: "Aparthotel Siete32 · instant answers",
+    more: "See more questions",
+    wspBtn: "Another question? Message us on WhatsApp",
+    openLabel: "Open FAQ chat",
+    closeLabel: "Close FAQ chat",
+    closeBtn: "Close chat",
+    dialog: "Frequently asked questions"
+  } : {
+    wspText: "Hola, tengo una duda sobre Aparthotel Siete32",
+    greeting: "¡Hola! 👋 Bienvenido a Aparthotel Siete32. Elige una pregunta y te respondo al momento:",
+    title: "Recepción virtual",
+    subtitle: "Aparthotel Siete32 · respuestas al instante",
+    more: "Ver más preguntas",
+    wspBtn: "¿Otra duda? Escríbenos por WhatsApp",
+    openLabel: "Abrir chat de preguntas frecuentes",
+    closeLabel: "Cerrar chat de preguntas frecuentes",
+    closeBtn: "Cerrar chat",
+    dialog: "Preguntas frecuentes"
+  };
 
-  var FAQS = [
+  var WSP_URL = "https://wa.me/529992551748?text=" + encodeURIComponent(UI.wspText);
+
+  var GREETING = UI.greeting;
+
+  var FAQS_EN = [
+    {
+      q: "What suite types do you have and for how many guests?",
+      a: "We have 5 suite types, from 1 and up to 5 guests:\n• Executive Jr. — 1 or 2 guests, from $950 MXN/night\n• Executive — 1 or 2 guests, from $1,000 MXN/night\n• Junior Suite — 2 to 4 guests, from $1,150 MXN/night\n• Master Suite Jr. — up to 4 guests, from $1,300 MXN/night\n• Master Suite — up to 5 guests, from $1,300 MXN/night\nAll rates include taxes. You can see photos and details of each one in the “Suites” section."
+    },
+    {
+      q: "What does each suite include?",
+      a: "All of our suites include: kitchen equipped with refrigerator, Smart TV with cable, high-speed Wi-Fi, air conditioning and fan, private bathroom with towels and amenities, makeup mirror, dining/work table, daily housekeeping (dishwashing included) and a 24/7 front desk."
+    },
+    {
+      q: "Do children pay?",
+      a: "Kids under 10 stay free (up to two per reservation) in our Junior and Master Suites. From the 3rd guest on, an extra charge of $150 MXN per person may apply, depending on the suite type. A crib is available on request, free of charge."
+    },
+    {
+      q: "Do you have any promotions?",
+      a: "Yes 🎉 For every 6 nights paid, the 7th night is on us. Great for longer stays."
+    },
+    {
+      q: "Do you have parking?",
+      a: "Yes, we offer free parking for guests, monitored by security cameras."
+    },
+    {
+      q: "Where are you located?",
+      a: "At Av. República de Corea x 32 No. 612, Col. Maya, C.P. 97134, Mérida — Altabrisa area.\nWe are 150 m from major hospitals and shopping malls, 200 m from clinical labs, 100 m from the ADO bus terminal, with public transport right at the door. You'll find the map on the Home page."
+    },
+    {
+      q: "Do you have a wheelchair-accessible room?",
+      a: "Yes. Suite 25 (Master Suite) is on the ground floor and adapted for guests with reduced mobility, with grab bars in the bathroom and a wide wheelchair-accessible door. Message us on WhatsApp to secure this specific suite."
+    },
+    {
+      q: "What can I request at the front desk?",
+      a: "Free of charge, on request: blender, toaster, hair dryer, ironing set, baby crib, wine opener and coffee kit.\nWith an extra charge: laundry service (the front desk picks up and delivers) and specialized transportation."
+    },
+    {
+      q: "What are the check-in and check-out times?",
+      a: "Check-in is at 3:00 pm and check-out is at 12:00 pm."
+    },
+    {
+      q: "How do I book?",
+      a: "You can book online with the “Book Now” button — pick your dates and suite type and pay securely. If you prefer personal assistance, message us on WhatsApp or call us at +52 999 255 1748. Our front desk is available 24/7."
+    }
+  ];
+
+  var FAQS_ES = [
     {
       q: "¿Qué tipos de suite tienen y para cuántas personas?",
       a: "Tenemos 5 tipos de suite, desde 1 y hasta 5 personas:\n• Executive Jr. — 1 o 2 personas, desde $950 MXN/noche\n• Executive — 1 o 2 personas, desde $1,000 MXN/noche\n• Junior Suite — 2 a 4 personas, desde $1,150 MXN/noche\n• Master Suite Jr. — hasta 4 personas, desde $1,300 MXN/noche\n• Master Suite — hasta 5 personas, desde $1,300 MXN/noche\nTodas las tarifas incluyen impuestos. En la sección «Suites» puedes ver fotos y detalles de cada una."
@@ -59,6 +128,8 @@
     }
   ];
 
+  var FAQS = IS_EN ? FAQS_EN : FAQS_ES;
+
   var ICON_CHAT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>';
   var ICON_CLOSE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
   var ICON_WSP = '<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
@@ -86,7 +157,7 @@
     launcher = document.createElement("button");
     launcher.type = "button";
     launcher.className = "fq-launcher";
-    launcher.setAttribute("aria-label", "Abrir chat de preguntas frecuentes");
+    launcher.setAttribute("aria-label", UI.openLabel);
     launcher.innerHTML = ICON_CHAT;
     launcher.addEventListener("click", toggle);
     document.body.appendChild(launcher);
@@ -98,21 +169,21 @@
     panel = document.createElement("div");
     panel.className = "fq-panel";
     panel.setAttribute("role", "dialog");
-    panel.setAttribute("aria-label", "Preguntas frecuentes");
+    panel.setAttribute("aria-label", UI.dialog);
 
     var header = document.createElement("div");
     header.className = "fq-header";
     var titles = document.createElement("div");
     var h = document.createElement("strong");
-    h.textContent = "Recepción virtual";
+    h.textContent = UI.title;
     var sub = document.createElement("span");
-    sub.textContent = "Aparthotel Siete32 · respuestas al instante";
+    sub.textContent = UI.subtitle;
     titles.appendChild(h);
     titles.appendChild(sub);
     var closeBtn = document.createElement("button");
     closeBtn.type = "button";
     closeBtn.className = "fq-close";
-    closeBtn.setAttribute("aria-label", "Cerrar chat");
+    closeBtn.setAttribute("aria-label", UI.closeBtn);
     closeBtn.innerHTML = ICON_CLOSE;
     closeBtn.addEventListener("click", toggle);
     header.appendChild(titles);
@@ -139,7 +210,7 @@
     moreBtn = document.createElement("button");
     moreBtn.type = "button";
     moreBtn.className = "fq-more";
-    moreBtn.textContent = "Ver más preguntas";
+    moreBtn.textContent = UI.more;
     moreBtn.style.display = "none";
     moreBtn.addEventListener("click", function () {
       showChips(true);
@@ -154,7 +225,7 @@
     wsp.href = WSP_URL;
     wsp.target = "_blank";
     wsp.rel = "noopener";
-    wsp.innerHTML = ICON_WSP + "<span>¿Otra duda? Escríbenos por WhatsApp</span>";
+    wsp.innerHTML = ICON_WSP + "<span>" + UI.wspBtn + "</span>";
     footer.appendChild(wsp);
 
     panel.appendChild(header);
@@ -205,9 +276,7 @@
     open = !open;
     panel.classList.toggle("fq-open", open);
     launcher.innerHTML = open ? ICON_CLOSE : ICON_CHAT;
-    launcher.setAttribute("aria-label", open
-      ? "Cerrar chat de preguntas frecuentes"
-      : "Abrir chat de preguntas frecuentes");
+    launcher.setAttribute("aria-label", open ? UI.closeLabel : UI.openLabel);
     if (open) body.scrollTop = asked ? body.scrollHeight : 0;
   }
 })();

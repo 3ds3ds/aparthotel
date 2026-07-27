@@ -21,16 +21,17 @@
     if (!items.length) return;
 
     /* --- Build the overlay once --- */
+    var isEn = (document.documentElement.lang || "es").toLowerCase().indexOf("en") === 0;
     var lb = document.createElement("div");
     lb.className = "lightbox";
     lb.setAttribute("role", "dialog");
-    lb.setAttribute("aria-label", "Galería de fotos");
+    lb.setAttribute("aria-label", isEn ? "Photo gallery" : "Galería de fotos");
     lb.innerHTML =
       '<span class="lightbox-counter"></span>' +
-      '<button class="lightbox-close" type="button" aria-label="Cerrar">&times;</button>' +
-      '<button class="lightbox-nav lightbox-prev" type="button" aria-label="Foto anterior">&#10094;</button>' +
+      '<button class="lightbox-close" type="button" aria-label="' + (isEn ? 'Close' : 'Cerrar') + '">&times;</button>' +
+      '<button class="lightbox-nav lightbox-prev" type="button" aria-label="' + (isEn ? 'Previous photo' : 'Foto anterior') + '">&#10094;</button>' +
       '<img class="lightbox-img" alt="">' +
-      '<button class="lightbox-nav lightbox-next" type="button" aria-label="Foto siguiente">&#10095;</button>' +
+      '<button class="lightbox-nav lightbox-next" type="button" aria-label="' + (isEn ? 'Next photo' : 'Foto siguiente') + '">&#10095;</button>' +
       '<div class="lightbox-caption"></div>';
     document.body.appendChild(lb);
 

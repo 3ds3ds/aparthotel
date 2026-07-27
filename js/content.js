@@ -98,8 +98,10 @@
       if (card.priceFrom != null) {
         var priceEl = el.querySelector(".suite-pricing .price");
         if (priceEl) {
+          var perNight = (document.documentElement.lang || "es").toLowerCase().indexOf("en") === 0
+            ? "MXN / night" : "MXN / noche";
           priceEl.innerHTML = "$" + Number(card.priceFrom).toLocaleString("en-US") +
-            ' <span>MXN / noche</span>';
+            ' <span>' + perNight + '</span>';
         }
       }
 

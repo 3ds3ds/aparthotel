@@ -1,45 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Suite — Aparthotel Siete32</title>
-  <meta name="description" content="Detalle de Suite en Aparthotel Siete32, Mérida. Comodidades incluidas, servicios y accesorios bajo solicitud.">
+  <meta name="description" content="Suite details at Aparthotel Siete32, Mérida. Included amenities, services and accessories on request.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="header">
     <div class="header-inner">
-      <a href="index.html" class="header-logo"><img src="assets/images/logo-original.png" alt="Aparthotel Siete32"></a>
+      <a href="index.html" class="header-logo"><img src="/assets/images/logo-original.png" alt="Aparthotel Siete32"></a>
       <nav class="nav-links">
-        <a href="index.html">Inicio</a>
+        <a href="index.html">Home</a>
         <a href="suites.html">Suites</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="suites.html" class="btn btn-primary nav-cta">Reservar Ahora</a>
-        <a href="/en/studio.html" class="lang-switch" title="View in English">EN</a>
+        <a href="servicios.html">Services</a>
+        <a href="contacto.html">Contact</a>
+        <a href="suites.html" class="btn btn-primary nav-cta">Book Now</a>
+        <a href="/studio.html" class="lang-switch" id="lang-switch-link" title="Ver en español">ES</a>
       </nav>
-      <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </header>
   <div class="mobile-menu">
-    <a href="index.html">Inicio</a>
+    <a href="index.html">Home</a>
     <a href="suites.html">Suites</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="suites.html" class="btn btn-primary">Reservar Ahora</a>
-    <a href="/en/studio.html" class="lang-switch">EN — English</a>
+    <a href="servicios.html">Services</a>
+    <a href="contacto.html">Contact</a>
+    <a href="suites.html" class="btn btn-primary">Book Now</a>
+    <a href="/studio.html" class="lang-switch">ES — Español</a>
   </div>
 
   <!-- DETAIL HERO (rendered by JS) -->
-  <section class="detail-hero" id="detail-hero" style="background-image: url('assets/images/common-6.jpg');">
+  <section class="detail-hero" id="detail-hero" style="background-image: url('/assets/images/common-6.jpg');">
     <div class="detail-hero-content fade-up" id="detail-hero-content">
-      <h1 id="studio-name">Cargando...</h1>
+      <h1 id="studio-name">Loading...</h1>
       <div class="detail-meta" id="studio-meta"></div>
     </div>
   </section>
@@ -47,7 +47,7 @@
   <!-- BREADCRUMB -->
   <div class="breadcrumb">
     <div class="container">
-      <a href="index.html">Inicio</a> <span>›</span>
+      <a href="index.html">Home</a> <span>›</span>
       <a href="suites.html" id="breadcrumb-type">Suites</a> <span>›</span>
       <span id="breadcrumb-name">Suite</span>
     </div>
@@ -58,27 +58,27 @@
     <div class="container">
       <div class="detail-grid">
         <div class="fade-up" id="detail-left">
-          <p class="detail-description" id="studio-desc">Cargando descripción...</p>
+          <p class="detail-description" id="studio-desc">Loading description...</p>
 
-          <h3 class="detail-amenities-title">Comodidades incluidas</h3>
+          <h3 class="detail-amenities-title">Included amenities</h3>
           <div class="detail-amenities-grid" id="studio-amenities"></div>
         </div>
 
         <div class="detail-sidebar fade-up" id="detail-sidebar">
           <div class="studio-price-card">
-            <span class="price-label" id="price-label">Precio por noche desde</span>
+            <span class="price-label" id="price-label">Price per night from</span>
             <div class="price" id="studio-price-block">—</div>
-            <span class="price-extra" id="price-policy">+$150 por persona adicional desde la 3.ª · Menores de 10 años gratis (hasta 2)</span>
-            <span class="price-tax">Impuestos incluidos</span>
-            <a href="https://direct-book.com/properties/aparthotelsiete32direct" target="_blank" rel="noopener" class="btn btn-primary studio-book-btn">Reservar Ahora</a>
-            <p class="studio-promo">🎉 Paga 6 noches, la 7.ª es de cortesía</p>
+            <span class="price-extra" id="price-policy">+$150 MXN per extra guest from the 3rd · Kids under 10 free (up to 2)</span>
+            <span class="price-tax">Taxes included</span>
+            <a href="https://direct-book.com/properties/aparthotelsiete32direct" target="_blank" rel="noopener" class="btn btn-primary studio-book-btn">Book Now</a>
+            <p class="studio-promo">🎉 Pay for 6 nights, the 7th is on us</p>
           </div>
 
           <div class="studio-wsp-card">
-            <p class="studio-wsp-text">¿Prefieres llamar para reservar?</p>
+            <p class="studio-wsp-text">Prefer to talk to us before booking?</p>
             <a href="https://wa.me/529992551748" target="_blank" rel="noopener" class="btn btn-outline studio-wsp-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-              WhatsApp Directo
+              Direct WhatsApp
             </a>
           </div>
         </div>
@@ -86,25 +86,25 @@
     </div>
   </section>
 
-  <!-- ACCESORIOS Y SERVICIOS ADICIONALES -->
+  <!-- ACCESSORIES & ADDITIONAL SERVICES -->
   <section class="extras-section">
     <div class="container">
       <div class="section-header fade-up" style="text-align:center; margin-bottom: 32px;">
-        <h2>Servicios y accesorios disponibles</h2>
-        <p class="subtitle">Extras para hacer tu estancia más cómoda — algunos sin costo y otros con cargo adicional.</p>
+        <h2>Available services &amp; accessories</h2>
+        <p class="subtitle">Extras to make your stay more comfortable — some free and some with an additional charge.</p>
       </div>
 
       <div class="extras-grid">
-        <!-- Accesorios bajo solicitud (sin costo) -->
+        <!-- Accessories on request (free) -->
         <div class="extras-card extras-free fade-up">
           <div class="extras-card-header">
             <div class="extras-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
             <div class="extras-card-titles">
-              <span class="extras-tag extras-tag-free">Sin costo</span>
-              <h3>Accesorios bajo solicitud</h3>
-              <p class="extras-sub">Disponibles en recepción cuando los necesites</p>
+              <span class="extras-tag extras-tag-free">Free</span>
+              <h3>Accessories on request</h3>
+              <p class="extras-sub">Available at the front desk whenever you need them</p>
             </div>
           </div>
 
@@ -113,57 +113,57 @@
               <span class="extras-item-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
               </span>
-              <span class="extras-item-label">Licuadora</span>
+              <span class="extras-item-label">Blender</span>
             </div>
             <div class="extras-item">
               <span class="extras-item-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="10" rx="2"/><line x1="8" y1="11" x2="8" y2="15"/><line x1="12" y1="11" x2="12" y2="15"/><line x1="16" y1="11" x2="16" y2="15"/><line x1="6" y1="5" x2="6" y2="8"/></svg>
               </span>
-              <span class="extras-item-label">Tostadora</span>
+              <span class="extras-item-label">Toaster</span>
             </div>
             <div class="extras-item">
               <span class="extras-item-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"/><path d="M17.73 2.27A2.5 2.5 0 1 1 19.5 6.5H2"/><path d="M14.5 11.5A2.5 2.5 0 1 0 18.5 16H2"/></svg>
               </span>
-              <span class="extras-item-label">Secadora de pelo</span>
+              <span class="extras-item-label">Hair dryer</span>
             </div>
             <div class="extras-item">
               <span class="extras-item-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18h12l-2-7H8z"/><path d="M9 11V8a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v3"/></svg>
               </span>
-              <span class="extras-item-label">Set de planchado</span>
+              <span class="extras-item-label">Ironing set</span>
             </div>
             <div class="extras-item">
               <span class="extras-item-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
               </span>
-              <span class="extras-item-label">Cuna para bebé</span>
+              <span class="extras-item-label">Baby crib</span>
             </div>
             <div class="extras-item">
               <span class="extras-item-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2h8"/><path d="M9 2v3.5L7 9v11a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9l-2-3.5V2"/><line x1="7" y1="14" x2="17" y2="14"/></svg>
               </span>
-              <span class="extras-item-label">Abridor de vino</span>
+              <span class="extras-item-label">Wine opener</span>
             </div>
             <div class="extras-item">
               <span class="extras-item-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
               </span>
-              <span class="extras-item-label">Kit de café</span>
+              <span class="extras-item-label">Coffee kit</span>
             </div>
           </div>
         </div>
 
-        <!-- Servicios adicionales con costo -->
+        <!-- Additional services (with charge) -->
         <div class="extras-card extras-paid fade-up">
           <div class="extras-card-header">
             <div class="extras-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             </div>
             <div class="extras-card-titles">
-              <span class="extras-tag extras-tag-paid">Con costo</span>
-              <h3>Servicios adicionales</h3>
-              <p class="extras-sub">Solicítalos en recepción cuando los necesites</p>
+              <span class="extras-tag extras-tag-paid">With charge</span>
+              <h3>Additional services</h3>
+              <p class="extras-sub">Request them at the front desk whenever you need them</p>
             </div>
           </div>
 
@@ -173,8 +173,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="14" r="4"/><circle cx="8" cy="6" r="1"/></svg>
               </span>
               <div class="extras-item-content">
-                <span class="extras-item-label">Servicio de lavandería</span>
-                <span class="extras-item-sub">La recepción recoge y entrega</span>
+                <span class="extras-item-label">Laundry service</span>
+                <span class="extras-item-sub">The front desk picks up and delivers</span>
               </div>
             </div>
             <div class="extras-item">
@@ -182,8 +182,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l2-5h10l2 5"/><rect x="3" y="12" width="18" height="7" rx="2"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="16.5" cy="19" r="1.5"/></svg>
               </span>
               <div class="extras-item-content">
-                <span class="extras-item-label">Transporte especializado</span>
-                <span class="extras-item-sub">Servicio bajo solicitud</span>
+                <span class="extras-item-label">Specialized transportation</span>
+                <span class="extras-item-sub">Service on request</span>
               </div>
             </div>
           </div>
@@ -195,7 +195,7 @@
   <!-- PHOTO GALLERY (rendered by JS) -->
   <section class="detail-gallery">
     <div class="container">
-      <h2 class="fade-up" style="margin-bottom: 32px;">Galería de Fotos</h2>
+      <h2 class="fade-up" style="margin-bottom: 32px;">Photo Gallery</h2>
       <div class="gallery-grid stagger" id="studio-gallery"></div>
     </div>
   </section>
@@ -205,18 +205,18 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/images/logo-original.png" alt="Aparthotel Siete32">
-          <p>El confort que mereces, al precio que necesitas. Ubicación ideal durante tu estancia en Mérida.</p>
+          <img src="/assets/images/logo-original.png" alt="Aparthotel Siete32">
+          <p>The comfort you deserve, at the price you need. An ideal location for your stay in Mérida.</p>
         </div>
         <div class="footer-links">
-          <h4>Enlaces</h4>
-          <a href="index.html">Inicio</a><a href="suites.html">Suites</a><a href="servicios.html">Servicios</a><a href="contacto.html">Contacto</a>
+          <h4>Links</h4>
+          <a href="index.html">Home</a><a href="suites.html">Suites</a><a href="servicios.html">Services</a><a href="contacto.html">Contact</a>
         </div>
         <div class="footer-contact">
-          <h4>Contacto</h4>
+          <h4>Contact</h4>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Av. República de Corea x 32 No. 612, Col. Maya, C.P. 97134, Mérida, Yuc. — Zona Altabrisa</span>
+            <span>Av. República de Corea x 32 No. 612, Col. Maya, C.P. 97134, Mérida, Yuc. — Altabrisa area</span>
           </div>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -225,8 +225,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Aparthotel Siete32. Todos los derechos reservados.</span>
-        <span>Desarrollado en Mérida, Yucatán.</span>
+        <span>&copy; 2026 Aparthotel Siete32. All rights reserved.</span>
+        <span>Developed in Mérida, Yucatán.</span>
       </div>
     </div>
   </footer>
@@ -237,20 +237,19 @@
 
   <div class="mobile-booking-bar">
     <div class="price-col"><small id="mobile-studio-name">Suite</small><strong><span id="mobile-studio-price">—</span> <span>MXN</span></strong></div>
-    <a href="https://direct-book.com/properties/aparthotelsiete32direct" target="_blank" rel="noopener" class="btn btn-primary">Reservar</a>
+    <a href="https://direct-book.com/properties/aparthotelsiete32direct" target="_blank" rel="noopener" class="btn btn-primary">Book</a>
   </div>
 
-  <!-- Rooms data + studio renderer -->
-  <script src="js/rooms.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/content.js"></script>
-  <script src="js/lightbox.js"></script>
-  <script src="js/chatbot.js"></script>
+  <!-- Rooms data + suite renderer -->
+  <script src="/js/rooms.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/content.js"></script>
+  <script src="/js/lightbox.js"></script>
   <script>
     (function () {
       // Keep the language switcher pointing at the same suite.
       document.querySelectorAll('.lang-switch').forEach(function (a) {
-        a.href = '/en/studio.html' + window.location.hash;
+        a.href = '/studio.html' + window.location.hash;
       });
 
       // Read room TYPE id from URL hash
@@ -283,8 +282,8 @@
       };
 
       function kitchenText() {
-        if (t.kitchen === 'kitchenette') return 'Microondas, cafetera y refrigerador';
-        return 'Cocina totalmente equipada';
+        if (t.kitchen === 'kitchenette') return 'Microwave, coffee maker and refrigerator';
+        return 'Fully equipped kitchen';
       }
 
       // Set page title and meta
@@ -294,7 +293,7 @@
 
       // Hero
       const heroSection = document.getElementById('detail-hero');
-      if (heroSection) heroSection.style.backgroundImage = `url('assets/images/${t.cardImg}')`;
+      if (heroSection) heroSection.style.backgroundImage = `url('/assets/images/${t.cardImg}')`;
       document.getElementById('studio-name').textContent = t.name;
 
       const meta = document.getElementById('studio-meta');
@@ -302,8 +301,8 @@
       metaBadges.push(`<span class="badge">${t.capacity}</span>`);
       metaBadges.push(`<span>${t.beds}</span>`);
       metaBadges.push(`<span>${kitchenText()}</span>`);
-      if (t.adultsOnly) metaBadges.push('<span class="badge">Solo adultos</span>');
-      if (t.accessible) metaBadges.push('<span class="badge">Unidad accesible</span>');
+      if (t.adultsOnly) metaBadges.push('<span class="badge">Adults only</span>');
+      if (t.accessible) metaBadges.push('<span class="badge">Accessible unit</span>');
       meta.innerHTML = metaBadges.join('');
 
       // Breadcrumb
@@ -319,33 +318,33 @@
       const amenities = [
         { icon: I.bed, label: t.beds },
         { icon: I.kitchen, label: kitchenText() },
-        { icon: I.tv, label: 'Smart TV con cable' },
-        { icon: I.wifi, label: 'Wi-Fi de alta velocidad incluido' },
-        { icon: I.clean, label: 'Limpieza diaria incluida' },
-        { icon: I.ac, label: 'A/C y ventilador' },
-        { icon: I.bath, label: 'Baño privado con toallas y amenidades' },
-        { icon: I.mirror, label: 'Espejo para maquillaje' },
-        { icon: I.reception, label: 'Recepción 24/7' }
+        { icon: I.tv, label: 'Smart TV with cable' },
+        { icon: I.wifi, label: 'High-speed Wi-Fi included' },
+        { icon: I.clean, label: 'Daily housekeeping included' },
+        { icon: I.ac, label: 'A/C and fan' },
+        { icon: I.bath, label: 'Private bathroom with towels and amenities' },
+        { icon: I.mirror, label: 'Makeup mirror' },
+        { icon: I.reception, label: '24/7 front desk' }
       ];
-      if (t.groundFloor === 'all') amenities.push({ icon: I.floor, label: 'En planta baja, sin escalones' });
-      else if (t.groundFloor === 'some') amenities.push({ icon: I.floor, label: 'Suites en planta alta y planta baja' });
-      if (t.accessible) amenities.push({ icon: I.access, label: `Unidad accesible para silla de ruedas (Suite ${t.accessible.room}, a solicitud)` });
-      if (t.adultsOnly) amenities.push({ icon: adultsIcon, label: 'Habitación para adultos' });
-      else if (t.allowsChildren) amenities.push({ icon: I.child, label: 'Menores de 10 años gratis (hasta 2)' });
+      if (t.groundFloor === 'all') amenities.push({ icon: I.floor, label: 'Ground floor, step-free' });
+      else if (t.groundFloor === 'some') amenities.push({ icon: I.floor, label: 'Suites on ground and upper floors' });
+      if (t.accessible) amenities.push({ icon: I.access, label: `Wheelchair-accessible unit (Suite ${t.accessible.room}, on request)` });
+      if (t.adultsOnly) amenities.push({ icon: adultsIcon, label: 'Adults-only room' });
+      else if (t.allowsChildren) amenities.push({ icon: I.child, label: 'Kids under 10 free (up to 2)' });
 
       document.getElementById('studio-amenities').innerHTML = amenities.map(a =>
         `<div class="amenity-item">${a.icon}<span>${a.label}</span></div>`
       ).join('');
 
       // Price card
-      document.getElementById('price-label').textContent = `Precio por noche (desde · ${t.capacity})`;
+      document.getElementById('price-label').textContent = `Price per night (from · ${t.capacity})`;
       document.getElementById('studio-price-block').innerHTML =
-        `$${t.priceFrom.toLocaleString('en-US')} <span>MXN / noche</span>`;
+        `$${t.priceFrom.toLocaleString('en-US')} <span>MXN / night</span>`;
 
       // Policy line (children + accessible note)
       const policyParts = [];
-      if (t.allowsChildren) policyParts.push('Menores de 10 años gratis (hasta 2)');
-      if (t.accessible) policyParts.push(`Unidad accesible a solicitud (Suite ${t.accessible.room})`);
+      if (t.allowsChildren) policyParts.push('Kids under 10 free (up to 2)');
+      if (t.accessible) policyParts.push(`Accessible unit on request (Suite ${t.accessible.room})`);
       const policyEl = document.getElementById('price-policy');
       if (policyParts.length) {
         policyEl.textContent = policyParts.join(' · ');
@@ -366,8 +365,9 @@
 
       // Gallery — every unit's photo, each captioned with its suite number(s)
       document.getElementById('studio-gallery').innerHTML = t.gallery.map(function (g) {
-        var cap = (/[,y]/.test(String(g.room)) ? 'Suites ' : 'Suite ') + g.room;
-        return `<figure class="gallery-item"><img src="assets/images/${g.img}" alt="${t.name} — ${cap}" loading="lazy"><figcaption>${cap}</figcaption></figure>`;
+        var roomLabel = String(g.room).replace(/ y /g, ' & ');
+        var cap = (/[,y]/.test(String(g.room)) ? 'Suites ' : 'Suite ') + roomLabel;
+        return `<figure class="gallery-item"><img src="/assets/images/${g.img}" alt="${t.name} — ${cap}" loading="lazy"><figcaption>${cap}</figcaption></figure>`;
       }).join('');
 
       // Reload when navigating between types via hash

@@ -94,22 +94,23 @@ document.addEventListener('DOMContentLoaded', () => {
      los mensajes llegan al mismo número que ya atiende recepción. --- */
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
+    const isEn = (document.documentElement.lang || 'es').toLowerCase().indexOf('en') === 0;
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const val = (id) => {
         const el = document.getElementById(id);
         return el ? el.value.trim() : '';
       };
-      let text = 'Hola, soy ' + val('name') + '.\n';
-      if (val('phone')) text += 'Teléfono: ' + val('phone') + '\n';
-      if (val('email')) text += 'Correo: ' + val('email') + '\n';
+      let text = (isEn ? 'Hello, my name is ' : 'Hola, soy ') + val('name') + '.\n';
+      if (val('phone')) text += (isEn ? 'Phone: ' : 'Teléfono: ') + val('phone') + '\n';
+      if (val('email')) text += (isEn ? 'Email: ' : 'Correo: ') + val('email') + '\n';
       text += '\n' + val('message');
 
       window.open('https://wa.me/529992551748?text=' + encodeURIComponent(text), '_blank', 'noopener');
 
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
-      submitBtn.textContent = '✓ Abriendo WhatsApp…';
+      submitBtn.textContent = isEn ? '✓ Opening WhatsApp…' : '✓ Abriendo WhatsApp…';
       setTimeout(() => { submitBtn.textContent = originalText; }, 4000);
     });
   }
