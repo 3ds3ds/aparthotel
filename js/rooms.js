@@ -17,6 +17,10 @@
 // sobreescribirla.
 const BOOKING_URL = "https://direct-book.com/properties/aparthotelsiete32direct";
 
+// Idioma de la página. Las copias en inglés (carpeta /en/) declaran
+// <html lang="en">; todo lo demás se sirve en español.
+const IS_EN = (document.documentElement.lang || "es").toLowerCase().indexOf("en") === 0;
+
 const ROOM_TYPES = [
   {
     id: "executive",
@@ -157,12 +161,82 @@ const ROOM_TYPES = [
   }
 ];
 
+/* --- Traducciones al inglés (se aplican sobre ROOM_TYPES si IS_EN) --- */
+const ROOM_TYPES_EN = {
+  "executive": {
+    capacity: "1 to 2 guests", badge: "Up to 2 Guests", beds: "1 king-size bed",
+    desc: "Ground-floor suite with a king bed and a kitchen equipped with refrigerator. For 1 or 2 guests.",
+    longDesc: "The Executive is a ground-floor suite with a king-size bed for 1 or 2 guests. It features a fully equipped kitchen with refrigerator, dining/work table, Smart TV with cable, high-speed Wi-Fi, A/C, fan and a private bathroom with towels and amenities. Step-free access, ideal if you prefer to avoid stairs. Daily housekeeping included. 24/7 front desk. This type includes suites 20, 21 and 22."
+  },
+  "executive-jr": {
+    capacity: "1 to 2 guests", badge: "Up to 2 Guests", beds: "1 queen-size bed",
+    desc: "Suite with a queen bed, microwave, coffee maker and refrigerator. Ideal for 1 or 2 guests.",
+    longDesc: "The Executive Jr. is ideal for 1 or 2 guests, with a queen-size bed. It features a microwave, coffee maker and refrigerator, dishes and cutlery, dining/work table, Smart TV with cable, high-speed Wi-Fi, A/C, fan and a private bathroom with towels and amenities. Daily housekeeping included. 24/7 front desk. Perfect for travelers looking for a comfortable stay in Mérida. This type corresponds to suite 17."
+  },
+  "junior-suite": {
+    capacity: "2 to 4 guests", badge: "Up to 4 Guests",
+    beds: "Two double beds, or two queen beds, or one king bed + one twin bed",
+    desc: "Full kitchen. Different bed configurations available: two double beds, or two queen beds, or one king bed + one twin bed.",
+    longDesc: "The Junior Suite is our most available type. It features a full kitchen (stove, refrigerator, microwave, coffee maker, dishes, cutlery and cookware), dining/work table and a comfortable sleeping area. Sleeps 2 to 4 guests, with different bed configurations depending on the unit: two double beds, or two queen beds, or one king bed + one twin bed. Smart TV with cable, high-speed Wi-Fi, A/C, fan and a private bathroom with towels and amenities. We have suites on both the ground and upper floors. Daily housekeeping included. 24/7 front desk. This type includes suites 11, 12, 13, 14, 15, 16, 23 and 24."
+  },
+  "master-suite": {
+    capacity: "Up to 5 guests", badge: "Up to 5 Guests",
+    beds: "King/queen + 3 twin beds, or 2 double beds + 1 twin (depending on unit)",
+    desc: "Our largest space, up to 5 guests. One wheelchair-accessible room available (Suite 25).",
+    longDesc: "The Master Suite is our largest space, sleeping up to 5 guests, with a fully equipped kitchen (stove, refrigerator, microwave, coffee maker, dishes, cutlery and cookware), dining/work table, Smart TV with cable, high-speed Wi-Fi, A/C, fan and a private bathroom with towels and amenities. Configurations vary by unit: a king or queen bed with three twin beds (one unit also has a sofa); Suite 25 has two double beds and one twin bed, on the ground floor. Daily housekeeping included. 24/7 front desk. ♿ One of our units, Suite 25, is on the ground floor and adapted for guests with reduced mobility (grab bars in the bathroom and a wide wheelchair-accessible door). If you need this specific room, contact us to secure it. This type includes suites 18, 19 and 25."
+  },
+  "master-suite-jr": {
+    capacity: "Up to 4 guests", badge: "Up to 4 Guests", beds: "4 twin beds",
+    desc: "Four twin beds and a fully equipped kitchen. Great for families or work teams, up to 4 guests.",
+    longDesc: "The Master Suite Jr. is a spacious suite with four twin beds, sleeping up to 4 guests — great for families and work teams. It features a fully equipped kitchen (stove, refrigerator, microwave, coffee maker, dishes, cutlery and cookware), dining/work table and a comfortable sleeping area. Smart TV with cable, high-speed Wi-Fi, A/C, fan and a private bathroom with towels and amenities. Daily housekeeping included. 24/7 front desk. This type corresponds to suite 10."
+  }
+};
+
+if (IS_EN) ROOM_TYPES.forEach(function (t) { Object.assign(t, ROOM_TYPES_EN[t.id] || {}); });
+
+// Textos de interfaz de las tarjetas, por idioma.
+const T = IS_EN ? {
+  kitchenette: "Microwave, coffee maker and refrigerator",
+  fullKitchen: "Fully equipped kitchen",
+  adultsOnly: "Adults only",
+  accessiblePre: "Wheelchair-accessible unit available (Suite ",
+  tv: "Smart TV with cable",
+  wifi: "High-speed Wi-Fi",
+  cleaning: "Daily housekeeping included",
+  ac: "A/C and fan",
+  reception: "24/7 front desk",
+  from: "From",
+  perNight: "MXN / night",
+  taxes: "Taxes included",
+  details: "See details & photos →",
+  book: "Book",
+  promo: "🎉 Pay for 6 nights, the 7th is on us",
+  noResults: "We don't have a suite type for that many guests. Try fewer guests or message us on WhatsApp."
+} : {
+  kitchenette: "Microondas, cafetera y refrigerador",
+  fullKitchen: "Cocina totalmente equipada",
+  adultsOnly: "Solo adultos",
+  accessiblePre: "Unidad con acceso a silla de ruedas disponible (Suite ",
+  tv: "Smart TV con cable",
+  wifi: "Wi-Fi de alta velocidad",
+  cleaning: "Limpieza diaria incluida",
+  ac: "A/C y ventilador",
+  reception: "Recepción 24/7",
+  from: "Desde",
+  perNight: "MXN / noche",
+  taxes: "Impuestos incluidos",
+  details: "Ver detalles y fotos →",
+  book: "Reservar",
+  promo: "🎉 Paga 6 noches, la 7.ª es de cortesía",
+  noResults: "No tenemos un tipo para esa cantidad de huéspedes. Prueba con menos personas o escríbenos por WhatsApp."
+};
+
 /* --- Helpers --- */
 function bookingUrlFor(t) { return (t && t.bookingUrl) || BOOKING_URL; }
 
 function kitchenLabel(t) {
-  if (t.kitchen === 'kitchenette') return 'Microondas, cafetera y refrigerador';
-  return 'Cocina totalmente equipada';
+  if (t.kitchen === 'kitchenette') return T.kitchenette;
+  return T.fullKitchen;
 }
 
 function detailLinkFor(t) { return 'studio.html#' + t.id; }
@@ -195,9 +269,9 @@ const ICONS = {
 
 function typeCardHTML(t) {
   const adultsBadge = t.adultsOnly
-    ? '<span class="suite-badge suite-badge-floor">Solo adultos</span>' : '';
+    ? '<span class="suite-badge suite-badge-floor">' + T.adultsOnly + '</span>' : '';
   const accessibleAmenity = t.accessible
-    ? '<div class="suite-amenity">' + ICONS.accessible + '<span>Unidad con acceso a silla de ruedas disponible (Suite ' + t.accessible.room + ')</span></div>'
+    ? '<div class="suite-amenity">' + ICONS.accessible + '<span>' + T.accessiblePre + t.accessible.room + ')</span></div>'
     : '';
   return '' +
   '<article class="suite-card fade-up" id="' + t.id + '">' +
@@ -212,23 +286,23 @@ function typeCardHTML(t) {
       '<div class="suite-amenities">' +
         '<div class="suite-amenity">' + ICONS.bed + '<span>' + t.beds + '</span></div>' +
         '<div class="suite-amenity">' + ICONS.kitchen + '<span>' + kitchenLabel(t) + '</span></div>' +
-        '<div class="suite-amenity">' + ICONS.tv + '<span>Smart TV con cable</span></div>' +
-        '<div class="suite-amenity">' + ICONS.wifi + '<span>Wi-Fi de alta velocidad</span></div>' +
-        '<div class="suite-amenity">' + ICONS.clean + '<span>Limpieza diaria incluida</span></div>' +
-        '<div class="suite-amenity">' + ICONS.ac + '<span>A/C y ventilador</span></div>' +
-        '<div class="suite-amenity">' + ICONS.reception + '<span>Recepción 24/7</span></div>' +
+        '<div class="suite-amenity">' + ICONS.tv + '<span>' + T.tv + '</span></div>' +
+        '<div class="suite-amenity">' + ICONS.wifi + '<span>' + T.wifi + '</span></div>' +
+        '<div class="suite-amenity">' + ICONS.clean + '<span>' + T.cleaning + '</span></div>' +
+        '<div class="suite-amenity">' + ICONS.ac + '<span>' + T.ac + '</span></div>' +
+        '<div class="suite-amenity">' + ICONS.reception + '<span>' + T.reception + '</span></div>' +
         accessibleAmenity +
       '</div>' +
       '<div class="suite-pricing">' +
         '<div>' +
-          '<span class="price-label">Desde · ' + t.capacity + '</span>' +
-          '<div class="price">$' + t.priceFrom.toLocaleString('en-US') + ' <span>MXN / noche</span></div>' +
-          '<span class="price-tax">Impuestos incluidos</span>' +
-          '<a class="suite-detail-link" href="' + detailLinkFor(t) + '">Ver detalles y fotos →</a>' +
+          '<span class="price-label">' + T.from + ' · ' + t.capacity + '</span>' +
+          '<div class="price">$' + t.priceFrom.toLocaleString('en-US') + ' <span>' + T.perNight + '</span></div>' +
+          '<span class="price-tax">' + T.taxes + '</span>' +
+          '<a class="suite-detail-link" href="' + detailLinkFor(t) + '">' + T.details + '</a>' +
         '</div>' +
-        '<a href="' + bookingUrlWithSearch(t) + '" target="_blank" rel="noopener" class="btn btn-primary">Reservar</a>' +
+        '<a href="' + bookingUrlWithSearch(t) + '" target="_blank" rel="noopener" class="btn btn-primary">' + T.book + '</a>' +
       '</div>' +
-      '<div class="suite-promo">🎉 Paga 6 noches, la 7.ª es de cortesía</div>' +
+      '<div class="suite-promo">' + T.promo + '</div>' +
     '</div>' +
   '</article>';
 }
@@ -245,7 +319,7 @@ function renderTypes(minGuests) {
   list = list.slice().sort((a, b) => a.priceFrom - b.priceFrom || a.guestsMax - b.guestsMax);
 
   if (list.length === 0) {
-    container.innerHTML = '<p class="no-results">No tenemos un tipo para esa cantidad de huéspedes. Prueba con menos personas o escríbenos por WhatsApp.</p>';
+    container.innerHTML = '<p class="no-results">' + T.noResults + '</p>';
     return;
   }
 

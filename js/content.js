@@ -98,15 +98,17 @@
       if (card.priceFrom != null) {
         var priceEl = el.querySelector(".suite-pricing .price");
         if (priceEl) {
+          var perNight = (document.documentElement.lang || "es").toLowerCase().indexOf("en") === 0
+            ? "MXN / night" : "MXN / noche";
           priceEl.innerHTML = "$" + Number(card.priceFrom).toLocaleString("en-US") +
-            ' <span>MXN / noche</span>';
+            ' <span>' + perNight + '</span>';
         }
       }
 
-      // Image
+      // Image — ruta absoluta para que funcione igual en / y en /en/.
       if (card.image) {
         var img = el.querySelector(".suite-image img");
-        if (img) img.src = "assets/images/" + card.image;
+        if (img) img.src = "/assets/images/" + card.image;
       }
 
       applyPromo(el, card.id, promos);

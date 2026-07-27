@@ -155,6 +155,13 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 .hero-content h1 { margin-bottom: 16px; }
 .hero-content p { font-size: clamp(1rem, 2vw, 1.25rem); opacity: .9; margin-bottom: 0; }
 
+/* Selector de idioma en la navegación */
+.lang-switch {
+  font-weight: 700; letter-spacing: .5px;
+  border: 1.5px solid currentColor; border-radius: 6px;
+  padding: 4px 10px !important; line-height: 1;
+}
+
 /* Icono de WhatsApp junto al teléfono del footer */
 .footer-contact-item .footer-wsp svg {
   width: 16px; height: 16px; fill: #25D366; stroke: none;

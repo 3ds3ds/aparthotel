@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aparthotel Siete32 — Hotel y Aparthotel en Mérida</title>
-  <meta name="description" content="Hotel y aparthotel en Mérida: suites totalmente equipadas, tipo estudio, para estancias cortas o largas. Ideal para turismo, negocios, familias, pacientes y acompañantes.">
-  <meta name="keywords" content="Hotel con cocineta en Mérida, Aparthotel Mérida Altabrisa, Hotel para familias grandes Mérida, Suites en Mérida">
+  <title>Aparthotel Siete32 — Hotel & Aparthotel in Mérida, Mexico</title>
+  <meta name="description" content="Hotel & aparthotel in Mérida, Mexico: fully equipped studio-style suites for short or long stays. Great for tourism, business, families, patients and companions.">
+  <meta name="keywords" content="Hotel with kitchenette in Merida, Aparthotel Merida Altabrisa, Hotel for large families Merida, Suites in Merida">
   <link rel="alternate" hreflang="es" href="https://aparthotelsiete32.com/">
   <link rel="alternate" hreflang="en" href="https://aparthotelsiete32.com/en/">
 
@@ -15,27 +15,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 
   <!-- ======== HEADER ======== -->
   <header class="header" id="header">
     <div class="header-inner">
-      <a href="index.html" class="header-logo" aria-label="Aparthotel Siete32 - Inicio">
-        <img src="assets/images/logo-original.png" alt="Aparthotel Siete32 Logo">
+      <a href="index.html" class="header-logo" aria-label="Aparthotel Siete32 - Home">
+        <img src="/assets/images/logo-original.png" alt="Aparthotel Siete32 Logo">
       </a>
 
-      <nav class="nav-links" aria-label="Navegación principal">
-        <a href="index.html">Inicio</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
         <a href="suites.html">Suites</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="suites.html" class="btn btn-primary nav-cta">Reservar Ahora</a>
-        <a href="/en/" class="lang-switch" title="View in English">EN</a>
+        <a href="servicios.html">Services</a>
+        <a href="contacto.html">Contact</a>
+        <a href="suites.html" class="btn btn-primary nav-cta">Book Now</a>
+        <a href="/" class="lang-switch" title="Ver en español">ES</a>
       </nav>
 
-      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -43,44 +43,44 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <a href="index.html">Inicio</a>
+    <a href="index.html">Home</a>
     <a href="suites.html">Suites</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="suites.html" class="btn btn-primary">Reservar Ahora</a>
-    <a href="/en/" class="lang-switch">EN — English</a>
+    <a href="servicios.html">Services</a>
+    <a href="contacto.html">Contact</a>
+    <a href="suites.html" class="btn btn-primary">Book Now</a>
+    <a href="/" class="lang-switch">ES — Español</a>
   </div>
 
   <!-- ======== HERO ======== -->
-  <section class="hero" id="hero" style="background-image: url('assets/images/common-6.jpg');">
+  <section class="hero" id="hero" style="background-image: url('/assets/images/common-6.jpg');">
     <div class="hero-content fade-up">
-      <h1>Hotel y Aparthotel en Mérida</h1>
-      <p>Bienvenido a Aparthotel Siete32: un concepto de hospedaje que combina la comodidad de un hogar con los servicios de un hotel. Suites totalmente equipadas, tipo estudio, para estancias cortas o largas.</p>
+      <h1>Hotel &amp; Aparthotel in Mérida</h1>
+      <p>Welcome to Aparthotel Siete32: a lodging concept that combines the comfort of home with the services of a hotel. Fully equipped studio-style suites for short or long stays.</p>
     </div>
   </section>
 
   <!-- ======== BOOKING WIDGET (floats between hero & next section) ======== -->
   <div class="booking-wrapper">
-    <form class="booking-widget fade-up" id="booking-form" aria-label="Buscador de disponibilidad">
+    <form class="booking-widget fade-up" id="booking-form" aria-label="Availability search">
       <div class="booking-field">
-        <label for="checkin">Entrada</label>
-        <input type="text" id="checkin" name="checkin" required placeholder="Seleccionar fecha" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+        <label for="checkin">Check-in</label>
+        <input type="text" id="checkin" name="checkin" required placeholder="Select date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
       </div>
       <div class="booking-field">
-        <label for="checkout">Salida</label>
-        <input type="text" id="checkout" name="checkout" required placeholder="Seleccionar fecha" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+        <label for="checkout">Check-out</label>
+        <input type="text" id="checkout" name="checkout" required placeholder="Select date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
       </div>
       <div class="booking-field">
-        <label for="guests">Huéspedes</label>
+        <label for="guests">Guests</label>
         <select id="guests" name="guests">
-          <option value="1">1 persona</option>
-          <option value="2" selected>2 personas</option>
-          <option value="3">3 personas</option>
-          <option value="4">4 personas</option>
-          <option value="5">5 personas</option>
+          <option value="1">1 guest</option>
+          <option value="2" selected>2 guests</option>
+          <option value="3">3 guests</option>
+          <option value="4">4 guests</option>
+          <option value="5">5 guests</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary">Buscar Suites</button>
+      <button type="submit" class="btn btn-primary">Search Suites</button>
     </form>
   </div>
 
@@ -88,8 +88,8 @@
   <section class="differentiators" id="diferenciadores">
     <div class="container">
       <div class="section-header fade-up">
-        <h2>Espacios funcionales y completamente equipados para sentirte como en casa, en una de las mejores y más seguras zonas de Mérida</h2>
-        <p class="subtitle">Recibimos a todo tipo de viajeros: turismo, negocios, compras, espectáculos, casinos, turismo médico, pacientes y acompañantes, estudiantes y más.</p>
+        <h2>Functional, fully equipped spaces that feel like home, in one of the best and safest areas of Mérida</h2>
+        <p class="subtitle">We welcome all kinds of travelers: tourism, business, shopping, shows, casinos, medical tourism, patients and companions, students and more.</p>
       </div>
 
       <div class="diff-grid stagger">
@@ -98,32 +98,32 @@
           <div class="diff-icon">
             <svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
           </div>
-          <h3>Suites para 1 a 5 personas</h3>
-          <p>Desde suites acogedoras para viajeros solos o parejas, hasta suites amplias para familias, equipos de trabajo o grupos de amigos.</p>
+          <h3>Suites for 1 to 5 Guests</h3>
+          <p>From cozy suites for solo travelers or couples to spacious suites for families, work teams or groups of friends.</p>
         </div>
         <!-- Card 2 -->
         <div class="diff-card">
           <div class="diff-icon">
             <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
           </div>
-          <h3>Cocina Equipada</h3>
-          <p>Cocina totalmente equipada para reducir drásticamente tus gastos diarios en alimentos.</p>
+          <h3>Equipped Kitchen</h3>
+          <p>A fully equipped kitchen to dramatically cut your daily food expenses.</p>
         </div>
         <!-- Card 3 -->
         <div class="diff-card">
           <div class="diff-icon">
             <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           </div>
-          <h3>Cerca de Hospitales</h3>
-          <p>Ubicación excelente para visitantes de hospitales. Contamos con suites en planta baja adecuadas para pacientes y sus acompañantes.</p>
+          <h3>Close to Hospitals</h3>
+          <p>An excellent location for hospital visitors. We have ground-floor suites suited for patients and their companions.</p>
         </div>
         <!-- Card 4 -->
         <div class="diff-card">
           <div class="diff-icon">
             <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
-          <h3>Tarifas Semanales</h3>
-          <p>Cuida tu presupuesto mientras estás lejos de casa: por cada 6 noches pagadas, la séptima noche es de cortesía.</p>
+          <h3>Weekly Rates</h3>
+          <p>Take care of your budget while away from home: for every 6 nights paid, the seventh night is on us.</p>
         </div>
       </div>
     </div>
@@ -133,51 +133,51 @@
   <section class="suites-section" id="suites">
     <div class="container">
       <div class="section-header fade-up">
-        <h2>Nuestros tipos de habitación</h2>
-        <p class="subtitle">Cinco tipos de habitación, todos con cocina equipada y servicios de hotelería.</p>
+        <h2>Our Room Types</h2>
+        <p class="subtitle">Five room types, all with an equipped kitchen and hotel services.</p>
       </div>
 
       <!-- Executive Jr. -->
       <article class="suite-card fade-up" data-card-id="executive-jr">
         <div class="suite-image">
-          <img src="assets/images/execjr-17-1.jpg" alt="Executive Jr. - Aparthotel Siete32" loading="lazy">
-          <span class="suite-badge">Hasta 2 Personas</span>
+          <img src="/assets/images/execjr-17-1.jpg" alt="Executive Jr. - Aparthotel Siete32" loading="lazy">
+          <span class="suite-badge">Up to 2 Guests</span>
         </div>
         <div class="suite-info">
           <h3>Executive Jr.</h3>
-          <p class="suite-desc">Suite con cama queen, microondas, cafetera y refrigerador. Ideal para 1 o 2 personas.</p>
+          <p class="suite-desc">Suite with a queen bed, microwave, coffee maker and refrigerator. Ideal for 1 or 2 guests.</p>
           <div class="suite-amenities">
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/></svg>
-              <span>1 cama queen size</span>
+              <span>1 queen-size bed</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
-              <span>Microondas, cafetera y refrigerador</span>
+              <span>Microwave, coffee maker and refrigerator</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
-              <span>Smart TV con cable</span>
+              <span>Smart TV with cable</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-              <span>Wi-Fi de alta velocidad incluido</span>
+              <span>High-speed Wi-Fi included</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M6 18h12l-2-7H8z"/><path d="M9 11V8a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v3"/></svg>
-              <span>Limpieza diaria incluida</span>
+              <span>Daily housekeeping included</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span>Recepción 24/7</span>
+              <span>24/7 front desk</span>
             </div>
           </div>
           <div class="suite-pricing">
             <div>
-              <span class="price-label">Desde</span>
-              <div class="price">$950 <span>MXN / noche</span></div>
+              <span class="price-label">From</span>
+              <div class="price">$950 <span>MXN / night</span></div>
             </div>
-            <a href="studio.html#executive-jr" class="btn btn-primary">Ver Detalles</a>
+            <a href="studio.html#executive-jr" class="btn btn-primary">View Details</a>
           </div>
         </div>
       </article>
@@ -185,44 +185,44 @@
       <!-- Executive -->
       <article class="suite-card fade-up" data-card-id="executive">
         <div class="suite-image">
-          <img src="assets/images/exec-21-22-2.jpg" alt="Executive - Aparthotel Siete32" loading="lazy">
-          <span class="suite-badge">Hasta 2 Personas</span>
+          <img src="/assets/images/exec-21-22-2.jpg" alt="Executive - Aparthotel Siete32" loading="lazy">
+          <span class="suite-badge">Up to 2 Guests</span>
         </div>
         <div class="suite-info">
           <h3>Executive</h3>
-          <p class="suite-desc">Suite en planta baja con cama king y cocina equipada con refrigerador. Para 1 o 2 personas.</p>
+          <p class="suite-desc">Ground-floor suite with a king bed and a kitchen equipped with refrigerator. For 1 or 2 guests.</p>
           <div class="suite-amenities">
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/></svg>
-              <span>1 cama king size</span>
+              <span>1 king-size bed</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
-              <span>Cocina totalmente equipada</span>
+              <span>Fully equipped kitchen</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
-              <span>Smart TV con cable</span>
+              <span>Smart TV with cable</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-              <span>Wi-Fi de alta velocidad incluido</span>
+              <span>High-speed Wi-Fi included</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M6 18h12l-2-7H8z"/><path d="M9 11V8a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v3"/></svg>
-              <span>Limpieza diaria incluida</span>
+              <span>Daily housekeeping included</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span>Recepción 24/7</span>
+              <span>24/7 front desk</span>
             </div>
           </div>
           <div class="suite-pricing">
             <div>
-              <span class="price-label">Desde</span>
-              <div class="price">$1,000 <span>MXN / noche</span></div>
+              <span class="price-label">From</span>
+              <div class="price">$1,000 <span>MXN / night</span></div>
             </div>
-            <a href="studio.html#executive" class="btn btn-primary">Ver Detalles</a>
+            <a href="studio.html#executive" class="btn btn-primary">View Details</a>
           </div>
         </div>
       </article>
@@ -230,44 +230,44 @@
       <!-- Junior Suite -->
       <article class="suite-card fade-up" data-card-id="junior-suite">
         <div class="suite-image">
-          <img src="assets/images/jr-11-14-3.jpg" alt="Junior Suite - Aparthotel Siete32" loading="lazy">
-          <span class="suite-badge">Hasta 4 Personas</span>
+          <img src="/assets/images/jr-11-14-3.jpg" alt="Junior Suite - Aparthotel Siete32" loading="lazy">
+          <span class="suite-badge">Up to 4 Guests</span>
         </div>
         <div class="suite-info">
           <h3>Junior Suite</h3>
-          <p class="suite-desc">Cocina completa y distintas configuraciones de cama. Para 2 a 4 personas.</p>
+          <p class="suite-desc">Full kitchen and different bed configurations. For 2 to 4 guests.</p>
           <div class="suite-amenities">
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/></svg>
-              <span>Dos matrimoniales, o dos queen size, o una king size + una individual</span>
+              <span>Two double beds, or two queen beds, or one king bed + one twin bed</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
-              <span>Cocina totalmente equipada</span>
+              <span>Fully equipped kitchen</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
-              <span>Smart TV con cable</span>
+              <span>Smart TV with cable</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-              <span>Wi-Fi de alta velocidad incluido</span>
+              <span>High-speed Wi-Fi included</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M6 18h12l-2-7H8z"/><path d="M9 11V8a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v3"/></svg>
-              <span>Limpieza diaria incluida</span>
+              <span>Daily housekeeping included</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span>Recepción 24/7</span>
+              <span>24/7 front desk</span>
             </div>
           </div>
           <div class="suite-pricing">
             <div>
-              <span class="price-label">Desde</span>
-              <div class="price">$1,150 <span>MXN / noche</span></div>
+              <span class="price-label">From</span>
+              <div class="price">$1,150 <span>MXN / night</span></div>
             </div>
-            <a href="studio.html#junior-suite" class="btn btn-primary">Ver Detalles</a>
+            <a href="studio.html#junior-suite" class="btn btn-primary">View Details</a>
           </div>
         </div>
       </article>
@@ -275,44 +275,44 @@
       <!-- Master Suite Jr. -->
       <article class="suite-card fade-up" data-card-id="master-suite-jr">
         <div class="suite-image">
-          <img src="assets/images/masterjr-10-1.jpg" alt="Master Suite Jr. - Aparthotel Siete32" loading="lazy">
-          <span class="suite-badge">Hasta 4 Personas</span>
+          <img src="/assets/images/masterjr-10-1.jpg" alt="Master Suite Jr. - Aparthotel Siete32" loading="lazy">
+          <span class="suite-badge">Up to 4 Guests</span>
         </div>
         <div class="suite-info">
           <h3>Master Suite Jr.</h3>
-          <p class="suite-desc">Cuatro camas individuales y cocina totalmente equipada. Ideal para familias o equipos, hasta 4 personas.</p>
+          <p class="suite-desc">Four twin beds and a fully equipped kitchen. Great for families or work teams, up to 4 guests.</p>
           <div class="suite-amenities">
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/></svg>
-              <span>4 camas individuales</span>
+              <span>4 twin beds</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
-              <span>Cocina totalmente equipada</span>
+              <span>Fully equipped kitchen</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
-              <span>Smart TV con cable</span>
+              <span>Smart TV with cable</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-              <span>Wi-Fi de alta velocidad incluido</span>
+              <span>High-speed Wi-Fi included</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M6 18h12l-2-7H8z"/><path d="M9 11V8a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v3"/></svg>
-              <span>Limpieza diaria incluida</span>
+              <span>Daily housekeeping included</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span>Recepción 24/7</span>
+              <span>24/7 front desk</span>
             </div>
           </div>
           <div class="suite-pricing">
             <div>
-              <span class="price-label">Desde</span>
-              <div class="price">$1,300 <span>MXN / noche</span></div>
+              <span class="price-label">From</span>
+              <div class="price">$1,300 <span>MXN / night</span></div>
             </div>
-            <a href="studio.html#master-suite-jr" class="btn btn-primary">Ver Detalles</a>
+            <a href="studio.html#master-suite-jr" class="btn btn-primary">View Details</a>
           </div>
         </div>
       </article>
@@ -320,44 +320,44 @@
       <!-- Master Suite -->
       <article class="suite-card fade-up" data-card-id="master-suite">
         <div class="suite-image">
-          <img src="assets/images/master-18-1.jpg" alt="Master Suite - Aparthotel Siete32" loading="lazy">
-          <span class="suite-badge">Hasta 5 Personas</span>
+          <img src="/assets/images/master-18-1.jpg" alt="Master Suite - Aparthotel Siete32" loading="lazy">
+          <span class="suite-badge">Up to 5 Guests</span>
         </div>
         <div class="suite-info">
           <h3>Master Suite</h3>
-          <p class="suite-desc">Nuestro espacio más amplio, hasta 5 personas. Contamos con una habitación accesible para silla de ruedas (Suite 25).</p>
+          <p class="suite-desc">Our largest space, up to 5 guests. We have one wheelchair-accessible room (Suite 25).</p>
           <div class="suite-amenities">
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/></svg>
-              <span>King o queen + 3 individuales</span>
+              <span>King or queen + 3 twin beds</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
-              <span>Cocina totalmente equipada</span>
+              <span>Fully equipped kitchen</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
-              <span>Smart TV con cable</span>
+              <span>Smart TV with cable</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-              <span>Wi-Fi de alta velocidad incluido</span>
+              <span>High-speed Wi-Fi included</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><path d="M6 18h12l-2-7H8z"/><path d="M9 11V8a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v3"/></svg>
-              <span>Limpieza diaria incluida</span>
+              <span>Daily housekeeping included</span>
             </div>
             <div class="suite-amenity">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2a7 7 0 0 0-14 0v2"/><path d="M5 13l3 8h8l3-8"/></svg>
-              <span>Unidad con acceso a silla de ruedas disponible (Suite 25)</span>
+              <span>Wheelchair-accessible unit available (Suite 25)</span>
             </div>
           </div>
           <div class="suite-pricing">
             <div>
-              <span class="price-label">Desde</span>
-              <div class="price">$1,300 <span>MXN / noche</span></div>
+              <span class="price-label">From</span>
+              <div class="price">$1,300 <span>MXN / night</span></div>
             </div>
-            <a href="studio.html#master-suite" class="btn btn-primary">Ver Detalles</a>
+            <a href="studio.html#master-suite" class="btn btn-primary">View Details</a>
           </div>
         </div>
       </article>
@@ -370,68 +370,68 @@
       <div class="location-icon fade-up">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       </div>
-      <h2 class="fade-up">Ubicación privilegiada en Mérida: Altabrisa</h2>
-      <p class="subtitle fade-up">Nos encontramos en una de las zonas más seguras y con mayor conectividad de Mérida, con fácil acceso a hospitales, centros comerciales, restaurantes, universidades y los principales atractivos de la ciudad.</p>
+      <h2 class="fade-up">A privileged location in Mérida: Altabrisa</h2>
+      <p class="subtitle fade-up">We are in one of the safest and best-connected areas of Mérida, with easy access to hospitals, shopping malls, restaurants, universities and the city's main attractions.</p>
 
       <div class="proximity-badges fade-up">
         <div class="proximity-badge">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          <span>A 150 m de importantes hospitales</span>
+          <span>150 m from major hospitals</span>
         </div>
         <div class="proximity-badge">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
-          <span>A 150 m de plazas comerciales</span>
+          <span>150 m from shopping malls</span>
         </div>
         <div class="proximity-badge">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M9 11H5a2 2 0 0 0-2 2v7h6v-7a2 2 0 0 0-2-2z"/><path d="M19 8h-4a2 2 0 0 0-2 2v10h6V10a2 2 0 0 0-2-2z"/><path d="M22 20h-3"/><path d="M5 20H2"/><path d="M9 4v5"/><path d="M15 4v3"/></svg>
-          <span>A 200 m de laboratorios clínicos</span>
+          <span>200 m from clinical labs</span>
         </div>
         <div class="proximity-badge">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M4 19L8 5"/><path d="M20 19L16 5"/><line x1="12" y1="7" x2="12" y2="9"/><line x1="12" y1="12" x2="12" y2="14"/><line x1="12" y1="17" x2="12" y2="19"/></svg>
-          <span>A 5 min en coche del periférico</span>
+          <span>5 min by car from the Periférico ring road</span>
         </div>
         <div class="proximity-badge">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          <span>Cerca de universidades</span>
+          <span>Close to universities</span>
         </div>
         <div class="proximity-badge">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>A 15 min en coche del centro de Mérida</span>
+          <span>15 min by car from downtown Mérida</span>
         </div>
         <div class="proximity-badge">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M17.657 18.657A8 8 0 0 1 6.343 7.343"/><path d="M20 4v5h-5"/><path d="M3 21a9 9 0 0 0 15-6.7A9 9 0 0 0 5.6 7"/></svg>
-          <span>A 30 min en coche de la playa</span>
+          <span>30 min by car from the beach</span>
         </div>
         <div class="proximity-badge">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><rect x="3" y="3" width="18" height="13" rx="2"/><path d="M3 16h18"/><path d="M7 19h2"/><path d="M15 19h2"/><path d="M8 3v13"/><path d="M16 3v13"/></svg>
-          <span>A 100 m del ADO</span>
+          <span>100 m from the ADO bus terminal</span>
         </div>
         <div class="proximity-badge">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M4 11h16"/><circle cx="8" cy="18" r="0"/><path d="M7 21l1-3"/><path d="M17 21l-1-3"/><path d="M8 15h.01"/><path d="M16 15h.01"/></svg>
-          <span>Transporte público en la puerta</span>
+          <span>Public transport at the door</span>
         </div>
         <div class="proximity-badge">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M5 12l2-5h10l2 5"/><rect x="3" y="12" width="18" height="7" rx="2"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="16.5" cy="19" r="1.5"/></svg>
-          <span>Estacionamiento gratuito para huéspedes</span>
+          <span>Free parking for guests</span>
         </div>
         <div class="proximity-badge">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-          <span>Tienda de conveniencia en planta baja</span>
+          <span>Convenience store on the ground floor</span>
         </div>
       </div>
 
       <div class="location-map fade-up">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.448!2d-89.58281!3d21.0147531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567726a5c2f9d5%3A0x828a9a643f043a4d!2sAparthotel%20Siete32!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx" 
-          allowfullscreen="" loading="lazy" 
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.448!2d-89.58281!3d21.0147531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567726a5c2f9d5%3A0x828a9a643f043a4d!2sAparthotel%20Siete32!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx"
+          allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          title="Ubicación de Aparthotel Siete32 en Google Maps">
+          title="Aparthotel Siete32 location on Google Maps">
         </iframe>
       </div>
 
       <a href="https://maps.google.com/?q=Aparthotel+Siete32+Merida" target="_blank" rel="noopener" class="btn btn-outline mt-24 fade-up">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-        Ver en Google Maps
+        View on Google Maps
       </a>
     </div>
   </section>
@@ -440,11 +440,11 @@
   <section class="cta-section">
     <div class="container">
       <div class="cta-card fade-up">
-        <h2>Reserva hoy y descubre una nueva forma de hospedarte en Mérida</h2>
-        <p>La independencia de un departamento con la atención y la seguridad de un hotel.</p>
+        <h2>Book today and discover a new way to stay in Mérida</h2>
+        <p>The independence of an apartment with the care and security of a hotel.</p>
         <div class="cta-actions">
-          <a href="suites.html" class="btn btn-primary">Ver Suites disponibles</a>
-          <a href="https://direct-book.com/properties/aparthotelsiete32direct" target="_blank" rel="noopener" class="btn btn-outline">Reservar ahora</a>
+          <a href="suites.html" class="btn btn-primary">See Available Suites</a>
+          <a href="https://direct-book.com/properties/aparthotelsiete32direct" target="_blank" rel="noopener" class="btn btn-outline">Book now</a>
         </div>
       </div>
     </div>
@@ -455,21 +455,21 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/images/logo-original.png" alt="Aparthotel Siete32">
-          <p>El confort que mereces, al precio que necesitas. Ubicación ideal durante tu estancia en Mérida.</p>
+          <img src="/assets/images/logo-original.png" alt="Aparthotel Siete32">
+          <p>The comfort you deserve, at the price you need. An ideal location for your stay in Mérida.</p>
         </div>
         <div class="footer-links">
-          <h4>Enlaces</h4>
-          <a href="index.html">Inicio</a>
+          <h4>Links</h4>
+          <a href="index.html">Home</a>
           <a href="suites.html">Suites</a>
-          <a href="servicios.html">Servicios</a>
-          <a href="contacto.html">Contacto</a>
+          <a href="servicios.html">Services</a>
+          <a href="contacto.html">Contact</a>
         </div>
         <div class="footer-contact">
-          <h4>Contacto</h4>
+          <h4>Contact</h4>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Av. República de Corea x 32 No. 612, Col. Maya, C.P. 97134, Mérida, Yuc. — Zona Altabrisa</span>
+            <span>Av. República de Corea x 32 No. 612, Col. Maya, C.P. 97134, Mérida, Yuc. — Altabrisa area</span>
           </div>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -478,19 +478,19 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Aparthotel Siete32. Todos los derechos reservados.</span>
-        <span>Desarrollado en Mérida, Yucatán.</span>
+        <span>&copy; 2026 Aparthotel Siete32. All rights reserved.</span>
+        <span>Developed in Mérida, Yucatán.</span>
       </div>
     </div>
   </footer>
 
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/529992551748" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contáctanos por WhatsApp">
+  <a href="https://wa.me/529992551748" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Message us on WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
-  <script src="js/main.js"></script>
-  <script src="js/content.js"></script>
-  <script src="js/chatbot.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/content.js"></script>
+  <script src="/js/chatbot.js"></script>
 </body>
 </html>
