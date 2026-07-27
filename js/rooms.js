@@ -276,7 +276,7 @@ function typeCardHTML(t) {
   return '' +
   '<article class="suite-card fade-up" id="' + t.id + '">' +
     '<div class="suite-image">' +
-      '<img src="assets/images/' + t.cardImg + '" alt="' + t.name + '" loading="lazy">' +
+      '<img src="/assets/images/' + t.cardImg + '" alt="' + t.name + '" loading="lazy">' +
       '<span class="suite-badge">' + t.badge + '</span>' +
       adultsBadge +
     '</div>' +
