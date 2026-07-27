@@ -105,10 +105,10 @@
         }
       }
 
-      // Image
+      // Image — ruta absoluta para que funcione igual en / y en /en/.
       if (card.image) {
         var img = el.querySelector(".suite-image img");
-        if (img) img.src = "assets/images/" + card.image;
+        if (img) img.src = "/assets/images/" + card.image;
       }
 
       applyPromo(el, card.id, promos);
